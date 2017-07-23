@@ -57,6 +57,12 @@
     <Compile Include="Formularios\Empleado.Designer.cs">
       <DependentUpon>Empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Main.cs">
       <SubType>Form</SubType>
     </Compile>
