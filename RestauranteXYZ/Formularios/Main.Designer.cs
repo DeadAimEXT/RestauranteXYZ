@@ -31,13 +31,13 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pbEmpleado = new System.Windows.Forms.PictureBox();
             this.pbMesa = new System.Windows.Forms.PictureBox();
-            this.pbFacutra = new System.Windows.Forms.PictureBox();
             this.pbAudit = new System.Windows.Forms.PictureBox();
+            this.pbFacutra = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMesa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFacutra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAudit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFacutra)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -79,17 +79,6 @@
             this.pbMesa.TabIndex = 1;
             this.pbMesa.TabStop = false;
             // 
-            // pbFacutra
-            // 
-            this.pbFacutra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbFacutra.Location = new System.Drawing.Point(351, 3);
-            this.pbFacutra.Name = "pbFacutra";
-            this.pbFacutra.Size = new System.Drawing.Size(343, 282);
-            this.pbFacutra.TabIndex = 2;
-            this.pbFacutra.TabStop = false;
-            // 
             // pbAudit
             // 
             this.pbAudit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -100,6 +89,18 @@
             this.pbAudit.Size = new System.Drawing.Size(343, 283);
             this.pbAudit.TabIndex = 3;
             this.pbAudit.TabStop = false;
+            // 
+            // pbFacutra
+            // 
+            this.pbFacutra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbFacutra.Image = global::RestauranteXYZ.Properties.Resources.diploma2_128;
+            this.pbFacutra.Location = new System.Drawing.Point(351, 3);
+            this.pbFacutra.Name = "pbFacutra";
+            this.pbFacutra.Size = new System.Drawing.Size(343, 282);
+            this.pbFacutra.TabIndex = 2;
+            this.pbFacutra.TabStop = false;
             // 
             // Form1
             // 
@@ -112,8 +113,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbEmpleado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMesa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFacutra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAudit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFacutra)).EndInit();
             this.ResumeLayout(false);
 
         }
