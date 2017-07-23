@@ -74,6 +74,7 @@
             this.pbMesa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMesa.Image = global::RestauranteXYZ.Properties.Resources.graduation_cap_128;
             this.pbMesa.Location = new System.Drawing.Point(3, 291);
             this.pbMesa.Name = "pbMesa";
             this.pbMesa.Size = new System.Drawing.Size(342, 283);
