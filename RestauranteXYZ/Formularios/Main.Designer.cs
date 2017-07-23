@@ -62,6 +62,7 @@
             this.pbEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbEmpleado.Image = global::RestauranteXYZ.Properties.Resources.approval_128;
             this.pbEmpleado.Location = new System.Drawing.Point(3, 3);
             this.pbEmpleado.Name = "pbEmpleado";
             this.pbEmpleado.Size = new System.Drawing.Size(342, 282);
