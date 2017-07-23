@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pbEmpleado = new System.Windows.Forms.PictureBox();
             this.pbMesa = new System.Windows.Forms.PictureBox();
@@ -85,9 +86,11 @@
             this.pbAudit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbAudit.Image = ((System.Drawing.Image)(resources.GetObject("pbAudit.Image")));
             this.pbAudit.Location = new System.Drawing.Point(351, 291);
             this.pbAudit.Name = "pbAudit";
             this.pbAudit.Size = new System.Drawing.Size(343, 283);
+            this.pbAudit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAudit.TabIndex = 3;
             this.pbAudit.TabStop = false;
             // 
