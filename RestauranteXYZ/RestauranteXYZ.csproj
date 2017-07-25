@@ -74,6 +74,9 @@
     <EmbeddedResource Include="Formularios\AuditLog.resx">
       <DependentUpon>AuditLog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Empleado.resx">
+      <DependentUpon>Empleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
