@@ -16,5 +16,10 @@ namespace RestauranteXYZ.Formularios
         {
             InitializeComponent();
         }
+
+        private void AuditLog_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
