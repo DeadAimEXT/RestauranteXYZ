@@ -33,27 +33,28 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtTipoEmpleado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtSexo = new System.Windows.Forms.ComboBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.rbNombre = new System.Windows.Forms.RadioButton();
+            this.rbEmpleado = new System.Windows.Forms.RadioButton();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.rbTipo = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -85,9 +86,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.btnBuscar);
             this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.txtBuscar);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -102,17 +103,17 @@
             this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.txtTipoEmpleado);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.txtSexo);
+            this.groupBox2.Controls.Add(this.txtDescripcion);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.txtCorreo);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.txtTelefono);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtApellidos);
+            this.groupBox2.Controls.Add(this.txtNombre);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtIdEmpleado);
@@ -134,13 +135,13 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "Tipo Empleado:";
             // 
-            // comboBox2
+            // txtTipoEmpleado
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(491, 60);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(165, 21);
-            this.comboBox2.TabIndex = 14;
+            this.txtTipoEmpleado.FormattingEnabled = true;
+            this.txtTipoEmpleado.Location = new System.Drawing.Point(491, 60);
+            this.txtTipoEmpleado.Name = "txtTipoEmpleado";
+            this.txtTipoEmpleado.Size = new System.Drawing.Size(165, 21);
+            this.txtTipoEmpleado.TabIndex = 14;
             // 
             // label8
             // 
@@ -152,21 +153,21 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "Sexo:";
             // 
-            // comboBox1
+            // txtSexo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(491, 97);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(127, 21);
-            this.comboBox1.TabIndex = 12;
+            this.txtSexo.FormattingEnabled = true;
+            this.txtSexo.Location = new System.Drawing.Point(491, 97);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(127, 21);
+            this.txtSexo.TabIndex = 12;
             // 
-            // textBox6
+            // txtDescripcion
             // 
-            this.textBox6.Location = new System.Drawing.Point(123, 236);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(545, 85);
-            this.textBox6.TabIndex = 11;
+            this.txtDescripcion.Location = new System.Drawing.Point(123, 236);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(545, 85);
+            this.txtDescripcion.TabIndex = 11;
             // 
             // label7
             // 
@@ -178,12 +179,12 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Dirección:";
             // 
-            // textBox5
+            // txtCorreo
             // 
-            this.textBox5.Location = new System.Drawing.Point(123, 154);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(217, 20);
-            this.textBox5.TabIndex = 9;
+            this.txtCorreo.Location = new System.Drawing.Point(123, 154);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(217, 20);
+            this.txtCorreo.TabIndex = 9;
             // 
             // label6
             // 
@@ -195,12 +196,12 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Correo:";
             // 
-            // textBox4
+            // txtTelefono
             // 
-            this.textBox4.Location = new System.Drawing.Point(124, 190);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(217, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtTelefono.Location = new System.Drawing.Point(124, 190);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(217, 20);
+            this.txtTelefono.TabIndex = 7;
             // 
             // label5
             // 
@@ -212,19 +213,19 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Teléfono:";
             // 
-            // textBox3
+            // txtApellidos
             // 
-            this.textBox3.Location = new System.Drawing.Point(123, 119);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(217, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtApellidos.Location = new System.Drawing.Point(123, 119);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(217, 20);
+            this.txtApellidos.TabIndex = 5;
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtNombre.Location = new System.Drawing.Point(123, 82);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(218, 20);
+            this.txtNombre.TabIndex = 4;
             // 
             // label4
             // 
@@ -265,8 +266,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rbTipo);
+            this.groupBox1.Controls.Add(this.rbNombre);
+            this.groupBox1.Controls.Add(this.rbEmpleado);
             this.groupBox1.Location = new System.Drawing.Point(184, 18);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(382, 64);
@@ -274,34 +276,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bucar:";
             // 
-            // radioButton3
+            // rbNombre
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(220, 29);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(112, 17);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Nombre Empleado";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbNombre.AutoSize = true;
+            this.rbNombre.Location = new System.Drawing.Point(128, 29);
+            this.rbNombre.Name = "rbNombre";
+            this.rbNombre.Size = new System.Drawing.Size(112, 17);
+            this.rbNombre.TabIndex = 1;
+            this.rbNombre.TabStop = true;
+            this.rbNombre.Text = "Nombre Empleado";
+            this.rbNombre.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbEmpleado
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(20, 29);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(81, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "IdEmpleado";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbEmpleado.AutoSize = true;
+            this.rbEmpleado.Location = new System.Drawing.Point(20, 29);
+            this.rbEmpleado.Name = "rbEmpleado";
+            this.rbEmpleado.Size = new System.Drawing.Size(81, 17);
+            this.rbEmpleado.TabIndex = 0;
+            this.rbEmpleado.TabStop = true;
+            this.rbEmpleado.Text = "IdEmpleado";
+            this.rbEmpleado.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtBuscar
             // 
-            this.textBox2.Location = new System.Drawing.Point(239, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtBuscar.Location = new System.Drawing.Point(239, 97);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(213, 20);
+            this.txtBuscar.TabIndex = 7;
             // 
             // dataGridView1
             // 
@@ -311,14 +313,25 @@
             this.dataGridView1.Size = new System.Drawing.Size(714, 226);
             this.dataGridView1.TabIndex = 9;
             // 
-            // button2
+            // btnBuscar
             // 
-            this.button2.Location = new System.Drawing.Point(458, 95);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(458, 95);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(61, 23);
+            this.btnBuscar.TabIndex = 10;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // rbTipo
+            // 
+            this.rbTipo.AutoSize = true;
+            this.rbTipo.Location = new System.Drawing.Point(264, 29);
+            this.rbTipo.Name = "rbTipo";
+            this.rbTipo.Size = new System.Drawing.Size(96, 17);
+            this.rbTipo.TabIndex = 2;
+            this.rbTipo.TabStop = true;
+            this.rbTipo.Text = "Tipo Empleado";
+            this.rbTipo.UseVisualStyleBackColor = true;
             // 
             // Empleado
             // 
@@ -347,27 +360,28 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox txtTipoEmpleado;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ComboBox txtSexo;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtIdEmpleado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RadioButton rbNombre;
+        private System.Windows.Forms.RadioButton rbEmpleado;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.RadioButton rbTipo;
     }
 }
