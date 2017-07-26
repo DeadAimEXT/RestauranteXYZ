@@ -100,8 +100,6 @@ namespace capaDatos
         {
             SqlDataAdapter da;
             DataSet ds = new DataSet();
-            
-
             try
             {
                 ConectarBD();
@@ -123,17 +121,13 @@ namespace capaDatos
         public DataSet ListarTipoEmpleado()
         {
             SqlDataAdapter da;
-            DataSet ds = new DataSet();
-            
-
+            DataSet ds = new DataSet();            
             try
             {
                 ConectarBD();
                 da = new SqlDataAdapter("Sp_ListarTipoEmpleado", cnn);
-                da.Fill(ds, "Sexo");
+                da.Fill(ds, "TipoEmpleados");
                 return ds;
-
-
             }
             catch (Exception ex)
             {
@@ -145,6 +139,7 @@ namespace capaDatos
                 ds.Dispose();
             }
         }
+
 
         public DataSet ListarEmpleados()
         {
@@ -163,7 +158,8 @@ namespace capaDatos
             }
             finally
             {
-                //Cerrar coneccion?            
+                //Cerrar coneccion?   
+                DesconectarBD();         
                 ds.Dispose();
             }
         }

@@ -39,6 +39,12 @@ namespace RestauranteXYZ.Formularios
             cboSexo.ValueMember = "IdSexo";
         }
 
+        private void CargarComboboxTipoEmpleado()
+        {
+            CNEmpleado objE = new CNEmpleado();
+            cboTipoEmpleado.DataSource = objE.ListarTipoEmpleado().Tables["TipoEmpleado"];
+        }
+
         private void CargarEmpleados()
         {
             CNEmpleado objA = new CNEmpleado();
@@ -78,6 +84,21 @@ namespace RestauranteXYZ.Formularios
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             CargarComboboxSexo();
+        }
+
+
+        private void FilaSeleccionada()
+        {
+            txtIdEmpleado.Text = dgvEmpleados.SelectedRows[0].Cells[0].Value.ToString();
+            txtNombre.Text = dgvEmpleados.SelectedRows[0].Cells[1].Value.ToString();
+            txtApellidos.Text = dgvEmpleados.SelectedRows[0].Cells[2].Value.ToString();
+            txtTelefono.Text = dgvEmpleados.SelectedRows[0].Cells[3].Value.ToString();
+            txtCorreo.Text = dgvEmpleados.SelectedRows[0].Cells[4].Value.ToString();
+            txtDireccion.Text = dgvEmpleados.SelectedRows[0].Cells[5].Value.ToString();
+            CargarComboboxSexo();
+            cboSexo.Text = dgvEmpleados.SelectedRows[0].Cells[6].Value.ToString();
+            CargarComboboxTipoEmpleado();
+            cboTipoEmpleado.Text = dgvEmpleados.SelectedRows[0].Cells[7].Value.ToString();
         }
     }
 }
