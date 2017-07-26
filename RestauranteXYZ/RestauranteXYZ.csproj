@@ -69,6 +69,12 @@
     <Compile Include="Formularios\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Mesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mesa.Designer.cs">
+      <DependentUpon>Mesa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\AuditLog.resx">
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mesa.resx">
+      <DependentUpon>Mesa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +120,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\graduation_cap-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mesa.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
