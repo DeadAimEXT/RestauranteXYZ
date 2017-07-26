@@ -25,8 +25,8 @@ namespace RestauranteXYZ.Formularios
 
         private void pbOrden_Click(object sender, EventArgs e)
         {
-            Orden orden = new Orden();
-            orden.Show();
+            Mesa mesa = new Mesa();
+            mesa.Show();
         }
 
         private void pbAudit_Click(object sender, EventArgs e)
