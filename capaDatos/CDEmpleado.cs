@@ -94,5 +94,27 @@ namespace capaDatos
             }
             return resultado;
         }
+        public DataSet ListadoSexo()
+        {
+            DataSet ds = new DataSet();
+            SqlDataAdapter da;
+
+            try
+            {
+                ConectarBD();
+                da = new SqlDataAdapter("Sp_ListadoSexo", cnn);
+                da.Fill(ds, "Sexo");
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al solicitar los datos del usuario", ex);
+            }
+            finally
+            {
+                DesconectarBD();
+                ds.Dispose();
+            }
+        }
     }
 }
