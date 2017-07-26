@@ -102,14 +102,14 @@ namespace RestauranteXYZ.Formularios
 
         private void FilaSeleccionada()
         {
-            txtIdEmpleado.Text   =  dgvEmpleados.SelectedRows[0].Cells[0].Value.ToString();
-            txtNombre.Text       =  dgvEmpleados.SelectedRows[0].Cells[1].Value.ToString();
-            txtApellidos.Text    =  dgvEmpleados.SelectedRows[0].Cells[2].Value.ToString();
-            txtTelefono.Text     =  dgvEmpleados.SelectedRows[0].Cells[3].Value.ToString();
-            txtCorreo.Text       =  dgvEmpleados.SelectedRows[0].Cells[4].Value.ToString();
-            txtDireccion.Text    =  dgvEmpleados.SelectedRows[0].Cells[5].Value.ToString();
-            cboSexo.Text         =  dgvEmpleados.SelectedRows[0].Cells[6].Value.ToString(); 
-            cboTipoEmpleado.Text =  dgvEmpleados.SelectedRows[0].Cells[7].Value.ToString();
+
+            txtIdEmpleado.Text   =  dgvEmpleados.CurrentRow.Cells[0].Value.ToString(); 
+            txtNombre.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
+            txtTelefono.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
+            txtCorreo.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
+            txtDireccion.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
+            cboSexo.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
+            cboTipoEmpleado.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void grpDatos_Enter(object sender, EventArgs e)
@@ -136,6 +136,7 @@ namespace RestauranteXYZ.Formularios
         {
             ModificarEmpleado();
             CargarEmpleados();
+            Limpiar();
         }
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,6 +146,18 @@ namespace RestauranteXYZ.Formularios
 
             //Seleccionar tab page
             tbcEmpleado.SelectedTab = tbpGestion;
+        }
+
+        private void Limpiar()
+        {
+            txtIdEmpleado.Clear();
+            txtNombre.Clear();
+            txtApellidos.Clear();
+            txtTelefono.Clear();
+            txtCorreo.Clear();
+            txtDireccion.Clear();
+            cboSexo.Text = "";
+            cboTipoEmpleado.Text = "";
         }
     }
 }
