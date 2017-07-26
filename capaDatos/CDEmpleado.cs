@@ -19,8 +19,8 @@ namespace capaDatos
             SqlCommand cmd = new SqlCommand("Sp_InsertarEmpleado", cnn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Nombre", SqlDbType.NVarChar).Value = objA.Nombre;
-            cmd.Parameters.AddWithValue("@Apellidos", SqlDbType.NVarChar).Value = objA.Apellido;
-            cmd.Parameters.AddWithValue("@Telefono", SqlDbType.VarChar).Value = objA.Apellido;
+            cmd.Parameters.AddWithValue("@Apellido", SqlDbType.NVarChar).Value = objA.Apellido;
+            cmd.Parameters.AddWithValue("@Telefono", SqlDbType.VarChar).Value = objA.Telefono;
             cmd.Parameters.AddWithValue("@Correo", SqlDbType.NVarChar).Value = objA.Correo;
             cmd.Parameters.AddWithValue("@Direccion", SqlDbType.NVarChar).Value = objA.Direccion;
             cmd.Parameters.AddWithValue("@IdSexo", SqlDbType.Int).Value = objA.IdSexo;
@@ -136,7 +136,7 @@ namespace capaDatos
             }
             finally
             {
-                DesconectarBD();
+                //DesconectarBD();
                 ds.Dispose();
             }
         }

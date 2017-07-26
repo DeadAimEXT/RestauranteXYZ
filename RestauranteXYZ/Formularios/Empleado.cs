@@ -30,7 +30,7 @@ namespace RestauranteXYZ.Formularios
         private void CargarComboboxTipoEmpleado()
         {
             CNEmpleado objE = new CNEmpleado();
-            cboTipoEmpleado.DataSource = objE.ListarTipoEmpleado().Tables["TipoEmpleado"];
+            cboTipoEmpleado.DataSource = objE.ListarTipoEmpleado().Tables["TipoEmpleados"];
             cboTipoEmpleado.DisplayMember = "TipoEmpleado";
             cboTipoEmpleado.ValueMember = "IdTipoEmpleado";
         }
@@ -51,8 +51,9 @@ namespace RestauranteXYZ.Formularios
             objEmpleado.Telefono = txtTelefono.Text;
             objEmpleado.Correo = txtCorreo.Text;
             objEmpleado.Direccion = txtDireccion.Text;
-            objEmpleado.IdTipoEmpleado = Convert.ToInt32(cboTipoEmpleado.SelectedValue);
             objEmpleado.IdSexo = Convert.ToInt32(cboSexo.SelectedValue);
+            objEmpleado.IdTipoEmpleado = Convert.ToInt32(cboTipoEmpleado.SelectedValue);
+            
 
             if (insertar.NuevoEmpleado(objEmpleado) > 0)
             {
@@ -87,7 +88,7 @@ namespace RestauranteXYZ.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
+            InsertarEmpleado();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
