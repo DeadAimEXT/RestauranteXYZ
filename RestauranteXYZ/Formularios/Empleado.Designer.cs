@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTipoEmpleado = new System.Windows.Forms.ComboBox();
@@ -48,19 +53,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbTipo = new System.Windows.Forms.RadioButton();
             this.rbNombre = new System.Windows.Forms.RadioButton();
             this.rbEmpleado = new System.Windows.Forms.RadioButton();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.rbTipo = new System.Windows.Forms.RadioButton();
+            this.cmsEmpleado = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.cmsEmpleado.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -70,37 +81,73 @@
             this.tabControl1.Location = new System.Drawing.Point(-4, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(741, 389);
+            this.tabControl1.Size = new System.Drawing.Size(761, 465);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(733, 363);
+            this.tabPage1.Size = new System.Drawing.Size(753, 439);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Agregar";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Text = "Gestión Empleado";
             // 
-            // tabPage2
+            // groupBox3
             // 
-            this.tabPage2.Controls.Add(this.btnBuscar);
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.txtBuscar);
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(733, 363);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Buscar";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Location = new System.Drawing.Point(12, 361);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(733, 65);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Opciones:";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(375, 21);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(86, 27);
+            this.button3.TabIndex = 27;
+            this.button3.Text = "Cancelar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(258, 21);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(86, 27);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "Guardar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(145, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 27);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Nuevo";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(490, 21);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(86, 27);
+            this.button4.TabIndex = 24;
+            this.button4.Text = "Salir ";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.txtTipoEmpleado);
@@ -118,9 +165,9 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtIdEmpleado);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(9, 10);
+            this.groupBox2.Location = new System.Drawing.Point(11, 16);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(713, 350);
+            this.groupBox2.Size = new System.Drawing.Size(736, 339);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Empleado:";
@@ -264,17 +311,66 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "IdEmpleado:";
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btnBuscar);
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.txtBuscar);
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(753, 439);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Buscar Empleado";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(455, 87);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(61, 23);
+            this.btnBuscar.TabIndex = 10;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(19, 133);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(714, 277);
+            this.dataGridView1.TabIndex = 9;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(236, 89);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(213, 20);
+            this.txtBuscar.TabIndex = 7;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbTipo);
             this.groupBox1.Controls.Add(this.rbNombre);
             this.groupBox1.Controls.Add(this.rbEmpleado);
-            this.groupBox1.Location = new System.Drawing.Point(184, 18);
+            this.groupBox1.Location = new System.Drawing.Point(184, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(382, 64);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bucar:";
+            // 
+            // rbTipo
+            // 
+            this.rbTipo.AutoSize = true;
+            this.rbTipo.Location = new System.Drawing.Point(264, 29);
+            this.rbTipo.Name = "rbTipo";
+            this.rbTipo.Size = new System.Drawing.Size(96, 17);
+            this.rbTipo.TabIndex = 2;
+            this.rbTipo.TabStop = true;
+            this.rbTipo.Text = "Tipo Empleado";
+            this.rbTipo.UseVisualStyleBackColor = true;
             // 
             // rbNombre
             // 
@@ -298,58 +394,45 @@
             this.rbEmpleado.Text = "IdEmpleado";
             this.rbEmpleado.UseVisualStyleBackColor = true;
             // 
-            // txtBuscar
+            // cmsEmpleado
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(239, 97);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(213, 20);
-            this.txtBuscar.TabIndex = 7;
+            this.cmsEmpleado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarToolStripMenuItem,
+            this.eliminarToolStripMenuItem});
+            this.cmsEmpleado.Name = "cmsEmpleado";
+            this.cmsEmpleado.Size = new System.Drawing.Size(118, 48);
             // 
-            // dataGridView1
+            // editarToolStripMenuItem
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 130);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(714, 226);
-            this.dataGridView1.TabIndex = 9;
+            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.editarToolStripMenuItem.Text = "Editar";
             // 
-            // btnBuscar
+            // eliminarToolStripMenuItem
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(458, 95);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(61, 23);
-            this.btnBuscar.TabIndex = 10;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // rbTipo
-            // 
-            this.rbTipo.AutoSize = true;
-            this.rbTipo.Location = new System.Drawing.Point(264, 29);
-            this.rbTipo.Name = "rbTipo";
-            this.rbTipo.Size = new System.Drawing.Size(96, 17);
-            this.rbTipo.TabIndex = 2;
-            this.rbTipo.TabStop = true;
-            this.rbTipo.Text = "Tipo Empleado";
-            this.rbTipo.UseVisualStyleBackColor = true;
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 385);
+            this.ClientSize = new System.Drawing.Size(753, 462);
             this.Controls.Add(this.tabControl1);
             this.Name = "Empleado";
             this.Text = "Empleado";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.cmsEmpleado.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -383,5 +466,13 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.RadioButton rbTipo;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ContextMenuStrip cmsEmpleado;
+        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
     }
 }
