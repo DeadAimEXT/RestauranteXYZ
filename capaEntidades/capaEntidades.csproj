@@ -41,8 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CEAuditoriaLog.cs" />
+    <Compile Include="CEDetalleFactura.cs" />
     <Compile Include="CEEmpleado.cs" />
+    <Compile Include="CEFactura.cs" />
+    <Compile Include="CEMesa.cs" />
     <Compile Include="CEProducto.cs" />
+    <Compile Include="CESexo.cs" />
+    <Compile Include="CETipoEmpleado.cs" />
+    <Compile Include="CETipoProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

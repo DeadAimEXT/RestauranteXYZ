@@ -16,5 +16,10 @@ namespace RestauranteXYZ
         {
             InitializeComponent();
         }
+
+        private void pbEmpleado_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
