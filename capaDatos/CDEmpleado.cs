@@ -96,7 +96,7 @@ namespace capaDatos
         }
 
 
-        public DataSet ListadoSexo()
+        public DataSet ListarSexo()
         {
             DataSet ds = new DataSet();
             SqlDataAdapter da;
@@ -118,6 +118,8 @@ namespace capaDatos
                 ds.Dispose();
             }
         }
+
+        
 
 
 
