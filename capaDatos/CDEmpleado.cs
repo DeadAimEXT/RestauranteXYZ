@@ -110,7 +110,32 @@ namespace capaDatos
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al solicitar los datos del usuario", ex);
+                throw new Exception("Error al solicitar los datos del empleado", ex);
+            }
+            finally
+            {
+                DesconectarBD();
+                ds.Dispose();
+            }
+        }
+
+        public DataSet ListarTipoEmpleado()
+        {
+            DataSet ds = new DataSet();
+            SqlDataAdapter da;
+
+            try
+            {
+                ConectarBD();
+                da = new SqlDataAdapter("Sp_ListarTipoEmpleado", cnn);
+                da.Fill(ds, "Sexo");
+                return ds;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al solicitar los datos del empleado", ex);
             }
             finally
             {

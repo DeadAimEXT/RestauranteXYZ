@@ -144,5 +144,15 @@
   <ItemGroup>
     <None Include="Resources\invoice.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\capaEntidades\capaEntidades.csproj">
+      <Project>{ac319b89-c3ec-4333-85d9-c374c91c65cc}</Project>
+      <Name>capaEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\capaNegocio\capaNegocio.csproj">
+      <Project>{35c0da3f-e969-4a42-8046-8c77097a5e87}</Project>
+      <Name>capaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

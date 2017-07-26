@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tbcEmpleado = new System.Windows.Forms.TabControl();
+            this.tbpGestion = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -41,7 +41,7 @@
             this.cboTipoEmpleado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cboSexo = new System.Windows.Forms.ComboBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbpBuscar = new System.Windows.Forms.TabPage();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -64,38 +64,38 @@
             this.cmsEmpleado = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tbcEmpleado.SuspendLayout();
+            this.tbpGestion.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tbpBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.cmsEmpleado.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tbcEmpleado
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(-4, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(761, 465);
-            this.tabControl1.TabIndex = 0;
+            this.tbcEmpleado.Controls.Add(this.tbpGestion);
+            this.tbcEmpleado.Controls.Add(this.tbpBuscar);
+            this.tbcEmpleado.Location = new System.Drawing.Point(-4, 0);
+            this.tbcEmpleado.Name = "tbcEmpleado";
+            this.tbcEmpleado.SelectedIndex = 0;
+            this.tbcEmpleado.Size = new System.Drawing.Size(761, 465);
+            this.tbcEmpleado.TabIndex = 0;
             // 
-            // tabPage1
+            // tbpGestion
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Controls.Add(this.groupBox3);
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(753, 439);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Gestión Empleado";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tbpGestion.BackColor = System.Drawing.Color.White;
+            this.tbpGestion.Controls.Add(this.groupBox3);
+            this.tbpGestion.Controls.Add(this.groupBox2);
+            this.tbpGestion.Location = new System.Drawing.Point(4, 22);
+            this.tbpGestion.Name = "tbpGestion";
+            this.tbpGestion.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpGestion.Size = new System.Drawing.Size(753, 439);
+            this.tbpGestion.TabIndex = 0;
+            this.tbpGestion.Text = "Gestión Empleado";
+            this.tbpGestion.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -127,6 +127,7 @@
             this.btnGuardar.TabIndex = 26;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnNuevo
             // 
@@ -136,6 +137,7 @@
             this.btnNuevo.TabIndex = 25;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnSalir
             // 
@@ -154,7 +156,7 @@
             this.groupBox2.Controls.Add(this.cboTipoEmpleado);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.cboSexo);
-            this.groupBox2.Controls.Add(this.txtDescripcion);
+            this.groupBox2.Controls.Add(this.txtDireccion);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtCorreo);
             this.groupBox2.Controls.Add(this.label6);
@@ -210,13 +212,13 @@
             this.cboSexo.Size = new System.Drawing.Size(127, 21);
             this.cboSexo.TabIndex = 12;
             // 
-            // txtDescripcion
+            // txtDireccion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(123, 236);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(545, 85);
-            this.txtDescripcion.TabIndex = 11;
+            this.txtDireccion.Location = new System.Drawing.Point(123, 236);
+            this.txtDireccion.Multiline = true;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(545, 85);
+            this.txtDireccion.TabIndex = 11;
             // 
             // label7
             // 
@@ -313,19 +315,19 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "IdEmpleado:";
             // 
-            // tabPage2
+            // tbpBuscar
             // 
-            this.tabPage2.Controls.Add(this.btnBuscar);
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.txtBuscar);
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(753, 439);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Buscar Empleado";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tbpBuscar.Controls.Add(this.btnBuscar);
+            this.tbpBuscar.Controls.Add(this.dataGridView1);
+            this.tbpBuscar.Controls.Add(this.txtBuscar);
+            this.tbpBuscar.Controls.Add(this.groupBox1);
+            this.tbpBuscar.Location = new System.Drawing.Point(4, 22);
+            this.tbpBuscar.Name = "tbpBuscar";
+            this.tbpBuscar.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpBuscar.Size = new System.Drawing.Size(753, 439);
+            this.tbpBuscar.TabIndex = 1;
+            this.tbpBuscar.Text = "Buscar Empleado";
+            this.tbpBuscar.UseVisualStyleBackColor = true;
             // 
             // btnBuscar
             // 
@@ -421,17 +423,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 462);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tbcEmpleado);
             this.Name = "Empleado";
             this.Text = "Empleado";
             this.Load += new System.EventHandler(this.Empleado_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tbcEmpleado.ResumeLayout(false);
+            this.tbpGestion.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tbpBuscar.ResumeLayout(false);
+            this.tbpBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -442,14 +444,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl tbcEmpleado;
+        private System.Windows.Forms.TabPage tbpGestion;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cboTipoEmpleado;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboSexo;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label6;
@@ -461,7 +463,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtIdEmpleado;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tbpBuscar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbNombre;
         private System.Windows.Forms.RadioButton rbEmpleado;
