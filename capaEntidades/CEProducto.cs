@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capaEntidades
 {
-    class CEProducto
+    public class CEProducto
     {
 
         //Se agregar los setters and getter de la tabla producto...

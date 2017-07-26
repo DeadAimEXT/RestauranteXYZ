@@ -9,7 +9,7 @@ using capaEntidades;
 
 namespace capaNegocio
 {
-    class CNEmpleado
+    public class CNEmpleado
     {
         
     }

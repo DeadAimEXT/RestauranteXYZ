@@ -11,7 +11,7 @@ using capaEntidades;
 namespace capaDatos
 {
 
-    class CDEmpleado : Conexion
+   public class CDEmpleado : Conexion
     {
         public int InsertarEmpleado(CEEmpleado objA)
         {

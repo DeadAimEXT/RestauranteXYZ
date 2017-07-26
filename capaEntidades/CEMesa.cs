@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capaEntidades
 {
-    class CEMesa
+    public class CEMesa
     {
         public int IdMesa { set; get; }
         public bool Estado { set; get; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capaEntidades
 {
-    class CEFactura
+    public class CEFactura
     {
         public int IdFactura { set; get; }
         public int IdEmpleado { set; get; }
