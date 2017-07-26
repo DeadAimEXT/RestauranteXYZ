@@ -19,18 +19,6 @@ namespace RestauranteXYZ.Formularios
             InitializeComponent();
         }
 
-        private void cboTipoEmpleado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Empleado_Load(object sender, EventArgs e)
-        {
-            CargarEmpleados();
-            CargarComboboxSexo();
-            
-        }
-
         private void CargarComboboxSexo()
         {
             CNEmpleado objE = new CNEmpleado();
@@ -43,6 +31,8 @@ namespace RestauranteXYZ.Formularios
         {
             CNEmpleado objE = new CNEmpleado();
             cboTipoEmpleado.DataSource = objE.ListarTipoEmpleado().Tables["TipoEmpleado"];
+            cboTipoEmpleado.DisplayMember = "TipoEmpleado";
+            cboTipoEmpleado.ValueMember = "IdTipoEmpleado";
         }
 
         private void CargarEmpleados()
@@ -76,17 +66,6 @@ namespace RestauranteXYZ.Formularios
             }
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            InsertarEmpleado();
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            CargarComboboxSexo();
-        }
-
-
         private void FilaSeleccionada()
         {
             txtIdEmpleado.Text = dgvEmpleados.SelectedRows[0].Cells[0].Value.ToString();
@@ -99,6 +78,33 @@ namespace RestauranteXYZ.Formularios
             cboSexo.Text = dgvEmpleados.SelectedRows[0].Cells[6].Value.ToString();
             CargarComboboxTipoEmpleado();
             cboTipoEmpleado.Text = dgvEmpleados.SelectedRows[0].Cells[7].Value.ToString();
+        }
+
+        private void grpDatos_Enter(object sender, EventArgs e)
+        {
+              
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboTipoEmpleado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Empleado_Load(object sender, EventArgs e)
+        {
+            CargarComboboxSexo();
+            CargarComboboxTipoEmpleado();
+            CargarEmpleados();
         }
     }
 }

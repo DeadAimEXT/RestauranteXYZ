@@ -36,7 +36,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grpDatos = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cboTipoEmpleado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             this.tbcEmpleado.SuspendLayout();
             this.tbpGestion.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grpDatos.SuspendLayout();
             this.tbpBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -88,7 +88,7 @@
             // 
             this.tbpGestion.BackColor = System.Drawing.Color.White;
             this.tbpGestion.Controls.Add(this.groupBox3);
-            this.tbpGestion.Controls.Add(this.groupBox2);
+            this.tbpGestion.Controls.Add(this.grpDatos);
             this.tbpGestion.Location = new System.Drawing.Point(4, 22);
             this.tbpGestion.Name = "tbpGestion";
             this.tbpGestion.Padding = new System.Windows.Forms.Padding(3);
@@ -148,32 +148,33 @@
             this.btnSalir.Text = "Salir ";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // grpDatos
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.cboTipoEmpleado);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.cboSexo);
-            this.groupBox2.Controls.Add(this.txtDireccion);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.txtCorreo);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.txtTelefono);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.txtApellidos);
-            this.groupBox2.Controls.Add(this.txtNombre);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.txtIdEmpleado);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(11, 16);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(736, 339);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos del Empleado:";
+            this.grpDatos.BackColor = System.Drawing.Color.Transparent;
+            this.grpDatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.grpDatos.Controls.Add(this.label9);
+            this.grpDatos.Controls.Add(this.cboTipoEmpleado);
+            this.grpDatos.Controls.Add(this.label8);
+            this.grpDatos.Controls.Add(this.cboSexo);
+            this.grpDatos.Controls.Add(this.txtDireccion);
+            this.grpDatos.Controls.Add(this.label7);
+            this.grpDatos.Controls.Add(this.txtCorreo);
+            this.grpDatos.Controls.Add(this.label6);
+            this.grpDatos.Controls.Add(this.txtTelefono);
+            this.grpDatos.Controls.Add(this.label5);
+            this.grpDatos.Controls.Add(this.txtApellidos);
+            this.grpDatos.Controls.Add(this.txtNombre);
+            this.grpDatos.Controls.Add(this.label4);
+            this.grpDatos.Controls.Add(this.label3);
+            this.grpDatos.Controls.Add(this.txtIdEmpleado);
+            this.grpDatos.Controls.Add(this.label2);
+            this.grpDatos.Location = new System.Drawing.Point(11, 16);
+            this.grpDatos.Name = "grpDatos";
+            this.grpDatos.Size = new System.Drawing.Size(736, 339);
+            this.grpDatos.TabIndex = 2;
+            this.grpDatos.TabStop = false;
+            this.grpDatos.Text = "Datos del Empleado:";
+            this.grpDatos.Enter += new System.EventHandler(this.grpDatos_Enter);
             // 
             // label9
             // 
@@ -430,8 +431,8 @@
             this.tbcEmpleado.ResumeLayout(false);
             this.tbpGestion.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grpDatos.ResumeLayout(false);
+            this.grpDatos.PerformLayout();
             this.tbpBuscar.ResumeLayout(false);
             this.tbpBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
@@ -446,7 +447,7 @@
 
         private System.Windows.Forms.TabControl tbcEmpleado;
         private System.Windows.Forms.TabPage tbpGestion;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpDatos;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cboTipoEmpleado;
         private System.Windows.Forms.Label label8;

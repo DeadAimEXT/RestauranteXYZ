@@ -11,9 +11,9 @@ using capaEntidades;
 namespace capaDatos
 {
 
-   public class CDEmpleado : Conexion
+     public class CDEmpleado : Conexion
     {
-        public int InsertarEmpleado(CEEmpleado objA)
+        public int InsertarEmpleado(CEEmpleado objA)        
         {
             int resultado;
             SqlCommand cmd = new SqlCommand("Sp_InsertarEmpleado", cnn);
@@ -41,6 +41,7 @@ namespace capaDatos
             }
             return resultado;
         }
+
         public int ModificarEmpleado(CEEmpleado objA)
         {
             int resultado;
@@ -163,12 +164,5 @@ namespace capaDatos
                 ds.Dispose();
             }
         }
-
-  
-
-
-
-
-
     }
 }
