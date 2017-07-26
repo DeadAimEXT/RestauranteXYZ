@@ -17,9 +17,6 @@ namespace RestauranteXYZ.Formularios
             InitializeComponent();
         }
 
-        private void txtMesa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

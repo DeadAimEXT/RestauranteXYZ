@@ -121,5 +121,8 @@
   <ItemGroup>
     <None Include="Resources\graduation_cap-128.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mesa.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
