@@ -95,6 +95,9 @@
     <EmbeddedResource Include="Formularios\Mesa.resx">
       <DependentUpon>Mesa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Orden.resx">
+      <DependentUpon>Orden.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -153,6 +156,15 @@
       <Project>{35c0da3f-e969-4a42-8046-8c77097a5e87}</Project>
       <Name>capaNegocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comida2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slider3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
