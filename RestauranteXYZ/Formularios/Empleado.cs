@@ -16,5 +16,20 @@ namespace RestauranteXYZ.Formularios
         {
             InitializeComponent();
         }
+
+        private void CargarComboboxSexo()
+        {
+            
+        }
+
+        private void cboTipoEmpleado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Empleado_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

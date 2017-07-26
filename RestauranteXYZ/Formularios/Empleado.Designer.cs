@@ -190,6 +190,7 @@
             this.cboTipoEmpleado.Name = "cboTipoEmpleado";
             this.cboTipoEmpleado.Size = new System.Drawing.Size(165, 21);
             this.cboTipoEmpleado.TabIndex = 14;
+            this.cboTipoEmpleado.SelectedIndexChanged += new System.EventHandler(this.cboTipoEmpleado_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -423,6 +424,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Empleado";
             this.Text = "Empleado";
+            this.Load += new System.EventHandler(this.Empleado_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
