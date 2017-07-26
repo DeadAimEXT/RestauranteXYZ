@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capaEntidades
 {
-    class CEEmpleado
+    public class CEEmpleado
     {
         //Agregado set and get de entidad Empleado...
 
