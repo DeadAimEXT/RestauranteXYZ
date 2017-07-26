@@ -17,7 +17,6 @@ namespace capaDatos
         public Conexion()
         {
             cnn = new SqlConnection(ConfigurationManager.ConnectionStrings["cnn"].ConnectionString);
-
         }
 
         //Conexion a la base de datos
