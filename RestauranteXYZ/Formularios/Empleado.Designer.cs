@@ -31,14 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-<<<<<<< HEAD
-=======
+
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
->>>>>>> e112f382c0b81a833ba1cfb59a9483e07c52e884
+
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTipoEmpleado = new System.Windows.Forms.ComboBox();
@@ -64,25 +63,24 @@
             this.rbTipo = new System.Windows.Forms.RadioButton();
             this.rbNombre = new System.Windows.Forms.RadioButton();
             this.rbEmpleado = new System.Windows.Forms.RadioButton();
-<<<<<<< HEAD
+
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-=======
+
             this.cmsEmpleado = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
->>>>>>> e112f382c0b81a833ba1cfb59a9483e07c52e884
+
             this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-<<<<<<< HEAD
-=======
+
             this.cmsEmpleado.SuspendLayout();
->>>>>>> e112f382c0b81a833ba1cfb59a9483e07c52e884
+
             this.SuspendLayout();
             // 
             // tabControl1
@@ -105,10 +103,10 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(753, 439);
             this.tabPage1.TabIndex = 0;
-<<<<<<< HEAD
+
             this.tabPage1.Text = "Agregar";
             this.tabPage1.UseVisualStyleBackColor = true;
-=======
+
             this.tabPage1.Text = "Gestión Empleado";
             // 
             // groupBox3
@@ -159,7 +157,7 @@
             this.button4.TabIndex = 24;
             this.button4.Text = "Salir ";
             this.button4.UseVisualStyleBackColor = true;
->>>>>>> e112f382c0b81a833ba1cfb59a9483e07c52e884
+
             // 
             // groupBox2
             // 
@@ -336,24 +334,24 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-<<<<<<< HEAD
+
             this.tabPage2.Size = new System.Drawing.Size(733, 363);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Buscar";
-=======
+
             this.tabPage2.Size = new System.Drawing.Size(753, 439);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Buscar Empleado";
->>>>>>> e112f382c0b81a833ba1cfb59a9483e07c52e884
+
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnBuscar
             // 
-<<<<<<< HEAD
+
             this.btnBuscar.Location = new System.Drawing.Point(458, 95);
-=======
+
             this.btnBuscar.Location = new System.Drawing.Point(455, 87);
->>>>>>> e112f382c0b81a833ba1cfb59a9483e07c52e884
+
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(61, 23);
             this.btnBuscar.TabIndex = 10;
@@ -363,24 +361,24 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
+
             this.dataGridView1.Location = new System.Drawing.Point(7, 130);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(714, 226);
-=======
+
             this.dataGridView1.Location = new System.Drawing.Point(19, 133);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(714, 277);
->>>>>>> e112f382c0b81a833ba1cfb59a9483e07c52e884
+
             this.dataGridView1.TabIndex = 9;
             // 
             // txtBuscar
             // 
-<<<<<<< HEAD
+
             this.txtBuscar.Location = new System.Drawing.Point(239, 97);
-=======
+
             this.txtBuscar.Location = new System.Drawing.Point(236, 89);
->>>>>>> e112f382c0b81a833ba1cfb59a9483e07c52e884
+
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(213, 20);
             this.txtBuscar.TabIndex = 7;
@@ -430,9 +428,9 @@
             this.rbEmpleado.Text = "IdEmpleado";
             this.rbEmpleado.UseVisualStyleBackColor = true;
             // 
-<<<<<<< HEAD
+
             // FrmEmpleado
-=======
+
             // cmsEmpleado
             // 
             this.cmsEmpleado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -454,7 +452,7 @@
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // Empleado
->>>>>>> e112f382c0b81a833ba1cfb59a9483e07c52e884
+
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -464,10 +462,10 @@
             this.Text = "Empleado";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-<<<<<<< HEAD
-=======
+
+
             this.groupBox3.ResumeLayout(false);
->>>>>>> e112f382c0b81a833ba1cfb59a9483e07c52e884
+
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -475,10 +473,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-<<<<<<< HEAD
-=======
+
             this.cmsEmpleado.ResumeLayout(false);
->>>>>>> e112f382c0b81a833ba1cfb59a9483e07c52e884
+
             this.ResumeLayout(false);
 
         }
