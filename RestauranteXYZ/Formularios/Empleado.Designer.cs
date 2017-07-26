@@ -55,7 +55,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbpBuscar = new System.Windows.Forms.TabPage();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbTipo = new System.Windows.Forms.RadioButton();
@@ -69,7 +69,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tbpBuscar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.cmsEmpleado.SuspendLayout();
             this.SuspendLayout();
@@ -318,7 +318,7 @@
             // tbpBuscar
             // 
             this.tbpBuscar.Controls.Add(this.btnBuscar);
-            this.tbpBuscar.Controls.Add(this.dataGridView1);
+            this.tbpBuscar.Controls.Add(this.dgvEmpleados);
             this.tbpBuscar.Controls.Add(this.txtBuscar);
             this.tbpBuscar.Controls.Add(this.groupBox1);
             this.tbpBuscar.Location = new System.Drawing.Point(4, 22);
@@ -338,13 +338,13 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvEmpleados
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 133);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(714, 277);
-            this.dataGridView1.TabIndex = 9;
+            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleados.Location = new System.Drawing.Point(19, 133);
+            this.dgvEmpleados.Name = "dgvEmpleados";
+            this.dgvEmpleados.Size = new System.Drawing.Size(714, 277);
+            this.dgvEmpleados.TabIndex = 9;
             // 
             // txtBuscar
             // 
@@ -434,7 +434,7 @@
             this.groupBox2.PerformLayout();
             this.tbpBuscar.ResumeLayout(false);
             this.tbpBuscar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.cmsEmpleado.ResumeLayout(false);
@@ -468,7 +468,7 @@
         private System.Windows.Forms.RadioButton rbNombre;
         private System.Windows.Forms.RadioButton rbEmpleado;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.RadioButton rbTipo;
         private System.Windows.Forms.GroupBox groupBox3;

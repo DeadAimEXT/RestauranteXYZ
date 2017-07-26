@@ -98,8 +98,9 @@ namespace capaDatos
 
         public DataSet ListarSexo()
         {
-            DataSet ds = new DataSet();
             SqlDataAdapter da;
+            DataSet ds = new DataSet();
+            
 
             try
             {
@@ -121,8 +122,9 @@ namespace capaDatos
 
         public DataSet ListarTipoEmpleado()
         {
-            DataSet ds = new DataSet();
             SqlDataAdapter da;
+            DataSet ds = new DataSet();
+            
 
             try
             {
@@ -144,7 +146,31 @@ namespace capaDatos
             }
         }
 
-        
+        public DataSet ListarEmpleados()
+        {
+            SqlDataAdapter da;
+            DataSet ds = new DataSet();
+            try
+            {
+                da = new SqlDataAdapter("Sp_MostrarEmpleados", cnn);
+                ConectarBD();
+                da.Fill(ds, "MostrarEmpleados");
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("No se pudo realizar la consulta", ex);
+            }
+            finally
+            {
+                //Cerrar coneccion?            
+                ds.Dispose();
+            }
+        }
+
+  
+
+
 
 
 

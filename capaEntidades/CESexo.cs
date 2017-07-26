@@ -8,8 +8,8 @@ namespace capaEntidades
 {
     public class CESexo
     {
-        public int IdSexo { set; get; }
-        public string Sexo { set; get; }
+        public int IdSexo { get; }
+        public string Sexo { get; }
 
     }
 }

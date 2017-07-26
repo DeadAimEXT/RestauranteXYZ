@@ -19,11 +19,6 @@ namespace RestauranteXYZ.Formularios
             InitializeComponent();
         }
 
-        private void CargarComboboxSexo()
-        {
-            
-        }
-
         private void cboTipoEmpleado_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -31,16 +26,25 @@ namespace RestauranteXYZ.Formularios
 
         private void Empleado_Load(object sender, EventArgs e)
         {
-  
+            CargarEmpleados();
+            CargarComboboxSexo();
+            
         }
 
-        private void CargarComboSexo()
+        private void CargarComboboxSexo()
         {
             CNEmpleado objE = new CNEmpleado();
             cboSexo.DataSource = objE.ListarSexo().Tables["Sexo"];
             cboSexo.DisplayMember = "Sexo";
             cboSexo.ValueMember = "IdSexo";
         }
+
+        private void CargarEmpleados()
+        {
+            CNEmpleado objA = new CNEmpleado();
+            dgvEmpleados.DataSource = objA.ListarEmpleado().Tables["MostrarEmpleados"];     
+        }
+
 
         private void InsertarEmpleado()
         {
@@ -73,7 +77,6 @@ namespace RestauranteXYZ.Formularios
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            gr
             CargarComboboxSexo();
         }
     }

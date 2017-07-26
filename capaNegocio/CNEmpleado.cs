@@ -27,5 +27,12 @@ namespace capaNegocio
         {
             return objA1.ListarTipoEmpleado();
         }
+
+        public DataSet ListarEmpleado()
+        {
+            return objA1.ListarEmpleados();
+        }
+
+ 
     }
 }
