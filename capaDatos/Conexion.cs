@@ -47,7 +47,7 @@ namespace capaDatos
             }
             catch (Exception e)
             {
-                throw new Exception("Error al tratar d e cerrar la conexion", e);
+                throw new Exception("Error al tratar de cerrar la conexion", e);
             }
         }
 
