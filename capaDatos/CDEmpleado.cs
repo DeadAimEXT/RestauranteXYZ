@@ -13,18 +13,18 @@ namespace capaDatos
 
      public class CDEmpleado : Conexion
     {
-        public int InsertarEmpleado(CEEmpleado objA)        
+        public int InsertarEmpleado(CEEmpleado objE)        
         {
             int resultado;
             SqlCommand cmd = new SqlCommand("Sp_InsertarEmpleado", cnn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Nombre", SqlDbType.NVarChar).Value = objA.Nombre;
-            cmd.Parameters.AddWithValue("@Apellido", SqlDbType.NVarChar).Value = objA.Apellido;
-            cmd.Parameters.AddWithValue("@Telefono", SqlDbType.VarChar).Value = objA.Telefono;
-            cmd.Parameters.AddWithValue("@Correo", SqlDbType.NVarChar).Value = objA.Correo;
-            cmd.Parameters.AddWithValue("@Direccion", SqlDbType.NVarChar).Value = objA.Direccion;
-            cmd.Parameters.AddWithValue("@IdSexo", SqlDbType.Int).Value = objA.IdSexo;
-            cmd.Parameters.AddWithValue("@IdTipoEmpleado", SqlDbType.Int).Value = objA.IdTipoEmpleado;
+            cmd.Parameters.AddWithValue("@Nombre", SqlDbType.NVarChar).Value = objE.Nombre;
+            cmd.Parameters.AddWithValue("@Apellido", SqlDbType.NVarChar).Value = objE.Apellido;
+            cmd.Parameters.AddWithValue("@Telefono", SqlDbType.VarChar).Value = objE.Telefono;
+            cmd.Parameters.AddWithValue("@Correo", SqlDbType.NVarChar).Value = objE.Correo;
+            cmd.Parameters.AddWithValue("@Direccion", SqlDbType.NVarChar).Value = objE.Direccion;
+            cmd.Parameters.AddWithValue("@IdSexo", SqlDbType.Int).Value = objE.IdSexo;
+            cmd.Parameters.AddWithValue("@IdTipoEmpleado", SqlDbType.Int).Value = objE.IdTipoEmpleado;
             try
             {
                 ConectarBD();
@@ -42,20 +42,20 @@ namespace capaDatos
             return resultado;
         }
 
-        public int ModificarEmpleado(CEEmpleado objA)
+
+        public int ModificarEmpleado(CEEmpleado objE)
         {
             int resultado;
             SqlCommand cmd = new SqlCommand("Sp_ModificarEmpleado", cnn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("IdEmpleado", SqlDbType.Int).Value = objA.IdEmpleado;
-            cmd.Parameters.AddWithValue("@Nombre", SqlDbType.NVarChar).Value = objA.Nombre;
-            cmd.Parameters.AddWithValue("@Apellidos", SqlDbType.NVarChar).Value = objA.Apellido;
-            cmd.Parameters.AddWithValue("@Telefono", SqlDbType.VarChar).Value = objA.Apellido;
-            cmd.Parameters.AddWithValue("@Correo", SqlDbType.NVarChar).Value = objA.Correo;
-            cmd.Parameters.AddWithValue("@Direccion", SqlDbType.NVarChar).Value = objA.Direccion;
-            cmd.Parameters.AddWithValue("@IdSexo", SqlDbType.Int).Value = objA.IdSexo;
-            cmd.Parameters.AddWithValue("@IdTipoEmpleado", SqlDbType.Int).Value = objA.IdTipoEmpleado;
-
+            cmd.Parameters.AddWithValue("@IdEmpleado", SqlDbType.Int).Value = objE.IdEmpleado;
+            cmd.Parameters.AddWithValue("@Nombre", SqlDbType.NVarChar).Value = objE.Nombre;
+            cmd.Parameters.AddWithValue("@Apellido", SqlDbType.NVarChar).Value = objE.Apellido;
+            cmd.Parameters.AddWithValue("@Telefono", SqlDbType.VarChar).Value = objE.Telefono;
+            cmd.Parameters.AddWithValue("@Correo", SqlDbType.NVarChar).Value = objE.Correo;
+            cmd.Parameters.AddWithValue("@Direccion", SqlDbType.NVarChar).Value = objE.Direccion;
+            cmd.Parameters.AddWithValue("@IdSexo", SqlDbType.Int).Value = objE.IdSexo;
+            cmd.Parameters.AddWithValue("@IdTipoEmpleado", SqlDbType.Int).Value = objE.IdTipoEmpleado;
             try
             {
                 ConectarBD();
@@ -73,12 +73,14 @@ namespace capaDatos
 
             return resultado;
         }
-        public int EliminarEmpleado(CEEmpleado objA)
+
+
+        public int EliminarEmpleado(CEEmpleado objE)
         {
             int resultado;
             SqlCommand cmd = new SqlCommand("Sp_EliminarEmpleado", cnn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@IdEmpleado", SqlDbType.Int).Value = objA.IdEmpleado;
+            cmd.Parameters.AddWithValue("@IdEmpleado", SqlDbType.Int).Value = objE.IdEmpleado;
             try
             {
                 ConectarBD();

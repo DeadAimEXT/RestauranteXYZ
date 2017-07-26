@@ -19,6 +19,13 @@ namespace RestauranteXYZ.Formularios
             InitializeComponent();
         }
 
+        private void Empleado_Load(object sender, EventArgs e)
+        {
+            CargarComboboxSexo();
+            CargarComboboxTipoEmpleado();
+            CargarEmpleados();
+        }
+
         private void CargarComboboxSexo()
         {
             CNEmpleado objE = new CNEmpleado();
@@ -37,8 +44,8 @@ namespace RestauranteXYZ.Formularios
 
         private void CargarEmpleados()
         {
-            CNEmpleado objA = new CNEmpleado();
-            dgvEmpleados.DataSource = objA.ListarEmpleado().Tables["MostrarEmpleados"];     
+            CNEmpleado objE = new CNEmpleado();
+            dgvEmpleados.DataSource = objE.ListarEmpleado().Tables["MostrarEmpleados"];     
         }
 
 
@@ -53,7 +60,6 @@ namespace RestauranteXYZ.Formularios
             objEmpleado.Direccion = txtDireccion.Text;
             objEmpleado.IdSexo = Convert.ToInt32(cboSexo.SelectedValue);
             objEmpleado.IdTipoEmpleado = Convert.ToInt32(cboTipoEmpleado.SelectedValue);
-            
 
             if (insertar.NuevoEmpleado(objEmpleado) > 0)
             {
@@ -67,18 +73,43 @@ namespace RestauranteXYZ.Formularios
             }
         }
 
+
+        private void ModificarEmpleado()
+        {
+            CNEmpleado modificarE = new CNEmpleado();
+            CEEmpleado objEmpleado = new CEEmpleado();
+            objEmpleado.IdEmpleado = Convert.ToInt32(txtIdEmpleado.Text);
+            objEmpleado.Nombre = txtNombre.Text;
+            objEmpleado.Apellido = txtApellidos.Text;
+            objEmpleado.Telefono = txtTelefono.Text;
+            objEmpleado.Correo = txtCorreo.Text;
+            objEmpleado.Direccion = txtDireccion.Text;
+            objEmpleado.IdSexo = Convert.ToInt32(cboSexo.SelectedValue);
+            objEmpleado.IdTipoEmpleado = Convert.ToInt32(cboTipoEmpleado.SelectedValue);
+
+            if (modificarE.ModificarEmpleado(objEmpleado) > 0)
+            {
+                MessageBox.Show(null, "Registro modificado satisfactoriamente.", "Restaurante XYZ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(null, "Error al modificar el registro.", "Restaurante XYZ",
+             MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         private void FilaSeleccionada()
         {
-            txtIdEmpleado.Text = dgvEmpleados.SelectedRows[0].Cells[0].Value.ToString();
-            txtNombre.Text = dgvEmpleados.SelectedRows[0].Cells[1].Value.ToString();
-            txtApellidos.Text = dgvEmpleados.SelectedRows[0].Cells[2].Value.ToString();
-            txtTelefono.Text = dgvEmpleados.SelectedRows[0].Cells[3].Value.ToString();
-            txtCorreo.Text = dgvEmpleados.SelectedRows[0].Cells[4].Value.ToString();
-            txtDireccion.Text = dgvEmpleados.SelectedRows[0].Cells[5].Value.ToString();
-            CargarComboboxSexo();
-            cboSexo.Text = dgvEmpleados.SelectedRows[0].Cells[6].Value.ToString();
-            CargarComboboxTipoEmpleado();
-            cboTipoEmpleado.Text = dgvEmpleados.SelectedRows[0].Cells[7].Value.ToString();
+            txtIdEmpleado.Text   =  dgvEmpleados.SelectedRows[0].Cells[0].Value.ToString();
+            txtNombre.Text       =  dgvEmpleados.SelectedRows[0].Cells[1].Value.ToString();
+            txtApellidos.Text    =  dgvEmpleados.SelectedRows[0].Cells[2].Value.ToString();
+            txtTelefono.Text     =  dgvEmpleados.SelectedRows[0].Cells[3].Value.ToString();
+            txtCorreo.Text       =  dgvEmpleados.SelectedRows[0].Cells[4].Value.ToString();
+            txtDireccion.Text    =  dgvEmpleados.SelectedRows[0].Cells[5].Value.ToString();
+            cboSexo.Text         =  dgvEmpleados.SelectedRows[0].Cells[6].Value.ToString(); 
+            cboTipoEmpleado.Text =  dgvEmpleados.SelectedRows[0].Cells[7].Value.ToString();
         }
 
         private void grpDatos_Enter(object sender, EventArgs e)
@@ -101,11 +132,19 @@ namespace RestauranteXYZ.Formularios
 
         }
 
-        private void Empleado_Load(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
-            CargarComboboxSexo();
-            CargarComboboxTipoEmpleado();
+            ModificarEmpleado();
             CargarEmpleados();
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FilaSeleccionada();
+            grpDatos.Enabled = true; //El group box
+
+            //Seleccionar tab page
+            tbcEmpleado.SelectedTab = tbpGestion;
         }
     }
 }

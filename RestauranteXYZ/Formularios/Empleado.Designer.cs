@@ -32,6 +32,8 @@
             this.tbcEmpleado = new System.Windows.Forms.TabControl();
             this.tbpGestion = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -62,8 +64,8 @@
             this.rbNombre = new System.Windows.Forms.RadioButton();
             this.rbEmpleado = new System.Windows.Forms.RadioButton();
             this.cmsEmpleado = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbcEmpleado.SuspendLayout();
             this.tbpGestion.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -99,6 +101,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnEliminar);
+            this.groupBox3.Controls.Add(this.btnModificar);
             this.groupBox3.Controls.Add(this.btnCancelar);
             this.groupBox3.Controls.Add(this.btnGuardar);
             this.groupBox3.Controls.Add(this.btnNuevo);
@@ -110,9 +114,28 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Opciones:";
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(374, 21);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(86, 27);
+            this.btnEliminar.TabIndex = 29;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(257, 21);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(86, 27);
+            this.btnModificar.TabIndex = 28;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(375, 21);
+            this.btnCancelar.Location = new System.Drawing.Point(495, 21);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(86, 27);
             this.btnCancelar.TabIndex = 27;
@@ -121,7 +144,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(258, 21);
+            this.btnGuardar.Location = new System.Drawing.Point(141, 21);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(86, 27);
             this.btnGuardar.TabIndex = 26;
@@ -131,7 +154,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(145, 21);
+            this.btnNuevo.Location = new System.Drawing.Point(25, 21);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(86, 27);
             this.btnNuevo.TabIndex = 25;
@@ -141,7 +164,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(490, 21);
+            this.btnSalir.Location = new System.Drawing.Point(613, 21);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(86, 27);
             this.btnSalir.TabIndex = 24;
@@ -342,6 +365,7 @@
             // dgvEmpleados
             // 
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleados.ContextMenuStrip = this.cmsEmpleado;
             this.dgvEmpleados.Location = new System.Drawing.Point(19, 133);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.Size = new System.Drawing.Size(714, 277);
@@ -402,22 +426,23 @@
             // cmsEmpleado
             // 
             this.cmsEmpleado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editarToolStripMenuItem,
+            this.modificarToolStripMenuItem,
             this.eliminarToolStripMenuItem});
             this.cmsEmpleado.Name = "cmsEmpleado";
-            this.cmsEmpleado.Size = new System.Drawing.Size(118, 48);
-            // 
-            // editarToolStripMenuItem
-            // 
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.editarToolStripMenuItem.Text = "Editar";
+            this.cmsEmpleado.Size = new System.Drawing.Size(153, 70);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
+            // 
+            // modificarToolStripMenuItem
+            // 
+            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modificarToolStripMenuItem.Text = "Modificar";
+            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // Empleado
             // 
@@ -478,7 +503,9 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ContextMenuStrip cmsEmpleado;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

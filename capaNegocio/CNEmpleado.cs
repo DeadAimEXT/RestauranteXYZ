@@ -11,26 +11,33 @@ namespace capaNegocio
 {
     public class CNEmpleado
     {
-        CDEmpleado objA1 = new CDEmpleado();
+        CDEmpleado objE1 = new CDEmpleado();
 
-        public int NuevoEmpleado(CEEmpleado objA)
+        public int NuevoEmpleado(CEEmpleado objE)
         {
-            return objA1.InsertarEmpleado(objA);
+            return objE1.InsertarEmpleado(objE);
+        }
+
+
+        //Codigo correspondiente de la capaNegocio para modificar alumnos
+        public int ModificarEmpleado (CEEmpleado objE)
+        {
+            return objE1.ModificarEmpleado(objE);
         }
 
         public DataSet ListarSexo()
         {
-            return objA1.ListarSexo();
+            return objE1.ListarSexo();
         }
 
         public DataSet ListarTipoEmpleado()
         {
-            return objA1.ListarTipoEmpleado();
+            return objE1.ListarTipoEmpleado();
         }
 
         public DataSet ListarEmpleado()
         {
-            return objA1.ListarEmpleados();
+            return objE1.ListarEmpleados();
         }
 
  

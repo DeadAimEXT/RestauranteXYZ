@@ -10,7 +10,7 @@ namespace capaEntidades
     {
         //Agregado set and get de entidad Empleado...
 
-        public int IdEmpleado { get; }
+        public int IdEmpleado { set; get; }
         public string Nombre { set; get; }
         public string Apellido { set; get; }
         public string Telefono { set; get; }
