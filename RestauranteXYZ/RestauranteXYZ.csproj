@@ -63,17 +63,23 @@
     <Compile Include="Formularios\Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Main.cs">
+    <Compile Include="Formularios\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="Formularios\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Mesa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Mesa.Designer.cs">
       <DependentUpon>Mesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Orden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Orden.Designer.cs">
+      <DependentUpon>Orden.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,8 +89,8 @@
     <EmbeddedResource Include="Formularios\Empleado.resx">
       <DependentUpon>Empleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mesa.resx">
       <DependentUpon>Mesa.cs</DependentUpon>
