@@ -32,15 +32,15 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtTipoEmpleado = new System.Windows.Forms.ComboBox();
+            this.cboTipoEmpleado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtSexo = new System.Windows.Forms.ComboBox();
+            this.cboSexo = new System.Windows.Forms.ComboBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -99,10 +99,10 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.btnCancelar);
+            this.groupBox3.Controls.Add(this.btnGuardar);
+            this.groupBox3.Controls.Add(this.btnNuevo);
+            this.groupBox3.Controls.Add(this.btnSalir);
             this.groupBox3.Location = new System.Drawing.Point(12, 361);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(733, 65);
@@ -110,50 +110,50 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Opciones:";
             // 
-            // button3
+            // btnCancelar
             // 
-            this.button3.Location = new System.Drawing.Point(375, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 27);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(375, 21);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(86, 27);
+            this.btnCancelar.TabIndex = 27;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnGuardar
             // 
-            this.button2.Location = new System.Drawing.Point(258, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 27);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnGuardar.Location = new System.Drawing.Point(258, 21);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(86, 27);
+            this.btnGuardar.TabIndex = 26;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnNuevo
             // 
-            this.button1.Location = new System.Drawing.Point(145, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 27);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnNuevo.Location = new System.Drawing.Point(145, 21);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(86, 27);
+            this.btnNuevo.TabIndex = 25;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnSalir
             // 
-            this.button4.Location = new System.Drawing.Point(490, 21);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 27);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "Salir ";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSalir.Location = new System.Drawing.Point(490, 21);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(86, 27);
+            this.btnSalir.TabIndex = 24;
+            this.btnSalir.Text = "Salir ";
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtTipoEmpleado);
+            this.groupBox2.Controls.Add(this.cboTipoEmpleado);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.txtSexo);
+            this.groupBox2.Controls.Add(this.cboSexo);
             this.groupBox2.Controls.Add(this.txtDescripcion);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtCorreo);
@@ -183,13 +183,13 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "Tipo Empleado:";
             // 
-            // txtTipoEmpleado
+            // cboTipoEmpleado
             // 
-            this.txtTipoEmpleado.FormattingEnabled = true;
-            this.txtTipoEmpleado.Location = new System.Drawing.Point(491, 60);
-            this.txtTipoEmpleado.Name = "txtTipoEmpleado";
-            this.txtTipoEmpleado.Size = new System.Drawing.Size(165, 21);
-            this.txtTipoEmpleado.TabIndex = 14;
+            this.cboTipoEmpleado.FormattingEnabled = true;
+            this.cboTipoEmpleado.Location = new System.Drawing.Point(491, 60);
+            this.cboTipoEmpleado.Name = "cboTipoEmpleado";
+            this.cboTipoEmpleado.Size = new System.Drawing.Size(165, 21);
+            this.cboTipoEmpleado.TabIndex = 14;
             // 
             // label8
             // 
@@ -201,13 +201,13 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "Sexo:";
             // 
-            // txtSexo
+            // cboSexo
             // 
-            this.txtSexo.FormattingEnabled = true;
-            this.txtSexo.Location = new System.Drawing.Point(491, 97);
-            this.txtSexo.Name = "txtSexo";
-            this.txtSexo.Size = new System.Drawing.Size(127, 21);
-            this.txtSexo.TabIndex = 12;
+            this.cboSexo.FormattingEnabled = true;
+            this.cboSexo.Location = new System.Drawing.Point(491, 97);
+            this.cboSexo.Name = "cboSexo";
+            this.cboSexo.Size = new System.Drawing.Size(127, 21);
+            this.cboSexo.TabIndex = 12;
             // 
             // txtDescripcion
             // 
@@ -444,9 +444,9 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox txtTipoEmpleado;
+        private System.Windows.Forms.ComboBox cboTipoEmpleado;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox txtSexo;
+        private System.Windows.Forms.ComboBox cboSexo;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCorreo;
@@ -468,10 +468,10 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.RadioButton rbTipo;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ContextMenuStrip cmsEmpleado;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;

@@ -94,6 +94,8 @@ namespace capaDatos
             }
             return resultado;
         }
+
+
         public DataSet ListadoSexo()
         {
             DataSet ds = new DataSet();
@@ -102,7 +104,7 @@ namespace capaDatos
             try
             {
                 ConectarBD();
-                da = new SqlDataAdapter("Sp_ListadoSexo", cnn);
+                da = new SqlDataAdapter("Sp_ListarSexo", cnn);
                 da.Fill(ds, "Sexo");
                 return ds;
             }
@@ -116,5 +118,8 @@ namespace capaDatos
                 ds.Dispose();
             }
         }
+
+
+
     }
 }
