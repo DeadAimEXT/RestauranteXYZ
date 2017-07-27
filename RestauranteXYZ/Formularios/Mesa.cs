@@ -16,17 +16,6 @@ namespace RestauranteXYZ.Formularios
         {
             InitializeComponent();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Orden orden = new Orden();
-            orden.Show();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Orden orden = new Orden();
-            orden.Show();
-        }
+        
     }
 }
