@@ -1,0 +1,16 @@
+En este archivo se agregan las cosas que hacen falta hacer al proyecto y quien las esta haciendo. 
+
+Si ven un item sin nombre, pueden agregar su nombre para indicar que lo estan haciendo. 
+Si el item en el que estan trabajando no esta en la lista, agregarlo con SU NOMBRE.
+
+
+***PORFAVOR NO TRABAJAR EN MODULOS QUE NO SE LE HAN ASIGNADO AQUI EN ESTE DOCUMENTO***
+
+
+Procedimientos BD	|
+Triggers BD AuditLog	|
+Modulo Mesas		|Angulo
+Modulo Empleados	|Samuel
+Modulo Facturacion	|Angulo
+Modulo Ordenes		|Angulo
+Modulo AuditLog		|Samuel
