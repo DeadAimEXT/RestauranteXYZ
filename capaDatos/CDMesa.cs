@@ -9,7 +9,7 @@ using capaEntidades;
 
 namespace capaDatos
 {
-    class CDMesa : Conexion
+    public class CDMesa : Conexion
     {
         public int InsertarMesa(CEMesa objM)
         {
@@ -87,26 +87,53 @@ namespace capaDatos
             return resultado;
         }
 
-        public DataSet ListarEmpleados()
+        public int ActualizarEstadoMesa(CEMesa objM, int estado)
         {
-            SqlDataAdapter da;
-            DataSet ds = new DataSet();
+            int resultado;
+            SqlCommand cmd = new SqlCommand("Sp_ModEstadoMesa", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@IdMesa", SqlDbType.Int).Value = objM.IdMesa;
+            cmd.Parameters.AddWithValue("@Estado", SqlDbType.Bit).Value = estado;
             try
             {
                 ConectarBD();
-                da = new SqlDataAdapter("Sp_MostrarEmpleados", cnn);
-                da.Fill(ds, "Empleados");
-                return ds;
+                resultado = cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al solicitar los datos del empleado", ex);
+                throw new Exception("Error al actualizar el estado de la mesa", ex);
             }
             finally
             {
                 DesconectarBD();
-                ds.Dispose();
+                cmd.Dispose();
             }
+            return resultado;
         }
+        public int EstadoMesa(CEMesa objM)
+        {
+            int resultado;
+            SqlCommand cmd = new SqlCommand("Sp_EstadoMesa", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@IdMesa", SqlDbType.Int).Value = objM.IdMesa;
+            
+            try
+            {
+                ConectarBD();
+                resultado = int.Parse(cmd.ExecuteScalar().ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar el estado de la mesa", ex);
+            }
+            finally
+            {
+                DesconectarBD();
+                cmd.Dispose();
+            }
+            return resultado;
+        }
+
+
     }
 }
