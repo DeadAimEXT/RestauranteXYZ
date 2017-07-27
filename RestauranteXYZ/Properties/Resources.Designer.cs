@@ -93,6 +93,16 @@ namespace RestauranteXYZ.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Backgroundmain {
+            get {
+                object obj = ResourceManager.GetObject("Backgroundmain", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bar {
             get {
                 object obj = ResourceManager.GetObject("bar", resourceCulture);
@@ -286,6 +296,16 @@ namespace RestauranteXYZ.Properties {
         internal static System.Drawing.Bitmap daily_specials_board {
             get {
                 object obj = ResourceManager.GetObject("daily-specials-board", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DE4JMA {
+            get {
+                object obj = ResourceManager.GetObject("DE4JMA", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

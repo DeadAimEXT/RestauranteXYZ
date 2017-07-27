@@ -16,6 +16,12 @@ namespace RestauranteXYZ.Formularios
         {
             InitializeComponent();
         }
-        
+
+        private void pbMesa1_Click(object sender, EventArgs e)
+        {
+            Orden orden = new Orden();
+            orden.Show();
+
+        }
     }
 }

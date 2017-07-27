@@ -48,7 +48,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbMesa9)).BeginInit();
             this.SuspendLayout();
             // 
-
             // pbMesa1
             // 
             this.pbMesa1.BackColor = System.Drawing.Color.Transparent;
@@ -58,6 +57,7 @@
             this.pbMesa1.Size = new System.Drawing.Size(117, 118);
             this.pbMesa1.TabIndex = 0;
             this.pbMesa1.TabStop = false;
+            this.pbMesa1.Click += new System.EventHandler(this.pbMesa1_Click);
             // 
             // pbMesa2
             // 
@@ -138,13 +138,12 @@
             this.pbMesa9.Size = new System.Drawing.Size(90, 128);
             this.pbMesa9.TabIndex = 8;
             this.pbMesa9.TabStop = false;
-
             // 
             // Mesa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::RestauranteXYZ.Properties.Resources.background2;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(759, 502);
             this.Controls.Add(this.pbMesa9);
             this.Controls.Add(this.pbMesa8);
