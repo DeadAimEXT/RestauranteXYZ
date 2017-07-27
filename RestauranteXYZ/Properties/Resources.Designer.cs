@@ -143,6 +143,16 @@ namespace RestauranteXYZ.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pastel_de_chocolate_sin_gluten_65_530_430_nw {
+            get {
+                object obj = ResourceManager.GetObject("pastel-de-chocolate-sin-gluten-65-530-430-nw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap restaurant {
             get {
                 object obj = ResourceManager.GetObject("restaurant", resourceCulture);
