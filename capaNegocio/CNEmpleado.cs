@@ -40,6 +40,12 @@ namespace capaNegocio
             return objE1.ListarEmpleados();
         }
 
+        public int EliminarEmpleado(CEEmpleado objE)
+        {
+            return objE1.EliminarEmpleado(objE);
+            
+        }
+
  
     }
 }

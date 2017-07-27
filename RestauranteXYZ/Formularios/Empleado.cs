@@ -100,16 +100,36 @@ namespace RestauranteXYZ.Formularios
         }
 
 
+        private void EliminarEmpleado(int IdEmpleado)
+        {
+            CNEmpleado eliminarE = new CNEmpleado();
+            CEEmpleado objEmpleado = new CEEmpleado();
+            objEmpleado.IdEmpleado = IdEmpleado;
+
+            if (eliminarE.EliminarEmpleado(objEmpleado) > 0)
+            {
+                MessageBox.Show(null, "Registr eliminado satisfactoriamente.", "Restaurante XYZ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(null, "Error al eliminar el registro.", "Restaurante XYZ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         private void FilaSeleccionada()
         {
 
-            txtIdEmpleado.Text   =  dgvEmpleados.CurrentRow.Cells[0].Value.ToString(); 
-            txtNombre.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
-            txtTelefono.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
-            txtCorreo.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
-            txtDireccion.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
-            cboSexo.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
-            cboTipoEmpleado.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
+            txtIdEmpleado.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString(); 
+            txtNombre.Text = dgvEmpleados.CurrentRow.Cells[1].Value.ToString();
+            txtApellidos.Text = dgvEmpleados.CurrentRow.Cells[2].Value.ToString();
+            txtTelefono.Text = dgvEmpleados.CurrentRow.Cells[3].Value.ToString();
+            txtCorreo.Text = dgvEmpleados.CurrentRow.Cells[4].Value.ToString();
+            txtDireccion.Text = dgvEmpleados.CurrentRow.Cells[5].Value.ToString();
+            cboSexo.Text = dgvEmpleados.CurrentRow.Cells[6].Value.ToString();
+            cboTipoEmpleado.Text = dgvEmpleados.CurrentRow.Cells[7].Value.ToString();
         }
 
         private void grpDatos_Enter(object sender, EventArgs e)
@@ -119,12 +139,17 @@ namespace RestauranteXYZ.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            HabilitarTexbox(false, false);
+            HabilitarBotones(true, false, false, false, true);
+     
             InsertarEmpleado();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            HabilitarTexbox(false, true);
+            HabilitarBotones(false, true, false, true, false);
+  
         }
 
         private void cboTipoEmpleado_SelectedIndexChanged(object sender, EventArgs e)
@@ -134,6 +159,9 @@ namespace RestauranteXYZ.Formularios
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            HabilitarTexbox(false, false);
+            HabilitarBotones(true, false, false, false, true);
+      
             ModificarEmpleado();
             CargarEmpleados();
             Limpiar();
@@ -141,8 +169,11 @@ namespace RestauranteXYZ.Formularios
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            HabilitarTexbox(false, true);
+            HabilitarBotones(false, false, true, true, false);
             FilaSeleccionada();
             grpDatos.Enabled = true; //El group box
+            
 
             //Seleccionar tab page
             tbcEmpleado.SelectedTab = tbpGestion;
@@ -156,8 +187,47 @@ namespace RestauranteXYZ.Formularios
             txtTelefono.Clear();
             txtCorreo.Clear();
             txtDireccion.Clear();
-            cboSexo.Text = "";
-            cboTipoEmpleado.Text = "";
+            cboSexo.SelectedValue = - 1;
+            cboTipoEmpleado.SelectedValue = -1;
+        }
+
+        private void HabilitarBotones (bool Nuevo, bool Guardar, bool Modificar,  bool Cancelar, bool Salir)
+        {
+            btnNuevo.Enabled = Nuevo;
+            btnGuardar.Enabled = Guardar;
+            btnModificar.Enabled = Modificar;
+            btnCancelar.Enabled = Cancelar;
+            btnSalir.Enabled = Salir;
+        }
+
+        private void HabilitarTexbox(bool Id, bool valor)
+        {
+            txtIdEmpleado.Enabled = Id;
+            txtNombre.Enabled = valor;
+            txtApellidos.Enabled = valor;
+            txtTelefono.Enabled = valor;
+            txtCorreo.Enabled = valor;
+            txtDireccion.Enabled = valor;
+            cboSexo.Enabled = valor;
+            cboTipoEmpleado.Enabled = valor;
+        }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            HabilitarBotones(true, false, false, false, true);
+            HabilitarTexbox(false, false);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int i;
+            i = int.Parse(dgvEmpleados.CurrentRow.Cells[0].Value.ToString());
+            EliminarEmpleado(i);
+            CargarEmpleados();
         }
     }
 }
