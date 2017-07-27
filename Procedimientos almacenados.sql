@@ -173,3 +173,30 @@ Create procedure Sp_EliminarFactura
 	Where IdFactura=@IdFactura
 End
 --------------------------------------------------
+
+------------------------------------------------------
+/*Obtener estados de mesas*/
+------------------------------------------------------
+Create PROCEDURE Sp_EstadoMesa
+@IdMesa int
+
+AS
+BEGIN
+	SET NOCOUNT OFF
+	Select Estado
+	From Mesa
+	Where IdMesa = @IdMesa
+END
+
+Create PROCEDURE Sp_ModEstadoMesa
+@IdMesa int,
+@Estado bit
+
+AS
+BEGIN
+	SET NOCOUNT OFF
+	Update Mesa
+	Set Estado = @Estado
+	Where IdMesa = @IdMesa
+END
+	
