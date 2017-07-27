@@ -1,5 +1,160 @@
 use RestauranteXYZ
 
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------Procedimientos Almacenados para empleado--------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+--Procedimiento almacenado para insertar
+Create Procedure Sp_InsertarEmpleado
+	@Nombre nvarchar(20),
+	@Apellido nvarchar(20),
+	@Telefono varchar(9),
+	@Correo nvarchar(30),
+	@Direccion nvarchar(200),
+	@IdSexo int,
+	@IdTipoEmpleado int
+As
+Begin
+	Set nocount off
+	Insert into Empleado
+	values (@Nombre, @Apellido, @Telefono, @Correo, @Direccion, @IdSexo, @IdTipoEmpleado)
+End
+
+Exec Sp_InsertarEmpleado 'Samuel', 'Aguilar', '2780-0000', 'kike.as58@gmail.com', 'B° La esperanza', 1, 3 
+
+--Procedimiento almacenado para modificar
+Create Procedure Sp_ModificarEmpleado 
+	@IdEmpleado int, 
+	@Nombre nvarchar(20),
+	@Apellido nvarchar(20),
+	@Telefono varchar(9),
+	@Correo nvarchar(30),
+	@Direccion nvarchar(200),
+	@IdSexo int,
+	@IdTipoEmpleado int
+As
+Begin
+	Set nocount off
+	Update Empleado
+	Set Nombre = @Nombre,
+		Apellido = @Apellido,
+		Telefono = @Telefono,
+		Correo = @Correo,
+		Direccion = @Direccion,
+		IdSexo = @IdSexo, 
+		IdTipoEmpleado = @IdTipoEmpleado
+	Where IdEmpleado = @IdEmpleado
+END
+
+Select * from Empleado
+Exec Sp_ModificarEmpleado 1, 'Samuel', 'Aguilar', '2780-0000', 'kike.as58@gmail.com', 'B° La esperanza', 1, 1
+
+--Procedimiento almacenado para eliminar Empleado.
+Create Procedure Sp_EliminarEmpleado
+	@IdEmpleado int
+As
+Begin
+	Set nocount off
+	Delete 
+	From Empleado
+	Where IdEmpleado = @IdEmpleado
+End
+
+--Procedimiento almacenado para listar todos los Empleados.
+Create Procedure Sp_MostrarEmpleados
+As
+Begin
+	Set nocount on
+	Select e.IdEmpleado, e.Nombre, e.Apellido, e.Telefono, e.Correo, e.Direccion, s.Sexo, t.TipoEmpleado
+	From Empleado e inner join TipoEmpleado t
+		on e.IdTipoEmpleado= T.IdTipoEmpleado
+		inner join Sexo s
+		on e.IdSexo = s.IdSexo
+End
+
+Exec Sp_MostrarEmpleados
+
+--Porcedimiento almacenado para listar los tipo de empleado
+Create Procedure Sp_ListarTipoEmpleado
+AS
+BEGIN
+	Set nocount on
+	Select *
+	From TipoEmpleado
+End
+
+Exec Sp_ListarTipoEmpleado
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------Procedimientos Almacenados para Sexo--------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Create Procedure Sp_ListarSexo
+AS
+BEGIN
+	Set nocount on
+	Select * 
+	From Sexo
+End
+
+Exec Sp_ListarSexo
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+-------------------------------Procedimientos Almacenados para Mesa-----------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Create PROCEDURE Sp_EstadoMesa
+	@IdMesa int
+
+AS
+BEGIN
+    SET NOCOUNT OFF
+    Select Estado
+    From Mesa
+    Where IdMesa = @IdMesa
+END
+
+
+Create procedure Sp_InsertarMesa
+	@Estado bit,
+	@Capacidad int,
+	@IdEmpleado int
+AS
+BEGIN
+	Set nocount off
+	Insert into Mesa
+	values (@Estado, @Capacidad, @IdEmpleado)
+end
+
+Create Procedure Sp_EliminarMesa
+	@IdMesa int
+AS
+BEGIN
+	Set nocount off
+	Delete
+	From Mesa
+	Where IdMesa = @IdMesa
+END
+
+Create Procedure Sp_ActualizarMesa
+	@IdMesa int,
+	@Estado bit,
+	@Capacidad int, 
+	@IdEmpleado int
+AS
+BEGIN
+	Set nocount off
+	UPDATE Mesa
+	Set Estado = @Estado,
+		Capacidad = @Capacidad,
+		IdEmpleado = @IdEmpleado
+	Where IdMesa = @IdMesa
+End
+
 
 /*PROCEDIMIENTOS ALMACENADOS PARA PRODUCTO*/
 -------------------------------------------------
