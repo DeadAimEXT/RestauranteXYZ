@@ -269,5 +269,65 @@
   <ItemGroup>
     <None Include="Resources\waiter1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaActivaDer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaActivaDer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaActivaIzq1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaActivaIzq2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaActivaIzq3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaInactivaDer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaInactivaDer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaInactivaIzq1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaInactivaIzq2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaInactivaIzq3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MesaActiva1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MesaActiva2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MesaActiva3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MesaActiva4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MesaInactiva1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MesaInactiva2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MesaInactiva3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MesaInactiva4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
