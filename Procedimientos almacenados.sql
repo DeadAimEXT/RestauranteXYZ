@@ -141,7 +141,7 @@ End
 --------------------------------------------------
 /*Modificar Factura*/
 --------------------------------------------------
-Create procedure Sp_Factura
+Create procedure Sp_ModificarFactura
 @IdFactura int,
 @IdEmpleado int,
 @NombreCliente nvarchar(20),
@@ -152,7 +152,7 @@ As
 	Begin
 	Set nocount off
 	Update Factura
-		Set IdFactura=@IdFactura,
+		Set 
 			IdEmpleado=@IdEmpleado,
 			NombreCliente=@NombreCliente,
 			RTN=@RTN,
