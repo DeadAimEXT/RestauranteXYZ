@@ -12,14 +12,15 @@ namespace RestauranteXYZ.Formularios
 {
     public partial class Orden : Form
     {
+
+        CheckBox[] chkArray = new CheckBox[16];
+        NumericUpDown[] nudArray = new NumericUpDown[16];
+
         public Orden()
         {
             InitializeComponent();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
+        
     }
 }

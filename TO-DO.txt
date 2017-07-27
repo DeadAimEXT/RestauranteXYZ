@@ -2,15 +2,29 @@ En este archivo se agregan las cosas que hacen falta hacer al proyecto y quien l
 
 Si ven un item sin nombre, pueden agregar su nombre para indicar que lo estan haciendo. 
 Si el item en el que estan trabajando no esta en la lista, agregarlo con SU NOMBRE.
+Usar los recursos en la carpeta de recursos o PARECIDOS.
 
 
 ***PORFAVOR NO TRABAJAR EN MODULOS QUE NO SE LE HAN ASIGNADO AQUI EN ESTE DOCUMENTO***
+***Prioridad 5 es lo mas urgente***
 
+Tarea			Desarollador	Prioridad(1-5)
 
-Procedimientos BD	|
-Triggers BD AuditLog	|
-Modulo Mesas		|Angulo
-Modulo Empleados	|Samuel
-Modulo Facturacion	|Angulo
-Modulo Ordenes		|Angulo
-Modulo AuditLog		|Samuel
+Procedimientos BD	|Erick		|5
+Triggers BD AuditLog	|		|3
+Modulo Mesas		|Angulo		|3
+Modulo Empleados	|Samuel		|3
+Modulo Facturacion	|Angulo		|3
+Modulo Ordenes		|Angulo		|4
+Modulo AuditLog		|Samuel		|1
+Clase CDProducto	|Angulo		|3
+Clase CDTipoProducto	|Angulo		|3
+Clase CDMesa		|		|3
+Reporte Ingresos	|		|2
+Reporte xEmpleado	|		|2
+Reporte ???		|		|2
+Clase CNProducto	|Angulo		|3
+Clase CNTipoProducto	|Angulo		|3
+Clase CDFactura		|		|3
+Clase CNFactura		|		|3
+Pantalla Buscar Factura |		|3

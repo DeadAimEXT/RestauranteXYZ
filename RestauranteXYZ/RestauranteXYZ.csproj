@@ -93,6 +93,9 @@
     <EmbeddedResource Include="Formularios\Empleado.resx">
       <DependentUpon>Empleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +175,99 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pastel-de-chocolate-sin-gluten-65-530-430-nw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chef.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cookbook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cutlery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\daily-specials-board.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dessert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dinner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hot-drink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pasta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spicy-food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sushi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\take-away.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vegetarian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waiter1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
