@@ -68,6 +68,7 @@
             this.pbMesa2.Size = new System.Drawing.Size(117, 118);
             this.pbMesa2.TabIndex = 1;
             this.pbMesa2.TabStop = false;
+            this.pbMesa2.Click += new System.EventHandler(this.pbMesa2_Click);
             // 
             // pbMesa3
             // 
@@ -78,6 +79,7 @@
             this.pbMesa3.Size = new System.Drawing.Size(117, 118);
             this.pbMesa3.TabIndex = 2;
             this.pbMesa3.TabStop = false;
+            this.pbMesa3.Click += new System.EventHandler(this.pbMesa3_Click);
             // 
             // pbMesa4
             // 
@@ -88,6 +90,7 @@
             this.pbMesa4.Size = new System.Drawing.Size(117, 118);
             this.pbMesa4.TabIndex = 3;
             this.pbMesa4.TabStop = false;
+            this.pbMesa4.Click += new System.EventHandler(this.pbMesa4_Click);
             // 
             // pbMesa5
             // 
@@ -98,6 +101,7 @@
             this.pbMesa5.Size = new System.Drawing.Size(90, 128);
             this.pbMesa5.TabIndex = 4;
             this.pbMesa5.TabStop = false;
+            this.pbMesa5.Click += new System.EventHandler(this.pbMesa5_Click);
             // 
             // pbMesa7
             // 
@@ -108,6 +112,7 @@
             this.pbMesa7.Size = new System.Drawing.Size(90, 128);
             this.pbMesa7.TabIndex = 5;
             this.pbMesa7.TabStop = false;
+            this.pbMesa7.Click += new System.EventHandler(this.pbMesa7_Click);
             // 
             // pbMesa6
             // 
@@ -118,6 +123,7 @@
             this.pbMesa6.Size = new System.Drawing.Size(90, 128);
             this.pbMesa6.TabIndex = 6;
             this.pbMesa6.TabStop = false;
+            this.pbMesa6.Click += new System.EventHandler(this.pbMesa6_Click);
             // 
             // pbMesa8
             // 
@@ -128,6 +134,7 @@
             this.pbMesa8.Size = new System.Drawing.Size(90, 128);
             this.pbMesa8.TabIndex = 7;
             this.pbMesa8.TabStop = false;
+            this.pbMesa8.Click += new System.EventHandler(this.pbMesa8_Click);
             // 
             // pbMesa9
             // 
@@ -138,6 +145,7 @@
             this.pbMesa9.Size = new System.Drawing.Size(90, 128);
             this.pbMesa9.TabIndex = 8;
             this.pbMesa9.TabStop = false;
+            this.pbMesa9.Click += new System.EventHandler(this.pbMesa9_Click);
             // 
             // Mesa
             // 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.nudGallina = new System.Windows.Forms.NumericUpDown();
+            this.nudSopaGallina = new System.Windows.Forms.NumericUpDown();
             this.chkLomo = new System.Windows.Forms.CheckBox();
             this.nudLomo = new System.Windows.Forms.NumericUpDown();
             this.chkCarne = new System.Windows.Forms.CheckBox();
@@ -61,9 +61,15 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.nudTe = new System.Windows.Forms.NumericUpDown();
+            this.nudCafe = new System.Windows.Forms.NumericUpDown();
+            this.chkTe = new System.Windows.Forms.CheckBox();
+            this.chkCafe = new System.Windows.Forms.CheckBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.nudAgua = new System.Windows.Forms.NumericUpDown();
             this.nudBatido = new System.Windows.Forms.NumericUpDown();
-            this.nudGaseosa = new System.Windows.Forms.NumericUpDown();
+            this.nudGaseosas = new System.Windows.Forms.NumericUpDown();
             this.chkAgua = new System.Windows.Forms.CheckBox();
             this.chkBatido = new System.Windows.Forms.CheckBox();
             this.chkGaseosas = new System.Windows.Forms.CheckBox();
@@ -92,18 +98,13 @@
             this.chTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblVolver = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGallina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSopaGallina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLomo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCarne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPollo)).BeginInit();
@@ -114,16 +115,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudTocino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHamburguesa)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCafe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAgua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBatido)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGaseosa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGaseosas)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudBrownie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTorta)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleFactura)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -134,7 +135,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Linen;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.nudGallina);
+            this.panel1.Controls.Add(this.nudSopaGallina);
             this.panel1.Controls.Add(this.chkLomo);
             this.panel1.Controls.Add(this.nudLomo);
             this.panel1.Controls.Add(this.chkCarne);
@@ -159,13 +160,13 @@
             this.panel1.Size = new System.Drawing.Size(207, 285);
             this.panel1.TabIndex = 1;
             // 
-            // nudGallina
+            // nudSopaGallina
             // 
-            this.nudGallina.Enabled = false;
-            this.nudGallina.Location = new System.Drawing.Point(169, 39);
-            this.nudGallina.Name = "nudGallina";
-            this.nudGallina.Size = new System.Drawing.Size(33, 20);
-            this.nudGallina.TabIndex = 26;
+            this.nudSopaGallina.Enabled = false;
+            this.nudSopaGallina.Location = new System.Drawing.Point(169, 39);
+            this.nudSopaGallina.Name = "nudSopaGallina";
+            this.nudSopaGallina.Size = new System.Drawing.Size(33, 20);
+            this.nudSopaGallina.TabIndex = 26;
             // 
             // chkLomo
             // 
@@ -175,6 +176,7 @@
             this.chkLomo.Size = new System.Drawing.Size(15, 14);
             this.chkLomo.TabIndex = 25;
             this.chkLomo.UseVisualStyleBackColor = true;
+            this.chkLomo.CheckedChanged += new System.EventHandler(this.chkLomo_CheckedChanged);
             // 
             // nudLomo
             // 
@@ -192,6 +194,7 @@
             this.chkCarne.Size = new System.Drawing.Size(15, 14);
             this.chkCarne.TabIndex = 24;
             this.chkCarne.UseVisualStyleBackColor = true;
+            this.chkCarne.CheckedChanged += new System.EventHandler(this.chkCarne_CheckedChanged);
             // 
             // nudCarne
             // 
@@ -209,6 +212,7 @@
             this.chkPollo.Size = new System.Drawing.Size(15, 14);
             this.chkPollo.TabIndex = 23;
             this.chkPollo.UseVisualStyleBackColor = true;
+            this.chkPollo.CheckedChanged += new System.EventHandler(this.chkPollo_CheckedChanged);
             // 
             // nudPollo
             // 
@@ -226,6 +230,7 @@
             this.chkSopaTortilla.Size = new System.Drawing.Size(15, 14);
             this.chkSopaTortilla.TabIndex = 22;
             this.chkSopaTortilla.UseVisualStyleBackColor = true;
+            this.chkSopaTortilla.CheckedChanged += new System.EventHandler(this.chkSopaTortilla_CheckedChanged);
             // 
             // nudSopaTortilla
             // 
@@ -243,6 +248,7 @@
             this.chkPapas.Size = new System.Drawing.Size(15, 14);
             this.chkPapas.TabIndex = 21;
             this.chkPapas.UseVisualStyleBackColor = true;
+            this.chkPapas.CheckedChanged += new System.EventHandler(this.chkPapas_CheckedChanged);
             // 
             // nudPapas
             // 
@@ -260,6 +266,7 @@
             this.chkSopaGallina.Size = new System.Drawing.Size(15, 14);
             this.chkSopaGallina.TabIndex = 20;
             this.chkSopaGallina.UseVisualStyleBackColor = true;
+            this.chkSopaGallina.CheckedChanged += new System.EventHandler(this.chkSopaGallina_CheckedChanged);
             // 
             // label11
             // 
@@ -392,6 +399,7 @@
             this.chkPupusas.Size = new System.Drawing.Size(15, 14);
             this.chkPupusas.TabIndex = 25;
             this.chkPupusas.UseVisualStyleBackColor = true;
+            this.chkPupusas.CheckedChanged += new System.EventHandler(this.chkPupusas_CheckedChanged);
             // 
             // chkTocino
             // 
@@ -401,6 +409,7 @@
             this.chkTocino.Size = new System.Drawing.Size(15, 14);
             this.chkTocino.TabIndex = 24;
             this.chkTocino.UseVisualStyleBackColor = true;
+            this.chkTocino.CheckedChanged += new System.EventHandler(this.chkTocino_CheckedChanged);
             // 
             // chkHamburguesa
             // 
@@ -410,6 +419,7 @@
             this.chkHamburguesa.Size = new System.Drawing.Size(15, 14);
             this.chkHamburguesa.TabIndex = 23;
             this.chkHamburguesa.UseVisualStyleBackColor = true;
+            this.chkHamburguesa.CheckedChanged += new System.EventHandler(this.chkHamburguesa_CheckedChanged);
             // 
             // label14
             // 
@@ -455,15 +465,15 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Linen;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.numericUpDown1);
-            this.panel4.Controls.Add(this.numericUpDown2);
-            this.panel4.Controls.Add(this.checkBox1);
-            this.panel4.Controls.Add(this.checkBox2);
+            this.panel4.Controls.Add(this.nudTe);
+            this.panel4.Controls.Add(this.nudCafe);
+            this.panel4.Controls.Add(this.chkTe);
+            this.panel4.Controls.Add(this.chkCafe);
             this.panel4.Controls.Add(this.label20);
             this.panel4.Controls.Add(this.label23);
             this.panel4.Controls.Add(this.nudAgua);
             this.panel4.Controls.Add(this.nudBatido);
-            this.panel4.Controls.Add(this.nudGaseosa);
+            this.panel4.Controls.Add(this.nudGaseosas);
             this.panel4.Controls.Add(this.chkAgua);
             this.panel4.Controls.Add(this.chkBatido);
             this.panel4.Controls.Add(this.chkGaseosas);
@@ -476,6 +486,62 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(202, 285);
             this.panel4.TabIndex = 6;
+            // 
+            // nudTe
+            // 
+            this.nudTe.Enabled = false;
+            this.nudTe.Location = new System.Drawing.Point(164, 220);
+            this.nudTe.Name = "nudTe";
+            this.nudTe.Size = new System.Drawing.Size(33, 20);
+            this.nudTe.TabIndex = 43;
+            // 
+            // nudCafe
+            // 
+            this.nudCafe.Enabled = false;
+            this.nudCafe.Location = new System.Drawing.Point(164, 195);
+            this.nudCafe.Name = "nudCafe";
+            this.nudCafe.Size = new System.Drawing.Size(33, 20);
+            this.nudCafe.TabIndex = 42;
+            // 
+            // chkTe
+            // 
+            this.chkTe.AutoSize = true;
+            this.chkTe.Location = new System.Drawing.Point(3, 222);
+            this.chkTe.Name = "chkTe";
+            this.chkTe.Size = new System.Drawing.Size(15, 14);
+            this.chkTe.TabIndex = 41;
+            this.chkTe.UseVisualStyleBackColor = true;
+            this.chkTe.CheckedChanged += new System.EventHandler(this.chkTe_CheckedChanged);
+            // 
+            // chkCafe
+            // 
+            this.chkCafe.AutoSize = true;
+            this.chkCafe.Location = new System.Drawing.Point(3, 197);
+            this.chkCafe.Name = "chkCafe";
+            this.chkCafe.Size = new System.Drawing.Size(15, 14);
+            this.chkCafe.TabIndex = 40;
+            this.chkCafe.UseVisualStyleBackColor = true;
+            this.chkCafe.CheckedChanged += new System.EventHandler(this.chkCafe_CheckedChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(19, 222);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(17, 13);
+            this.label20.TabIndex = 39;
+            this.label20.Text = "Te";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(19, 197);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(30, 13);
+            this.label23.TabIndex = 38;
+            this.label23.Text = "Cafe";
             // 
             // nudAgua
             // 
@@ -493,13 +559,13 @@
             this.nudBatido.Size = new System.Drawing.Size(33, 20);
             this.nudBatido.TabIndex = 36;
             // 
-            // nudGaseosa
+            // nudGaseosas
             // 
-            this.nudGaseosa.Enabled = false;
-            this.nudGaseosa.Location = new System.Drawing.Point(164, 40);
-            this.nudGaseosa.Name = "nudGaseosa";
-            this.nudGaseosa.Size = new System.Drawing.Size(33, 20);
-            this.nudGaseosa.TabIndex = 35;
+            this.nudGaseosas.Enabled = false;
+            this.nudGaseosas.Location = new System.Drawing.Point(164, 40);
+            this.nudGaseosas.Name = "nudGaseosas";
+            this.nudGaseosas.Size = new System.Drawing.Size(33, 20);
+            this.nudGaseosas.TabIndex = 35;
             // 
             // chkAgua
             // 
@@ -509,6 +575,7 @@
             this.chkAgua.Size = new System.Drawing.Size(15, 14);
             this.chkAgua.TabIndex = 31;
             this.chkAgua.UseVisualStyleBackColor = true;
+            this.chkAgua.CheckedChanged += new System.EventHandler(this.chkAgua_CheckedChanged);
             // 
             // chkBatido
             // 
@@ -518,6 +585,7 @@
             this.chkBatido.Size = new System.Drawing.Size(15, 14);
             this.chkBatido.TabIndex = 30;
             this.chkBatido.UseVisualStyleBackColor = true;
+            this.chkBatido.CheckedChanged += new System.EventHandler(this.chkBatido_CheckedChanged);
             // 
             // chkGaseosas
             // 
@@ -527,6 +595,7 @@
             this.chkGaseosas.Size = new System.Drawing.Size(15, 14);
             this.chkGaseosas.TabIndex = 29;
             this.chkGaseosas.UseVisualStyleBackColor = true;
+            this.chkGaseosas.CheckedChanged += new System.EventHandler(this.chkGaseosas_CheckedChanged);
             // 
             // label17
             // 
@@ -618,6 +687,7 @@
             this.chkTorta.Size = new System.Drawing.Size(15, 14);
             this.chkTorta.TabIndex = 31;
             this.chkTorta.UseVisualStyleBackColor = true;
+            this.chkTorta.CheckedChanged += new System.EventHandler(this.chkTorta_CheckedChanged);
             // 
             // chkBrownie
             // 
@@ -627,6 +697,7 @@
             this.chkBrownie.Size = new System.Drawing.Size(15, 14);
             this.chkBrownie.TabIndex = 30;
             this.chkBrownie.UseVisualStyleBackColor = true;
+            this.chkBrownie.CheckedChanged += new System.EventHandler(this.chkBrownie_CheckedChanged);
             // 
             // label21
             // 
@@ -746,60 +817,6 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Enabled = false;
-            this.numericUpDown1.Location = new System.Drawing.Point(164, 220);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(33, 20);
-            this.numericUpDown1.TabIndex = 43;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Enabled = false;
-            this.numericUpDown2.Location = new System.Drawing.Point(164, 195);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(33, 20);
-            this.numericUpDown2.TabIndex = 42;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 222);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 41;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(3, 197);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 40;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(19, 222);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(17, 13);
-            this.label20.TabIndex = 39;
-            this.label20.Text = "Te";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(19, 197);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(30, 13);
-            this.label23.TabIndex = 38;
-            this.label23.Text = "Cafe";
-            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
@@ -844,12 +861,24 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lblVolver
+            // 
+            this.lblVolver.AutoSize = true;
+            this.lblVolver.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVolver.Location = new System.Drawing.Point(32, 7);
+            this.lblVolver.Name = "lblVolver";
+            this.lblVolver.Size = new System.Drawing.Size(91, 25);
+            this.lblVolver.TabIndex = 13;
+            this.lblVolver.Text = "<- Volver";
+            this.lblVolver.Click += new System.EventHandler(this.lblVolver_Click);
+            // 
             // Orden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(851, 815);
+            this.Controls.Add(this.lblVolver);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvDetalleFactura);
@@ -866,7 +895,7 @@
             this.Text = "Orden";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGallina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSopaGallina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLomo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCarne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPollo)).EndInit();
@@ -879,9 +908,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHamburguesa)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCafe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAgua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBatido)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGaseosa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGaseosas)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudBrownie)).EndInit();
@@ -889,8 +920,6 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleFactura)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -951,7 +980,7 @@
         private System.Windows.Forms.ToolStripStatusLabel lblMesa;
         private System.Windows.Forms.DataGridView dgvDetalleFactura;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown nudGallina;
+        private System.Windows.Forms.NumericUpDown nudSopaGallina;
         private System.Windows.Forms.NumericUpDown nudLomo;
         private System.Windows.Forms.NumericUpDown nudCarne;
         private System.Windows.Forms.NumericUpDown nudPollo;
@@ -962,7 +991,7 @@
         private System.Windows.Forms.NumericUpDown nudHamburguesa;
         private System.Windows.Forms.NumericUpDown nudAgua;
         private System.Windows.Forms.NumericUpDown nudBatido;
-        private System.Windows.Forms.NumericUpDown nudGaseosa;
+        private System.Windows.Forms.NumericUpDown nudGaseosas;
         private System.Windows.Forms.NumericUpDown nudBrownie;
         private System.Windows.Forms.NumericUpDown nudTorta;
         private System.Windows.Forms.DataGridViewTextBoxColumn chProducto;
@@ -970,11 +999,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn chPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn chTotal;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.NumericUpDown nudTe;
+        private System.Windows.Forms.NumericUpDown nudCafe;
+        private System.Windows.Forms.CheckBox chkTe;
+        private System.Windows.Forms.CheckBox chkCafe;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblVolver;
     }
 }
