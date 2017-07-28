@@ -21,7 +21,6 @@ namespace RestauranteXYZ.Formularios
         {
             Orden orden = new Orden();
             orden.Show();
-
         }
     }
 }
