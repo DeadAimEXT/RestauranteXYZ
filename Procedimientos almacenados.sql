@@ -107,6 +107,18 @@ Exec Sp_ListarSexo
 -------------------------------Procedimientos Almacenados para Mesa-----------------------------------
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
+Create PROCEDURE Sp_ModEstadoMesa
+@IdMesa int,
+@Estado bit
+
+AS
+BEGIN
+	SET NOCOUNT OFF
+	Update Mesa
+	Set Estado = @Estado
+	Where IdMesa = @IdMesa
+END
+	
 Create PROCEDURE Sp_EstadoMesa
 	@IdMesa int
 
@@ -327,31 +339,54 @@ Create procedure Sp_EliminarFactura
 	From Factura
 	Where IdFactura=@IdFactura
 End
---------------------------------------------------
 
-------------------------------------------------------
-/*Obtener estados de mesas*/
-------------------------------------------------------
-Create PROCEDURE Sp_EstadoMesa
-@IdMesa int
+INSERT INTO TipoProducto
+VALUES('Entrada')
+INSERT INTO TipoProducto
+VALUES('Plato Fuerte')
+INSERT INTO TipoProducto
+VALUES('Comida Rapida')
+INSERT INTO TipoProducto
+VALUES('Bebida Fria')
+INSERT INTO TipoProducto
+VALUES('Bebida Caliente')
+INSERT INTO TipoProducto
+VALUES('Postre')
 
-AS
-BEGIN
-	SET NOCOUNT OFF
-	Select Estado
-	From Mesa
-	Where IdMesa = @IdMesa
-END
+INSERT INTO Producto
+VALUES('Sopa Gallina India',140,1)
+INSERT INTO Producto
+VALUES('Papas Fritas',30,1)
+INSERT INTO Producto
+VALUES('Sopa Tortilla', 180 ,1)
 
-Create PROCEDURE Sp_ModEstadoMesa
-@IdMesa int,
-@Estado bit
+INSERT INTO Producto
+VALUES('Pollo Asado',110,2)
+INSERT INTO Producto
+VALUES('Carne Asada',150,2)
+INSERT INTO Producto
+VALUES('Lomo Atenado',200,2)
 
-AS
-BEGIN
-	SET NOCOUNT OFF
-	Update Mesa
-	Set Estado = @Estado
-	Where IdMesa = @IdMesa
-END
-	
+INSERT INTO Producto
+VALUES('Hamburgesa', 80 ,3)
+INSERT INTO Producto
+VALUES('Hamburgesa de Tocino',100,3)
+INSERT INTO Producto
+VALUES('Pupusas',50,3)
+
+INSERT INTO Producto
+VALUES('Gaseosa', 20 ,4)
+INSERT INTO Producto
+VALUES('Batido',50,4)
+INSERT INTO Producto
+VALUES('Agua',15,4)
+
+INSERT INTO Producto
+VALUES('Cafe',40,5)
+INSERT INTO Producto
+VALUES('Te',40,5)
+
+INSERT INTO Producto
+VALUES('Brownie',100 ,6)
+INSERT INTO Producto
+VALUES('Torta', 120 ,6)
