@@ -30,20 +30,6 @@ namespace RestauranteXYZ.Formularios
             this.Hide();
         }
 
-        private void validarNuds()
-        {
-            for(int i = 0; i < 16; i++)
-            {
-                if(chkArray[i].Checked)
-                {
-                    nudArray[i].Enabled = true;
-                }
-                else
-                {
-                    nudArray[i].Enabled = false;
-                }
-            }
-        }
 
         private void chkSopaGallina_CheckedChanged(object sender, EventArgs e)
         {
@@ -123,6 +109,21 @@ namespace RestauranteXYZ.Formularios
         private void chkTorta_CheckedChanged(object sender, EventArgs e)
         {
             validarNuds();
+        }
+
+        private void validarNuds()
+        {
+            for (int i = 0; i < 16; i++)
+            {
+                if (chkArray[i].Checked)
+                {
+                    nudArray[i].Enabled = true;
+                }
+                else
+                {
+                    nudArray[i].Enabled = false;
+                }
+            }
         }
     }
 }
