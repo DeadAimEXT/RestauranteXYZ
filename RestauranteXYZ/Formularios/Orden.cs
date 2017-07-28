@@ -15,6 +15,7 @@ namespace RestauranteXYZ.Formularios
 
         CheckBox[] chkArray;
         NumericUpDown[] nudArray;
+       
 
         public Orden()
         {
@@ -124,6 +125,28 @@ namespace RestauranteXYZ.Formularios
                     nudArray[i].Enabled = false;
                 }
             }
+        }
+        private void agregarDgv()
+        {
+            
+            for(int i = 0; i < 16; i++)
+            {
+                if (chkArray[i].Checked)
+                {
+                    DataGridViewRow row = (DataGridViewRow)dgvDetalleFactura.Rows[0].Clone(); 
+                    row.Cells[0].Value ="test" ;
+                    row.Cells[1].Value = nudArray[i].Value;
+                    row.Cells[2].Value = "100";
+                    row.Cells[3].Value = "101";
+                    dgvDetalleFactura.Rows.Add(row);
+                    
+                }
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            agregarDgv();
         }
     }
 }
