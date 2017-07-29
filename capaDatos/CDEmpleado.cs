@@ -100,6 +100,7 @@ namespace capaDatos
 
         public DataSet ListarSexo()
         {
+            
             SqlDataAdapter da;
             DataSet ds = new DataSet();
             try

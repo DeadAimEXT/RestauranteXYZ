@@ -390,3 +390,22 @@ INSERT INTO Producto
 VALUES('Brownie',100 ,6)
 INSERT INTO Producto
 VALUES('Torta', 120 ,6)
+
+CREATE Procedure Sp_NombreProducto
+@IdProducto int
+AS
+Begin
+	Select Nombre
+	from Producto
+	WHERE IdProducto = @IdProducto
+End
+CREATE Procedure Sp_PrecioProducto
+@IdProducto int
+AS
+Begin
+	Select Precio
+	from Producto
+	WHERE IdProducto = @IdProducto
+End
+
+Select * from Producto

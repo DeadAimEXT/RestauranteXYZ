@@ -92,10 +92,6 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblMesa = new System.Windows.Forms.ToolStripStatusLabel();
             this.dgvDetalleFactura = new System.Windows.Forms.DataGridView();
-            this.chProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -103,6 +99,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblVolver = new System.Windows.Forms.Label();
+            this.chProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSopaGallina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLomo)).BeginInit();
@@ -778,26 +778,6 @@
             this.dgvDetalleFactura.Size = new System.Drawing.Size(449, 267);
             this.dgvDetalleFactura.TabIndex = 11;
             // 
-            // chProducto
-            // 
-            this.chProducto.HeaderText = "Producto";
-            this.chProducto.Name = "chProducto";
-            // 
-            // chCantidad
-            // 
-            this.chCantidad.HeaderText = "Cantidad";
-            this.chCantidad.Name = "chCantidad";
-            // 
-            // chPrecio
-            // 
-            this.chPrecio.HeaderText = "Precio";
-            this.chPrecio.Name = "chPrecio";
-            // 
-            // chTotal
-            // 
-            this.chTotal.HeaderText = "Total";
-            this.chTotal.Name = "chTotal";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -814,7 +794,7 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 12;
-            this.btnAgregar.Text = ",  ";
+            this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -872,6 +852,27 @@
             this.lblVolver.TabIndex = 13;
             this.lblVolver.Text = "<- Volver";
             this.lblVolver.Click += new System.EventHandler(this.lblVolver_Click);
+            // 
+            // chProducto
+            // 
+            this.chProducto.HeaderText = "Producto";
+            this.chProducto.Name = "chProducto";
+            this.chProducto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // chCantidad
+            // 
+            this.chCantidad.HeaderText = "Cantidad";
+            this.chCantidad.Name = "chCantidad";
+            // 
+            // chPrecio
+            // 
+            this.chPrecio.HeaderText = "Precio";
+            this.chPrecio.Name = "chPrecio";
+            // 
+            // chTotal
+            // 
+            this.chTotal.HeaderText = "Total";
+            this.chTotal.Name = "chTotal";
             // 
             // Orden
             // 
@@ -995,10 +996,6 @@
         private System.Windows.Forms.NumericUpDown nudGaseosas;
         private System.Windows.Forms.NumericUpDown nudBrownie;
         private System.Windows.Forms.NumericUpDown nudTorta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chCantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chPrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chTotal;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.NumericUpDown nudTe;
         private System.Windows.Forms.NumericUpDown nudCafe;
@@ -1007,5 +1004,9 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label lblVolver;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chTotal;
     }
 }

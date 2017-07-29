@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using capaEntidades;
+using capaNegocio;
+
 
 namespace RestauranteXYZ.Formularios
 {
@@ -15,6 +18,8 @@ namespace RestauranteXYZ.Formularios
 
         CheckBox[] chkArray;
         NumericUpDown[] nudArray;
+        
+        
        
 
         public Orden()
@@ -132,14 +137,21 @@ namespace RestauranteXYZ.Formularios
             for(int i = 0; i < 16; i++)
             {
                 if (chkArray[i].Checked)
-                {
-                    DataGridViewRow row = (DataGridViewRow)dgvDetalleFactura.Rows[0].Clone(); 
-                    row.Cells[0].Value ="test" ;
-                    row.Cells[1].Value = nudArray[i].Value;
-                    row.Cells[2].Value = "100";
-                    row.Cells[3].Value = "101";
-                    dgvDetalleFactura.Rows.Add(row);
                     
+                {
+                    CEProducto prod = new CEProducto();
+                    CNProducto get = new CNProducto();
+                    
+                    prod.IdProducto = i + 1;
+                    prod.Nombre = get.NombreProducto(prod.IdProducto);
+                    prod.Precio = get.PrecioProducto(prod.IdProducto);
+
+                    DataGridViewRow row = (DataGridViewRow)dgvDetalleFactura.Rows[0].Clone(); 
+                    row.Cells[0].Value = prod.Nombre;
+                    row.Cells[1].Value = nudArray[i].Value;
+                    row.Cells[2].Value = prod.Precio;
+                    row.Cells[3].Value = prod.Precio * nudArray[i].Value;
+                    dgvDetalleFactura.Rows.Add(row);
                 }
             }
         }
