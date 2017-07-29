@@ -8,23 +8,26 @@ Usar los recursos en la carpeta de recursos o PARECIDOS.
 ***PORFAVOR NO TRABAJAR EN MODULOS QUE NO SE LE HAN ASIGNADO AQUI EN ESTE DOCUMENTO***
 ***Prioridad 5 es lo mas urgente***
 
-Tarea			Desarollador	Prioridad(1-5)
+Tarea			Desarollador	Prioridad(1-5)	Estatus
 
-Procedimientos BD	|Erick		|5
-Triggers BD AuditLog	|		|3
-Modulo Mesas		|Angulo		|3
-Modulo Empleados	|Samuel		|3
-Modulo Facturacion	|Angulo		|3
-Modulo Ordenes		|Angulo		|4
-Modulo AuditLog		|Samuel		|1
-Clase CDProducto	|Angulo		|3
-Clase CDTipoProducto	|Angulo		|3
-Clase CDMesa		|		|3
-Reporte Ingresos	|		|2
-Reporte xEmpleado	|		|2
-Reporte ???		|		|2
-Clase CNProducto	|Angulo		|3
-Clase CNTipoProducto	|Angulo		|3
-Clase CDFactura		|Samuel		|3
-Clase CNFactura		|		|3
-Pantalla Buscar Factura |Oscar		|3
+Procedimientos BD	|Cristian	|1		|Terminado, agregar funciones segun necesidad
+Triggers BD AuditLog	|Erick		|4		|??? hacer a nivel aplicativo
+Modulo Mesas		|Angulo		|3		|Falta estetica, cambio de color de mesas
+Modulo Empleados	|Samuel		|1		|Funcional, faltan estetica, validaciones
+Modulo Facturacion	|Angulo		|1		|Funcional, falta busqueda etc
+Modulo Ordenes		|Angulo		|4		|Faltan Validaciones, mensajes confirmatorios, estetica		
+Modulo AuditLog		|Samuel		|1		|???
+Clase CDProducto	|Angulo		|1		|Terminado, agregar funciones segun necesidad
+Clase CDTipoProducto	|Angulo		|1		|Terminado, agregar funciones segun necesidad
+Clase CDMesa		|Angulo		|1		|Terminado, agregar funciones segun necesidad
+Reporte Ingresos	|		|2		|???
+Reporte xEmpleado	|		|2		|???
+Reporte ???		|		|2		|???
+Clase CNProducto	|Angulo		|3		|Terminado, agregar funciones segun necesidad
+Clase CNTipoProducto	|Angulo		|1		|??? Podria ser innecesario, trabajar segun necesidad
+Clase CDFactura		|Samuel/Angulo	|1		|Terminado, agregar funciones segun necesidad
+Clase CNFactura		|Angulo		|1		|Terminado, agregar funciones segun necesidad
+Pantalla Buscar Factura |Oscar		|3		|???
+Pantalla Login    	|		|4		|???
+Datos Prueba		|Angulo		|3		|Terminado, agregar segun necesidad (mas empleados, mas usuarios para login)
+
