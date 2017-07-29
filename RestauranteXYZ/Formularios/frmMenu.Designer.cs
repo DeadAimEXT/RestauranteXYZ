@@ -181,6 +181,7 @@
             this.ClientSize = new System.Drawing.Size(593, 552);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

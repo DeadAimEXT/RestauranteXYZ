@@ -90,7 +90,12 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblMesa = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.dgvDetalleFactura = new System.Windows.Forms.DataGridView();
+            this.chProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -98,12 +103,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblVolver = new System.Windows.Forms.Label();
-            this.chProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnFactura = new System.Windows.Forms.Button();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSopaGallina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLomo)).BeginInit();
@@ -760,6 +760,12 @@
             this.lblMesa.Name = "lblMesa";
             this.lblMesa.Size = new System.Drawing.Size(0, 17);
             // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(38, 17);
+            this.toolStripStatusLabel3.Text = "Mesa:";
+            // 
             // dgvDetalleFactura
             // 
             this.dgvDetalleFactura.BackgroundColor = System.Drawing.Color.Linen;
@@ -773,6 +779,27 @@
             this.dgvDetalleFactura.Name = "dgvDetalleFactura";
             this.dgvDetalleFactura.Size = new System.Drawing.Size(449, 267);
             this.dgvDetalleFactura.TabIndex = 11;
+            // 
+            // chProducto
+            // 
+            this.chProducto.HeaderText = "Producto";
+            this.chProducto.Name = "chProducto";
+            this.chProducto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // chCantidad
+            // 
+            this.chCantidad.HeaderText = "Cantidad";
+            this.chCantidad.Name = "chCantidad";
+            // 
+            // chPrecio
+            // 
+            this.chPrecio.HeaderText = "Precio";
+            this.chPrecio.Name = "chPrecio";
+            // 
+            // chTotal
+            // 
+            this.chTotal.HeaderText = "Total";
+            this.chTotal.Name = "chTotal";
             // 
             // label1
             // 
@@ -849,27 +876,6 @@
             this.lblVolver.Text = "<- Volver";
             this.lblVolver.Click += new System.EventHandler(this.lblVolver_Click);
             // 
-            // chProducto
-            // 
-            this.chProducto.HeaderText = "Producto";
-            this.chProducto.Name = "chProducto";
-            this.chProducto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // chCantidad
-            // 
-            this.chCantidad.HeaderText = "Cantidad";
-            this.chCantidad.Name = "chCantidad";
-            // 
-            // chPrecio
-            // 
-            this.chPrecio.HeaderText = "Precio";
-            this.chPrecio.Name = "chPrecio";
-            // 
-            // chTotal
-            // 
-            this.chTotal.HeaderText = "Total";
-            this.chTotal.Name = "chTotal";
-            // 
             // btnFactura
             // 
             this.btnFactura.Location = new System.Drawing.Point(547, 523);
@@ -879,12 +885,6 @@
             this.btnFactura.Text = "Generar Factura";
             this.btnFactura.UseVisualStyleBackColor = true;
             this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
-            // 
-            // toolStripStatusLabel3
-            // 
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(38, 17);
-            this.toolStripStatusLabel3.Text = "Mesa:";
             // 
             // Orden
             // 
@@ -907,6 +907,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Orden";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Orden";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
