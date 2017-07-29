@@ -429,3 +429,21 @@ BEGIN
 	SELECT max(IdFactura)
 	FROM Factura
 END
+ALTER procedure [dbo].[Sp_InsertarFactura]
+@IdEmpleado int,
+@Fecha datetime
+
+As 
+	Begin
+	Set nocount off
+	Insert into Factura
+	Values(@IdEmpleado,'','',@Fecha)
+End
+insert into Sexo
+VALUES('Masculino')
+insert into Sexo
+VALUES('Femenino')
+insert into TipoEmpleado
+VALUES('Mesero')
+insert into Empleado
+VALUES('Hola', 'Mundo', '9999-9999','','Barrio El Centro', 1, 1)

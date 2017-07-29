@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CNDetalleFactura.cs" />
     <Compile Include="CNEmpleado.cs" />
+    <Compile Include="CNFactura.cs" />
     <Compile Include="CNMesa.cs" />
     <Compile Include="CNProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -21,5 +21,9 @@ namespace capaNegocio
         {
             return objF1.ActualizarFactura(objF);
         }
+        public int MaxFactura()
+        {
+            return objF1.MaxFactura();
+        }
     }
 }

@@ -17,10 +17,8 @@ namespace capaDatos
 
             SqlCommand cmd = new SqlCommand("Sp_InsertarFactura", cnn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("IdEmpleado", SqlDbType.Int).Value = objF.IdEmpleado;
-            cmd.Parameters.AddWithValue("NombreCliente", SqlDbType.NVarChar).Value = objF.NombreCliente;
-            cmd.Parameters.AddWithValue("RTN", SqlDbType.NVarChar).Value = objF.RTN;
-            cmd.Parameters.AddWithValue("Fecha", SqlDbType.DateTime).Value = objF.Fecha;
+            cmd.Parameters.AddWithValue("@IdEmpleado", SqlDbType.Int).Value = objF.IdEmpleado;
+            cmd.Parameters.AddWithValue("@Fecha", SqlDbType.DateTime).Value = objF.Fecha;
 
             try
             {

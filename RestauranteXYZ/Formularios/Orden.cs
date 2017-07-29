@@ -171,13 +171,20 @@ namespace RestauranteXYZ.Formularios
         private void btnFactura_Click(object sender, EventArgs e)
         {
             int i;
-            CNFactura neg = new CNFactura();
+            CNDetalleFactura cnDetFactura = new CNDetalleFactura();
+            CNFactura cnFactura = new CNFactura();
             CEFactura factura = new CEFactura();
             factura.IdEmpleado = int.Parse(lblUsuario.Text); //test
             factura.Fecha = DateTime.Now;
             
-            neg.InsertarFactura(factura);
-            i = neg.MaxFactura();
+            cnFactura.InsertarFactura(factura);
+            i = cnFactura.MaxFactura();
+            foreach (CEDetalleFactura det in detallesFactura)
+            {
+                det.IdFactura = i;
+                cnDetFactura.InsertarDFactura(det);
+            }
+            
             this.Dispose();
         }
     }

@@ -12,6 +12,7 @@ namespace capaEntidades
         public int IdEmpleado { set; get; }
         public string NombreCliente { set; get; }
         public string RTN { set; get; }
+        public DateTime Fecha { set; get; }
 
     }
 }
