@@ -27,4 +27,4 @@ Clase CNProducto	|Angulo		|3
 Clase CNTipoProducto	|Angulo		|3
 Clase CDFactura		|Samuel		|3
 Clase CNFactura		|		|3
-Pantalla Buscar Factura |		|3
+Pantalla Buscar Factura |Oscar		|3
