@@ -165,9 +165,19 @@
             // 
             this.nudSopaGallina.Enabled = false;
             this.nudSopaGallina.Location = new System.Drawing.Point(169, 39);
+            this.nudSopaGallina.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudSopaGallina.Name = "nudSopaGallina";
             this.nudSopaGallina.Size = new System.Drawing.Size(33, 20);
             this.nudSopaGallina.TabIndex = 26;
+            this.nudSopaGallina.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // chkLomo
             // 
@@ -183,9 +193,19 @@
             // 
             this.nudLomo.Enabled = false;
             this.nudLomo.Location = new System.Drawing.Point(169, 249);
+            this.nudLomo.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudLomo.Name = "nudLomo";
             this.nudLomo.Size = new System.Drawing.Size(33, 20);
             this.nudLomo.TabIndex = 31;
+            this.nudLomo.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // chkCarne
             // 
@@ -201,9 +221,19 @@
             // 
             this.nudCarne.Enabled = false;
             this.nudCarne.Location = new System.Drawing.Point(169, 223);
+            this.nudCarne.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudCarne.Name = "nudCarne";
             this.nudCarne.Size = new System.Drawing.Size(33, 20);
             this.nudCarne.TabIndex = 30;
+            this.nudCarne.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // chkPollo
             // 
@@ -219,9 +249,19 @@
             // 
             this.nudPollo.Enabled = false;
             this.nudPollo.Location = new System.Drawing.Point(169, 197);
+            this.nudPollo.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudPollo.Name = "nudPollo";
             this.nudPollo.Size = new System.Drawing.Size(33, 20);
             this.nudPollo.TabIndex = 29;
+            this.nudPollo.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // chkSopaTortilla
             // 
@@ -237,9 +277,19 @@
             // 
             this.nudSopaTortilla.Enabled = false;
             this.nudSopaTortilla.Location = new System.Drawing.Point(169, 92);
+            this.nudSopaTortilla.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudSopaTortilla.Name = "nudSopaTortilla";
             this.nudSopaTortilla.Size = new System.Drawing.Size(33, 20);
             this.nudSopaTortilla.TabIndex = 28;
+            this.nudSopaTortilla.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // chkPapas
             // 
@@ -255,9 +305,19 @@
             // 
             this.nudPapas.Enabled = false;
             this.nudPapas.Location = new System.Drawing.Point(169, 66);
+            this.nudPapas.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudPapas.Name = "nudPapas";
             this.nudPapas.Size = new System.Drawing.Size(33, 20);
             this.nudPapas.TabIndex = 27;
+            this.nudPapas.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // chkSopaGallina
             // 
@@ -372,25 +432,55 @@
             // 
             this.nudPupusas.Enabled = false;
             this.nudPupusas.Location = new System.Drawing.Point(166, 88);
+            this.nudPupusas.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudPupusas.Name = "nudPupusas";
             this.nudPupusas.Size = new System.Drawing.Size(33, 20);
             this.nudPupusas.TabIndex = 34;
+            this.nudPupusas.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // nudTocino
             // 
             this.nudTocino.Enabled = false;
             this.nudTocino.Location = new System.Drawing.Point(166, 65);
+            this.nudTocino.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudTocino.Name = "nudTocino";
             this.nudTocino.Size = new System.Drawing.Size(33, 20);
             this.nudTocino.TabIndex = 33;
+            this.nudTocino.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // nudHamburguesa
             // 
             this.nudHamburguesa.Enabled = false;
             this.nudHamburguesa.Location = new System.Drawing.Point(166, 39);
+            this.nudHamburguesa.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudHamburguesa.Name = "nudHamburguesa";
             this.nudHamburguesa.Size = new System.Drawing.Size(33, 20);
             this.nudHamburguesa.TabIndex = 32;
+            this.nudHamburguesa.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // chkPupusas
             // 
@@ -492,17 +582,37 @@
             // 
             this.nudTe.Enabled = false;
             this.nudTe.Location = new System.Drawing.Point(164, 220);
+            this.nudTe.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudTe.Name = "nudTe";
             this.nudTe.Size = new System.Drawing.Size(33, 20);
             this.nudTe.TabIndex = 43;
+            this.nudTe.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // nudCafe
             // 
             this.nudCafe.Enabled = false;
             this.nudCafe.Location = new System.Drawing.Point(164, 195);
+            this.nudCafe.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudCafe.Name = "nudCafe";
             this.nudCafe.Size = new System.Drawing.Size(33, 20);
             this.nudCafe.TabIndex = 42;
+            this.nudCafe.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // chkTe
             // 
@@ -548,25 +658,55 @@
             // 
             this.nudAgua.Enabled = false;
             this.nudAgua.Location = new System.Drawing.Point(164, 92);
+            this.nudAgua.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudAgua.Name = "nudAgua";
             this.nudAgua.Size = new System.Drawing.Size(33, 20);
             this.nudAgua.TabIndex = 37;
+            this.nudAgua.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // nudBatido
             // 
             this.nudBatido.Enabled = false;
             this.nudBatido.Location = new System.Drawing.Point(164, 66);
+            this.nudBatido.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudBatido.Name = "nudBatido";
             this.nudBatido.Size = new System.Drawing.Size(33, 20);
             this.nudBatido.TabIndex = 36;
+            this.nudBatido.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // nudGaseosas
             // 
             this.nudGaseosas.Enabled = false;
             this.nudGaseosas.Location = new System.Drawing.Point(164, 40);
+            this.nudGaseosas.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudGaseosas.Name = "nudGaseosas";
             this.nudGaseosas.Size = new System.Drawing.Size(33, 20);
             this.nudGaseosas.TabIndex = 35;
+            this.nudGaseosas.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // chkAgua
             // 
@@ -668,17 +808,37 @@
             // 
             this.nudBrownie.Enabled = false;
             this.nudBrownie.Location = new System.Drawing.Point(163, 39);
+            this.nudBrownie.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudBrownie.Name = "nudBrownie";
             this.nudBrownie.Size = new System.Drawing.Size(33, 20);
             this.nudBrownie.TabIndex = 36;
+            this.nudBrownie.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // nudTorta
             // 
             this.nudTorta.Enabled = false;
             this.nudTorta.Location = new System.Drawing.Point(163, 65);
+            this.nudTorta.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudTorta.Name = "nudTorta";
             this.nudTorta.Size = new System.Drawing.Size(33, 20);
             this.nudTorta.TabIndex = 35;
+            this.nudTorta.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // chkTorta
             // 
