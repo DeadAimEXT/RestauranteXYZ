@@ -18,6 +18,7 @@ namespace RestauranteXYZ.Formularios
 
         CheckBox[] chkArray;
         NumericUpDown[] nudArray;
+        List<CEDetalleFactura> detallesFactura = new List<CEDetalleFactura>();
         
         
        
@@ -139,12 +140,17 @@ namespace RestauranteXYZ.Formularios
                 if (chkArray[i].Checked)
                     
                 {
+                    CEDetalleFactura det = new CEDetalleFactura();
                     CEProducto prod = new CEProducto();
                     CNProducto get = new CNProducto();
-                    
+                    //asignar id a objeto producto, recuperar valores de la BD
                     prod.IdProducto = i + 1;
                     prod.Nombre = get.NombreProducto(prod.IdProducto);
                     prod.Precio = get.PrecioProducto(prod.IdProducto);
+                    //Agregar fila a detalle factura
+                    det.IdProducto = prod.IdProducto;
+                    det.Cantidad = int.Parse(nudArray[i].Value.ToString());
+
 
                     DataGridViewRow row = (DataGridViewRow)dgvDetalleFactura.Rows[0].Clone(); 
                     row.Cells[0].Value = prod.Nombre;
@@ -152,6 +158,7 @@ namespace RestauranteXYZ.Formularios
                     row.Cells[2].Value = prod.Precio;
                     row.Cells[3].Value = prod.Precio * nudArray[i].Value;
                     dgvDetalleFactura.Rows.Add(row);
+                    detallesFactura.Add(det);
                 }
             }
         }
@@ -159,6 +166,19 @@ namespace RestauranteXYZ.Formularios
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             agregarDgv();
+        }
+
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            int i;
+            CNFactura neg = new CNFactura();
+            CEFactura factura = new CEFactura();
+            factura.IdEmpleado = int.Parse(lblUsuario.Text); //test
+            factura.Fecha = DateTime.Now;
+            
+            neg.InsertarFactura(factura);
+            i = neg.MaxFactura();
+            this.Dispose();
         }
     }
 }

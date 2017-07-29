@@ -408,4 +408,24 @@ Begin
 	WHERE IdProducto = @IdProducto
 End
 
-Select * from Producto
+
+
+ALTER procedure [dbo].[Sp_ModificarFactura]
+@IdFactura int,
+@NombreCliente nvarchar(20),
+@RTN nvarchar(14)
+
+
+As 
+Begin
+	Set nocount off
+	Update Factura
+	Set NombreCliente = @NombreCliente, RTN = @RTN
+	WHERE IdFactura = @IdFactura
+End
+CREATE PROCEDURE Sp_MaxFactura
+as
+BEGIN
+	SELECT max(IdFactura)
+	FROM Factura
+END

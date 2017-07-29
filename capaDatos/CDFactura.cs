@@ -20,7 +20,7 @@ namespace capaDatos
             cmd.Parameters.AddWithValue("IdEmpleado", SqlDbType.Int).Value = objF.IdEmpleado;
             cmd.Parameters.AddWithValue("NombreCliente", SqlDbType.NVarChar).Value = objF.NombreCliente;
             cmd.Parameters.AddWithValue("RTN", SqlDbType.NVarChar).Value = objF.RTN;
-            cmd.Parameters.AddWithValue("Fecha", SqlDbType.DateTime).Value = objF.RTN;
+            cmd.Parameters.AddWithValue("Fecha", SqlDbType.DateTime).Value = objF.Fecha;
 
             try
             {
@@ -43,13 +43,12 @@ namespace capaDatos
         {
             int resultado;
 
-            SqlCommand cmd = new SqlCommand("Sp_ActualizarFactura", cnn);
+            SqlCommand cmd = new SqlCommand("Sp_ModificarFactura", cnn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("IdFactura", SqlDbType.Int).Value = objF.IdFactura;
-            cmd.Parameters.AddWithValue("IdEmpleado", SqlDbType.Int).Value = objF.IdEmpleado;
             cmd.Parameters.AddWithValue("NombreCliente", SqlDbType.NVarChar).Value = objF.NombreCliente;
             cmd.Parameters.AddWithValue("RTN", SqlDbType.NVarChar).Value = objF.RTN;
-            cmd.Parameters.AddWithValue("Fecha", SqlDbType.DateTime).Value = objF.RTN;
+           
 
             try
             {
@@ -91,6 +90,28 @@ namespace capaDatos
             }
             return resultado;
         }
+        public int MaxFactura()
+        {
+            int resultado;
+            SqlCommand cmd = new SqlCommand("Sp_MaxFactura", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
 
+            try
+            {
+                ConectarBD();
+                resultado = int.Parse(cmd.ExecuteScalar().ToString());
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Error al tratar de consultar el valor de la factura ingresada", ex);
+            }
+            finally
+            {
+                DesconectarBD();
+                cmd.Dispose();
+            }
+            return resultado;
+
+        }
     }
 }

@@ -89,7 +89,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblMesa = new System.Windows.Forms.ToolStripStatusLabel();
             this.dgvDetalleFactura = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -103,6 +102,8 @@
             this.chCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnFactura = new System.Windows.Forms.Button();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSopaGallina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLomo)).BeginInit();
@@ -734,8 +735,8 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.lblUsuario,
-            this.toolStripStatusLabel3,
-            this.lblMesa});
+            this.lblMesa,
+            this.toolStripStatusLabel3});
             this.statusStrip1.Location = new System.Drawing.Point(0, 793);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(851, 22);
@@ -751,13 +752,8 @@
             // lblUsuario
             // 
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(0, 17);
-            // 
-            // toolStripStatusLabel3
-            // 
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(38, 17);
-            this.toolStripStatusLabel3.Text = "Mesa:";
+            this.lblUsuario.Size = new System.Drawing.Size(13, 17);
+            this.lblUsuario.Text = "1";
             // 
             // lblMesa
             // 
@@ -874,12 +870,29 @@
             this.chTotal.HeaderText = "Total";
             this.chTotal.Name = "chTotal";
             // 
+            // btnFactura
+            // 
+            this.btnFactura.Location = new System.Drawing.Point(547, 523);
+            this.btnFactura.Name = "btnFactura";
+            this.btnFactura.Size = new System.Drawing.Size(114, 23);
+            this.btnFactura.TabIndex = 14;
+            this.btnFactura.Text = "Generar Factura";
+            this.btnFactura.UseVisualStyleBackColor = true;
+            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(38, 17);
+            this.toolStripStatusLabel3.Text = "Mesa:";
+            // 
             // Orden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(851, 815);
+            this.Controls.Add(this.btnFactura);
             this.Controls.Add(this.lblVolver);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label1);
@@ -978,7 +991,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel lblUsuario;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel lblMesa;
         private System.Windows.Forms.DataGridView dgvDetalleFactura;
         private System.Windows.Forms.Label label1;
@@ -1008,5 +1020,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn chCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn chPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn chTotal;
+        private System.Windows.Forms.Button btnFactura;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
     }
 }
