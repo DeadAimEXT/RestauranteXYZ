@@ -368,19 +368,19 @@
             this.modificarToolStripMenuItem,
             this.eliminarToolStripMenuItem});
             this.cmsEmpleado.Name = "cmsEmpleado";
-            this.cmsEmpleado.Size = new System.Drawing.Size(153, 70);
+            this.cmsEmpleado.Size = new System.Drawing.Size(126, 48);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
@@ -443,6 +443,7 @@
             this.ClientSize = new System.Drawing.Size(753, 462);
             this.Controls.Add(this.tbcEmpleado);
             this.Name = "Empleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empleado";
             this.Load += new System.EventHandler(this.Empleado_Load);
             this.tbcEmpleado.ResumeLayout(false);

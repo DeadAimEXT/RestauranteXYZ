@@ -163,6 +163,7 @@
             this.Controls.Add(this.pbMesa2);
             this.Controls.Add(this.pbMesa1);
             this.Name = "Mesa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mesa";
             ((System.ComponentModel.ISupportInitialize)(this.pbMesa1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMesa2)).EndInit();
