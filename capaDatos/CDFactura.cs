@@ -111,5 +111,30 @@ namespace capaDatos
             return resultado;
 
         }
+        public DataSet MostrarDFacturaId(CEFactura objF)
+        {
+            SqlDataAdapter da;
+            DataSet ds = new DataSet();
+            SqlCommand cmd = new SqlCommand("Sp_MostrarDFacturaId", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@IdFactura", SqlDbType.Int).Value = objF.IdFactura;
+            try
+            {
+                ConectarBD();
+                da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+                da.Fill(ds, "Detalles");
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al solicitar los datos de la factura", ex);
+            }
+            finally
+            {
+                //DesconectarBD();
+                ds.Dispose();
+            }
+        }
     }
 }

@@ -447,3 +447,15 @@ insert into TipoEmpleado
 VALUES('Mesero')
 insert into Empleado
 VALUES('Hola', 'Mundo', '9999-9999','','Barrio El Centro', 1, 1)
+
+ALTER procedure [dbo].[Sp_EliminarFactura]
+@IdFactura int 
+
+	As 
+	Begin 
+	Set nocount off
+	exec Sp_EliminarDFactura @IdFactura
+	Delete 
+	From Factura
+	Where IdFactura=@IdFactura
+End

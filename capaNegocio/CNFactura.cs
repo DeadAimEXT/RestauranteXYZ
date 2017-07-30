@@ -25,5 +25,13 @@ namespace capaNegocio
         {
             return objF1.MaxFactura();
         }
+        public int EliminarFactura(CEFactura objF)
+        {
+            return objF1.EliminarFactura(objF);
+        }
+        public DataSet MostrarDFacturaId(CEFactura objF)
+        {
+            return objF1.MostrarDFacturaId(objF);
+        }
     }
 }

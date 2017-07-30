@@ -166,5 +166,29 @@ namespace capaDatos
                 ds.Dispose();
             }
         }
+
+        public string UsuarioNombreEmpleado(int idEmpleado)
+        {
+            string resultado;
+            SqlCommand cmd = new SqlCommand("Sp_UsuarioNombreEmpleado", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@idUsuario", SqlDbType.Int).Value = idEmpleado;
+            try
+            {
+                ConectarBD();
+                resultado = cmd.ExecuteScalar().ToString();
+                return resultado;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Error al recuperar nombre del usuario", ex);
+            }
+            finally
+            {
+                DesconectarBD();
+                cmd.Dispose();
+            }
+
+        }
     }
 }

@@ -45,7 +45,12 @@ namespace capaNegocio
             return objE1.EliminarEmpleado(objE);
             
         }
+        public string UsuarioNombreEmpleado(int idEmpleado)
+        {
+            return objE1.UsuarioNombreEmpleado(idEmpleado);
+        }
 
- 
+
+
     }
 }

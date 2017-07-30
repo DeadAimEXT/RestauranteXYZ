@@ -174,18 +174,41 @@ namespace RestauranteXYZ.Formularios
             CNDetalleFactura cnDetFactura = new CNDetalleFactura();
             CNFactura cnFactura = new CNFactura();
             CEFactura factura = new CEFactura();
+            
             factura.IdEmpleado = int.Parse(lblUsuario.Text); //test
             factura.Fecha = DateTime.Now;
             
             cnFactura.InsertarFactura(factura);
             i = cnFactura.MaxFactura();
+            factura.IdFactura = i;
             foreach (CEDetalleFactura det in detallesFactura)
             {
                 det.IdFactura = i;
                 cnDetFactura.InsertarDFactura(det);
             }
+            Factura frmFactura = new Factura(factura);
+
+            if (frmFactura.ShowDialog() == DialogResult.OK)
+            {
+                this.Dispose();
+            }
+            else
+            {
+                limpiar();
+            }
             
-            this.Dispose();
+        }
+        private void limpiar()
+        {
+            for (int i = 0; i < 16; i++)
+            {
+                chkArray[i].Checked = false;
+                nudArray[i].Value = 1;
+                dgvDetalleFactura.Rows.Clear();
+            }
+            detallesFactura.Clear();
+            validarNuds();
+
         }
     }
 }
