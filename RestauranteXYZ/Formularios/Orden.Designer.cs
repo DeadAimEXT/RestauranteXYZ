@@ -164,7 +164,7 @@
             // nudSopaGallina
             // 
             this.nudSopaGallina.Enabled = false;
-            this.nudSopaGallina.Location = new System.Drawing.Point(169, 39);
+            this.nudSopaGallina.Location = new System.Drawing.Point(169, 42);
             this.nudSopaGallina.Minimum = new decimal(new int[] {
             1,
             0,
@@ -431,7 +431,7 @@
             // nudPupusas
             // 
             this.nudPupusas.Enabled = false;
-            this.nudPupusas.Location = new System.Drawing.Point(166, 88);
+            this.nudPupusas.Location = new System.Drawing.Point(166, 92);
             this.nudPupusas.Minimum = new decimal(new int[] {
             1,
             0,
@@ -449,7 +449,7 @@
             // nudTocino
             // 
             this.nudTocino.Enabled = false;
-            this.nudTocino.Location = new System.Drawing.Point(166, 65);
+            this.nudTocino.Location = new System.Drawing.Point(166, 66);
             this.nudTocino.Minimum = new decimal(new int[] {
             1,
             0,
@@ -467,7 +467,7 @@
             // nudHamburguesa
             // 
             this.nudHamburguesa.Enabled = false;
-            this.nudHamburguesa.Location = new System.Drawing.Point(166, 39);
+            this.nudHamburguesa.Location = new System.Drawing.Point(166, 42);
             this.nudHamburguesa.Minimum = new decimal(new int[] {
             1,
             0,
@@ -675,7 +675,7 @@
             // nudBatido
             // 
             this.nudBatido.Enabled = false;
-            this.nudBatido.Location = new System.Drawing.Point(164, 66);
+            this.nudBatido.Location = new System.Drawing.Point(164, 67);
             this.nudBatido.Minimum = new decimal(new int[] {
             1,
             0,
@@ -693,7 +693,7 @@
             // nudGaseosas
             // 
             this.nudGaseosas.Enabled = false;
-            this.nudGaseosas.Location = new System.Drawing.Point(164, 40);
+            this.nudGaseosas.Location = new System.Drawing.Point(164, 42);
             this.nudGaseosas.Minimum = new decimal(new int[] {
             1,
             0,
@@ -807,7 +807,7 @@
             // nudBrownie
             // 
             this.nudBrownie.Enabled = false;
-            this.nudBrownie.Location = new System.Drawing.Point(163, 39);
+            this.nudBrownie.Location = new System.Drawing.Point(163, 42);
             this.nudBrownie.Minimum = new decimal(new int[] {
             1,
             0,
@@ -825,7 +825,7 @@
             // nudTorta
             // 
             this.nudTorta.Enabled = false;
-            this.nudTorta.Location = new System.Drawing.Point(163, 65);
+            this.nudTorta.Location = new System.Drawing.Point(163, 67);
             this.nudTorta.Minimum = new decimal(new int[] {
             1,
             0,
@@ -892,6 +892,7 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.lblUsuario,
@@ -905,8 +906,9 @@
             // 
             // toolStripStatusLabel1
             // 
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(51, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(50, 17);
             this.toolStripStatusLabel1.Text = "Atiende:";
             // 
             // lblUsuario
@@ -922,8 +924,9 @@
             // 
             // toolStripStatusLabel3
             // 
+            this.toolStripStatusLabel3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(38, 17);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(37, 17);
             this.toolStripStatusLabel3.Text = "Mesa:";
             // 
             // dgvDetalleFactura
@@ -935,9 +938,9 @@
             this.chCantidad,
             this.chPrecio,
             this.chTotal});
-            this.dgvDetalleFactura.Location = new System.Drawing.Point(11, 523);
+            this.dgvDetalleFactura.Location = new System.Drawing.Point(11, 551);
             this.dgvDetalleFactura.Name = "dgvDetalleFactura";
-            this.dgvDetalleFactura.Size = new System.Drawing.Size(449, 267);
+            this.dgvDetalleFactura.Size = new System.Drawing.Size(837, 239);
             this.dgvDetalleFactura.TabIndex = 11;
             // 
             // chProducto
@@ -973,7 +976,8 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(466, 523);
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(11, 522);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 12;
@@ -1038,7 +1042,8 @@
             // 
             // btnFactura
             // 
-            this.btnFactura.Location = new System.Drawing.Point(547, 523);
+            this.btnFactura.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFactura.Location = new System.Drawing.Point(104, 522);
             this.btnFactura.Name = "btnFactura";
             this.btnFactura.Size = new System.Drawing.Size(114, 23);
             this.btnFactura.TabIndex = 14;

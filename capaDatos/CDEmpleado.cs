@@ -138,7 +138,7 @@ namespace capaDatos
             }
             finally
             {
-                //DesconectarBD();
+                DesconectarBD();
                 ds.Dispose();
             }
         }
