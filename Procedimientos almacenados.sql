@@ -459,3 +459,27 @@ ALTER procedure [dbo].[Sp_EliminarFactura]
 	From Factura
 	Where IdFactura=@IdFactura
 End
+
+ALTER procedure [dbo].[Sp_MostrarDFacturaId]
+@IdFactura INT
+As BEGIN
+	  Set nocount on  
+	  Select a.IdFactura,p.Nombre,p.Precio,a.Cantidad
+	  	   From DetalleFactura a inner Join Producto p  
+	           on a.IdProducto = p.IdProducto 
+			   Where a.IdFactura = @IdFactura
+END
+ALTER Procedure [dbo].[Sp_ListarSexo]
+AS
+BEGIN
+	Set nocount on
+	Select * 
+	From Sexo
+End
+Create PROCEDURE Sp_ListarTipoEmpleado
+AS
+BEGIN
+	SELECT *
+	From TipoEmpleado
+END
+

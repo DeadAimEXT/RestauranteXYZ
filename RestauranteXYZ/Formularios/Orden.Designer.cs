@@ -1057,6 +1057,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(851, 815);
+            this.ControlBox = false;
             this.Controls.Add(this.btnFactura);
             this.Controls.Add(this.lblVolver);
             this.Controls.Add(this.btnAgregar);
@@ -1071,6 +1072,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Orden";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Orden";

@@ -37,7 +37,7 @@ namespace RestauranteXYZ.Formularios
 
         private void pbFactura_Click(object sender, EventArgs e)
         {
-            Factura factura = new Factura();
+            ModFactura factura = new ModFactura();
             factura.Show();
         }
 
