@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using capaEntidades;
-
+using System.Windows.Forms;
 
 namespace capaDatos
 {
@@ -188,7 +188,63 @@ namespace capaDatos
                 DesconectarBD();
                 cmd.Dispose();
             }
-
         }
+
+        #region Busquedas 
+        public DataSet BuscarPorNombre(CEEmpleado objE)
+        {
+            SqlDataAdapter da;
+            DataSet ds = new DataSet();
+
+            try
+            {
+                ConectarBD();
+                da = new SqlDataAdapter("Sp_BuscarEmpleadoNombre", cnn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@Nombre", SqlDbType.NVarChar).Value = objE.Nombre;
+                da.Fill(ds, "MostrarNombre");
+                return ds;
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(null, "No se pudo realizar la consulta", "Restaurante XYZ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            finally
+            {
+                DesconectarBD();
+                ds.Dispose();
+            }
+        }
+
+        public DataSet BuscarPorId(CEEmpleado objE)
+        {
+            SqlDataAdapter da;
+            DataSet ds = new DataSet();
+
+            try
+            {
+                ConectarBD();
+                da = new SqlDataAdapter("Sp_BuscarEmpleadoId", cnn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@IdEmpleado", SqlDbType.Int).Value = objE.IdEmpleado;
+                da.Fill(ds, "MostrarId");
+                return ds;
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(null, "No se pudo realizar la consulta", "Restaurante XYZ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            finally
+            {
+                DesconectarBD();
+                ds.Dispose();
+            }
+        }
+
+        #endregion
     }
 }

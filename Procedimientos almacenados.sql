@@ -74,7 +74,35 @@ Begin
 		on e.IdSexo = s.IdSexo
 End
 
-Exec Sp_MostrarEmpleados
+Create Procedure Sp_BuscarEmpleadoNombre
+	@Nombre nvarchar(20)
+As
+	Begin
+		Set nocount on
+		Select e.IdEmpleado, e.Nombre, e.Apellido, e.Telefono, e.Correo, e.Direccion, s.Sexo, t.TipoEmpleado
+		From Empleado e inner join TipoEmpleado t
+			on e.IdTipoEmpleado= T.IdTipoEmpleado
+			inner join Sexo s
+			on e.IdSexo = s.IdSexo
+		Where e.Nombre = @Nombre
+	End
+Go
+
+
+Create Procedure Sp_BuscarEmpleadoId
+	@IdEmpleado int
+As
+	Begin
+		Set nocount on
+		Select e.IdEmpleado, e.Nombre, e.Apellido, e.Telefono, e.Correo, e.Direccion, s.Sexo, t.TipoEmpleado
+		From Empleado e inner join TipoEmpleado t
+			on e.IdTipoEmpleado= T.IdTipoEmpleado
+			inner join Sexo s
+			on e.IdSexo = s.IdSexo
+		Where e.IdEmpleado = @IdEmpleado
+	End
+Go
+
 
 --Porcedimiento almacenado para listar los tipo de empleado
 Create Procedure Sp_ListarTipoEmpleado
@@ -84,8 +112,6 @@ BEGIN
 	Select *
 	From TipoEmpleado
 End
-
-Exec Sp_ListarTipoEmpleado
 
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
@@ -99,8 +125,6 @@ BEGIN
 	Select * 
 	From Sexo
 End
-
-Exec Sp_ListarSexo
 
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
@@ -140,7 +164,7 @@ BEGIN
 	Set nocount off
 	Insert into Mesa
 	values (@Estado, @Capacidad, @IdEmpleado)
-end
+End
 
 Create Procedure Sp_EliminarMesa
 	@IdMesa int
@@ -314,7 +338,6 @@ Create procedure Sp_ModificarFactura
 @NombreCliente nvarchar(20),
 @RTN nvarchar(14),
 @Fecha datetime
-
 As 
 	Begin
 	Set nocount off
@@ -399,6 +422,8 @@ Begin
 	from Producto
 	WHERE IdProducto = @IdProducto
 End
+
+
 CREATE Procedure Sp_PrecioProducto
 @IdProducto int
 AS
@@ -414,8 +439,6 @@ ALTER procedure [dbo].[Sp_ModificarFactura]
 @IdFactura int,
 @NombreCliente nvarchar(20),
 @RTN nvarchar(14)
-
-
 As 
 Begin
 	Set nocount off
@@ -423,22 +446,27 @@ Begin
 	Set NombreCliente = @NombreCliente, RTN = @RTN
 	WHERE IdFactura = @IdFactura
 End
+
+
 CREATE PROCEDURE Sp_MaxFactura
 as
 BEGIN
 	SELECT max(IdFactura)
 	FROM Factura
 END
+
+
 ALTER procedure [dbo].[Sp_InsertarFactura]
 @IdEmpleado int,
 @Fecha datetime
-
 As 
 	Begin
 	Set nocount off
 	Insert into Factura
 	Values(@IdEmpleado,'','',@Fecha)
 End
+
+
 insert into Sexo
 VALUES('Masculino')
 insert into Sexo
@@ -460,7 +488,8 @@ ALTER procedure [dbo].[Sp_EliminarFactura]
 	Where IdFactura=@IdFactura
 End
 
-ALTER procedure [dbo].[Sp_MostrarDFacturaId]
+--------------------------------------------------???
+ALTER procedure [dbo].[Sp_MostrarDFacturaId]-- no me dio
 @IdFactura INT
 As BEGIN
 	  Set nocount on  
@@ -469,6 +498,8 @@ As BEGIN
 	           on a.IdProducto = p.IdProducto 
 			   Where a.IdFactura = @IdFactura
 END
+
+
 ALTER Procedure [dbo].[Sp_ListarSexo]
 AS
 BEGIN
@@ -476,6 +507,9 @@ BEGIN
 	Select * 
 	From Sexo
 End
+
+---------------------------------------------------??? --porque no lleva set nocount on?
+
 Create PROCEDURE Sp_ListarTipoEmpleado
 AS
 BEGIN

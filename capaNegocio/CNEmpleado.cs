@@ -50,7 +50,14 @@ namespace capaNegocio
             return objE1.UsuarioNombreEmpleado(idEmpleado);
         }
 
+        public DataSet MostrarPorNombre(CEEmpleado objE)
+        {
+            return objE1.BuscarPorNombre(objE);
+        }
 
-
+        public DataSet MostrarPorId(CEEmpleado objE)
+        {
+            return objE1.BuscarPorId(objE);
+        }
     }
 }
