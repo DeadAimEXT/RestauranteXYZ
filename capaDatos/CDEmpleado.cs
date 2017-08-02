@@ -157,7 +157,7 @@ namespace capaDatos
             }
             catch (Exception ex)
             {
-                throw new Exception("No se pudo realizar la consulta", ex);
+                throw new Exception("No se pudo mostrar los datos de la base de datos", ex);
             }
             finally
             {

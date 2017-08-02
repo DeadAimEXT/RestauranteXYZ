@@ -17,5 +17,15 @@ namespace capaNegocio
         {
             return objAL1.MostrarAuditoria();
         }
+
+        public DataSet MostrarPorIdAuditLog(CEAuditoriaLog objA)
+        {
+            return objAL1.BuscarAuditLogId(objA);
+        }
+
+        public DataSet MostrarPorIdUsuario(CEAuditoriaLog objA)
+        {
+            return objAL1.BuscarAuditLogIdUsuario(objA);
+        }
     }
 }

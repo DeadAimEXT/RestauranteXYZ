@@ -30,7 +30,7 @@
         {
             this.dgvAuditoriaLog = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdbNombre = new System.Windows.Forms.RadioButton();
+            this.rdbEmpleado = new System.Windows.Forms.RadioButton();
             this.rdbIdUsuario = new System.Windows.Forms.RadioButton();
             this.rdbIdAuditoria = new System.Windows.Forms.RadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -43,33 +43,33 @@
             // 
             this.dgvAuditoriaLog.BackgroundColor = System.Drawing.Color.White;
             this.dgvAuditoriaLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAuditoriaLog.Location = new System.Drawing.Point(30, 153);
+            this.dgvAuditoriaLog.Location = new System.Drawing.Point(26, 140);
             this.dgvAuditoriaLog.Name = "dgvAuditoriaLog";
-            this.dgvAuditoriaLog.Size = new System.Drawing.Size(529, 300);
+            this.dgvAuditoriaLog.Size = new System.Drawing.Size(550, 309);
             this.dgvAuditoriaLog.TabIndex = 7;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rdbNombre);
+            this.groupBox1.Controls.Add(this.rdbEmpleado);
             this.groupBox1.Controls.Add(this.rdbIdUsuario);
             this.groupBox1.Controls.Add(this.rdbIdAuditoria);
-            this.groupBox1.Location = new System.Drawing.Point(119, 34);
+            this.groupBox1.Location = new System.Drawing.Point(113, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(382, 64);
+            this.groupBox1.Size = new System.Drawing.Size(396, 64);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bucar:";
             // 
-            // rdbNombre
+            // rdbEmpleado
             // 
-            this.rdbNombre.AutoSize = true;
-            this.rdbNombre.Location = new System.Drawing.Point(269, 29);
-            this.rdbNombre.Name = "rdbNombre";
-            this.rdbNombre.Size = new System.Drawing.Size(109, 17);
-            this.rdbNombre.TabIndex = 1;
-            this.rdbNombre.TabStop = true;
-            this.rdbNombre.Text = "Nombre Usuario";
-            this.rdbNombre.UseVisualStyleBackColor = true;
+            this.rdbEmpleado.AutoSize = true;
+            this.rdbEmpleado.Location = new System.Drawing.Point(269, 29);
+            this.rdbEmpleado.Name = "rdbEmpleado";
+            this.rdbEmpleado.Size = new System.Drawing.Size(120, 17);
+            this.rdbEmpleado.TabIndex = 1;
+            this.rdbEmpleado.TabStop = true;
+            this.rdbEmpleado.Text = "Nombre Empleado";
+            this.rdbEmpleado.UseVisualStyleBackColor = true;
             // 
             // rdbIdUsuario
             // 
@@ -95,16 +95,17 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(381, 107);
+            this.btnBuscar.Location = new System.Drawing.Point(382, 101);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(61, 23);
             this.btnBuscar.TabIndex = 12;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(162, 109);
+            this.txtBuscar.Location = new System.Drawing.Point(163, 103);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(213, 22);
             this.txtBuscar.TabIndex = 11;
@@ -133,7 +134,7 @@
         #endregion
         private System.Windows.Forms.DataGridView dgvAuditoriaLog;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rdbNombre;
+        private System.Windows.Forms.RadioButton rdbEmpleado;
         private System.Windows.Forms.RadioButton rdbIdUsuario;
         private System.Windows.Forms.RadioButton rdbIdAuditoria;
         private System.Windows.Forms.Button btnBuscar;

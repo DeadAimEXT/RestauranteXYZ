@@ -23,13 +23,39 @@ namespace RestauranteXYZ.Formularios
         {
             CargarDgvAuditoriaLog();
         }
-
         private void CargarDgvAuditoriaLog()
         {
             CNAuditoriaLog objA = new CNAuditoriaLog();
             dgvAuditoriaLog.DataSource = objA.MostrarAuditoriaLog().Tables["MostrarAuditoriaLog"];
+        }  
+        
+        private void BuscarPorIdLog(int IdAuditLog)
+        {
+            CNAuditoriaLog BuscarA = new CNAuditoriaLog();
+            CEAuditoriaLog objAuditoriaLog = new CEAuditoriaLog();
+            objAuditoriaLog.IdAuditoriaLog = IdAuditLog;
+            dgvAuditoriaLog.DataSource = BuscarA.MostrarPorIdAuditLog(objAuditoriaLog).Tables["MostrarPorIdAuditLog"];
         }
 
-        
+        private void BuscarPorIdUsuario(int IdUsuario)
+        {
+            CNAuditoriaLog BuscarA = new CNAuditoriaLog();
+            CEAuditoriaLog objAuditoriaLog = new CEAuditoriaLog();
+            objAuditoriaLog.IdUsuario = IdUsuario;
+            dgvAuditoriaLog.DataSource = BuscarA.MostrarPorIdUsuario(objAuditoriaLog).Tables["MostrarPorIdUsuario"];
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if(rdbIdAuditoria.Checked == true)
+            {
+                BuscarPorIdLog(Convert.ToInt32(txtBuscar.Text));
+            }
+            else if (rdbIdUsuario.Checked == true)
+            {
+                BuscarPorIdUsuario(Convert.ToInt32(txtBuscar.Text));
+            }
+
+        }
     }
 }

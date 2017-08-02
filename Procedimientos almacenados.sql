@@ -543,3 +543,34 @@ As
 Go
 
 exec Sp_MostrarAuditoriaLog
+
+
+
+Create Procedure Sp_MostrarAuditoriaLogId
+	@IdAuditLog int
+AS
+	BEGIN
+		Set nocount on
+			Select a.IdAuditLog, u.Usuario, e.Nombre + ' ' + e.Apellido 'Nombre Empleado', a.Descripcion
+			From AuditLog a inner join Usuario u
+				on a.IdUsuario = u.IdUsuario
+				inner join Empleado e
+				on u.IdEmpleado = e.IdEmpleado
+			Where a.IdAuditLog = @IdAuditLog
+	End
+Go
+
+
+Create Procedure Sp_MostrarAuditoriaLogIdUsuario
+	@IdUsuario int
+AS
+	BEGIN
+		Set nocount on
+			Select a.IdAuditLog, u.Usuario, e.Nombre + ' ' + e.Apellido 'Nombre Empleado', a.Descripcion
+			From AuditLog a inner join Usuario u
+				on a.IdUsuario = u.IdUsuario
+				inner join Empleado e
+				on u.IdEmpleado = e.IdEmpleado
+			Where u.IdUsuario = a.IdUsuario
+	End
+Go
