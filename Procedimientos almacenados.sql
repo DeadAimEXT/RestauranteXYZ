@@ -483,3 +483,9 @@ BEGIN
 	From TipoEmpleado
 END
 
+Create view V_Factura
+AS
+Select 
+From Factura f inner join DetalleFactura d on f.IdFactura = d.IdFactura
+			   inner join Producto p on p.IdProducto = d.IdProducto
+

@@ -117,6 +117,9 @@
     <EmbeddedResource Include="Formularios\Mesa.resx">
       <DependentUpon>Mesa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ModFactura.resx">
+      <DependentUpon>ModFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Orden.resx">
       <DependentUpon>Orden.cs</DependentUpon>
     </EmbeddedResource>
