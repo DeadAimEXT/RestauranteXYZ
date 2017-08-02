@@ -12,9 +12,16 @@ namespace RestauranteXYZ.Formularios
 {
     public partial class frmMenu : Form
     {
+        string userName;
+
         public frmMenu()
         {
             InitializeComponent();
+        }
+        public frmMenu(string userName)
+        {
+            InitializeComponent();
+            this.userName = userName;
         }
 
         private void pbEmpleado_Click(object sender, EventArgs e)

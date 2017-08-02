@@ -73,11 +73,23 @@
     <Compile Include="Formularios\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Mesa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Mesa.Designer.cs">
       <DependentUpon>Mesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ModFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ModFactura.Designer.cs">
+      <DependentUpon>ModFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Orden.cs">
       <SubType>Form</SubType>
@@ -98,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mesa.resx">
       <DependentUpon>Mesa.cs</DependentUpon>
@@ -155,6 +170,10 @@
     <None Include="Resources\invoice.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\capaDatos\capaDatos.csproj">
+      <Project>{25f592f0-5343-4354-a329-66cafc88925a}</Project>
+      <Name>capaDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\capaEntidades\capaEntidades.csproj">
       <Project>{ac319b89-c3ec-4333-85d9-c374c91c65cc}</Project>
       <Name>capaEntidades</Name>

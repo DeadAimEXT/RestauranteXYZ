@@ -17,7 +17,19 @@ namespace RestauranteXYZ.Formularios
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMenu());
+            Login Login = new Login();
+            DialogResult res = new DialogResult();
+            string username;
+            res = Login.ShowDialog();
+            username = Login.userName;
+            if (res == DialogResult.OK)
+            {
+                Application.Run(new frmMenu(username));
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }
