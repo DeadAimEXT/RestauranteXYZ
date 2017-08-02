@@ -534,7 +534,7 @@ Create Procedure Sp_MostrarAuditoriaLog
 As
 	Begin
 		Set nocount on
-		Select a.IdAuditLog, a.Descripcion, u.Usuario
+		Select a.IdAuditLog, u.Usuario, e.Nombre + ' ' + e.Apellido 'Nombre Empleado', a.Descripcion
 		From AuditLog a inner join Usuario u
 			on a.IdUsuario = u.IdUsuario
 			inner join Empleado e
