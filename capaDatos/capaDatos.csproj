@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CDAuditoriaLog.cs" />
     <Compile Include="CDDetalleFactura.cs" />
     <Compile Include="CDEmpleado.cs" />
     <Compile Include="CDFactura.cs" />

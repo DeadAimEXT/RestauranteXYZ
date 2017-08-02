@@ -523,3 +523,23 @@ Select
 From Factura f inner join DetalleFactura d on f.IdFactura = d.IdFactura
 			   inner join Producto p on p.IdProducto = d.IdProducto
 
+
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------Procedimientos Almacenados para Auditoria--------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Create Procedure Sp_MostrarAuditoriaLog
+As
+	Begin
+		Set nocount on
+		Select a.IdAuditLog, a.Descripcion, u.Usuario
+		From AuditLog a inner join Usuario u
+			on a.IdUsuario = u.IdUsuario
+			inner join Empleado e
+			on u.IdEmpleado = e.IdEmpleado
+	End
+Go
+
+exec Sp_MostrarAuditoriaLog

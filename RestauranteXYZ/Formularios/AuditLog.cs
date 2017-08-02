@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using capaEntidades;
+using capaNegocio;
 
 namespace RestauranteXYZ.Formularios
 {
@@ -19,7 +21,15 @@ namespace RestauranteXYZ.Formularios
 
         private void AuditLog_Load(object sender, EventArgs e)
         {
-
+            CargarDgvAuditoriaLog();
         }
+
+        private void CargarDgvAuditoriaLog()
+        {
+            CNAuditoriaLog objA = new CNAuditoriaLog();
+            dgvAuditoriaLog.DataSource = objA.MostrarAuditoriaLog().Tables["MostrarAuditoriaLog"];
+        }
+
+        
     }
 }

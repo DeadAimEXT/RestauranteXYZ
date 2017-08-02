@@ -28,124 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAuditoriaLog = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.rdbNombre = new System.Windows.Forms.RadioButton();
+            this.rdbIdUsuario = new System.Windows.Forms.RadioButton();
+            this.rdbIdAuditoria = new System.Windows.Forms.RadioButton();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAuditoriaLog)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // dgvAuditoriaLog
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(113)))), ((int)(((byte)(133)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(752, 52);
-            this.panel1.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(207)))), ((int)(((byte)(147)))));
-            this.label1.Location = new System.Drawing.Point(270, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 47);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Auditoría Log";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 181);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(727, 282);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvAuditoriaLog.BackgroundColor = System.Drawing.Color.White;
+            this.dgvAuditoriaLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAuditoriaLog.Location = new System.Drawing.Point(30, 153);
+            this.dgvAuditoriaLog.Name = "dgvAuditoriaLog";
+            this.dgvAuditoriaLog.Size = new System.Drawing.Size(529, 300);
+            this.dgvAuditoriaLog.TabIndex = 7;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(194, 70);
+            this.groupBox1.Controls.Add(this.rdbNombre);
+            this.groupBox1.Controls.Add(this.rdbIdUsuario);
+            this.groupBox1.Controls.Add(this.rdbIdAuditoria);
+            this.groupBox1.Location = new System.Drawing.Point(119, 34);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(382, 64);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bucar:";
             // 
-            // radioButton3
+            // rdbNombre
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(269, 29);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(62, 17);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Nombre";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdbNombre.AutoSize = true;
+            this.rdbNombre.Location = new System.Drawing.Point(269, 29);
+            this.rdbNombre.Name = "rdbNombre";
+            this.rdbNombre.Size = new System.Drawing.Size(109, 17);
+            this.rdbNombre.TabIndex = 1;
+            this.rdbNombre.TabStop = true;
+            this.rdbNombre.Text = "Nombre Usuario";
+            this.rdbNombre.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdbIdUsuario
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(152, 29);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(70, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "IdUsuario";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdbIdUsuario.AutoSize = true;
+            this.rdbIdUsuario.Location = new System.Drawing.Point(160, 29);
+            this.rdbIdUsuario.Name = "rdbIdUsuario";
+            this.rdbIdUsuario.Size = new System.Drawing.Size(75, 17);
+            this.rdbIdUsuario.TabIndex = 1;
+            this.rdbIdUsuario.TabStop = true;
+            this.rdbIdUsuario.Text = "IdUsuario";
+            this.rdbIdUsuario.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdbIdAuditoria
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(20, 29);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(93, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "IdAuditoriaLog";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdbIdAuditoria.AutoSize = true;
+            this.rdbIdAuditoria.Location = new System.Drawing.Point(20, 29);
+            this.rdbIdAuditoria.Name = "rdbIdAuditoria";
+            this.rdbIdAuditoria.Size = new System.Drawing.Size(102, 17);
+            this.rdbIdAuditoria.TabIndex = 0;
+            this.rdbIdAuditoria.TabStop = true;
+            this.rdbIdAuditoria.Text = "IdAuditoriaLog";
+            this.rdbIdAuditoria.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnBuscar
             // 
-            this.button2.Location = new System.Drawing.Point(456, 143);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(381, 107);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(61, 23);
+            this.btnBuscar.TabIndex = 12;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtBuscar
             // 
-            this.textBox2.Location = new System.Drawing.Point(237, 145);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 20);
-            this.textBox2.TabIndex = 11;
+            this.txtBuscar.Location = new System.Drawing.Point(162, 109);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(213, 22);
+            this.txtBuscar.TabIndex = 11;
             // 
             // AuditLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 475);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.Linen;
+            this.ClientSize = new System.Drawing.Size(600, 475);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.dgvAuditoriaLog);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.Name = "AuditLog";
             this.Load += new System.EventHandler(this.AuditLog_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAuditoriaLog)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -154,15 +131,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAuditoriaLog;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RadioButton rdbNombre;
+        private System.Windows.Forms.RadioButton rdbIdUsuario;
+        private System.Windows.Forms.RadioButton rdbIdAuditoria;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }
