@@ -26,6 +26,8 @@ namespace RestauranteXYZ.Formularios
             CargarEmpleados();
         }
 
+
+        #region CargarCombobox
         private void CargarComboboxSexo()
         {
             CNEmpleado objE = new CNEmpleado();
@@ -41,6 +43,8 @@ namespace RestauranteXYZ.Formularios
             cboTipoEmpleado.DisplayMember = "TipoEmpleado";
             cboTipoEmpleado.ValueMember = "IdTipoEmpleado";
         }
+        #endregion
+
 
         private void CargarEmpleados()
         {
@@ -49,6 +53,7 @@ namespace RestauranteXYZ.Formularios
         }
 
 
+        #region InsertarEliminarModificar
         private void InsertarEmpleado()
         {
             CNEmpleado insertar = new CNEmpleado();
@@ -72,7 +77,6 @@ namespace RestauranteXYZ.Formularios
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
 
         private void ModificarEmpleado()
         {
@@ -117,7 +121,7 @@ namespace RestauranteXYZ.Formularios
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        #endregion
 
         private void FilaSeleccionada()
         {
@@ -132,11 +136,8 @@ namespace RestauranteXYZ.Formularios
             cboTipoEmpleado.Text = dgvEmpleados.CurrentRow.Cells[7].Value.ToString();
         }
 
-        private void grpDatos_Enter(object sender, EventArgs e)
-        {
-              
-        }
 
+        #region TodosLosBotones
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             HabilitarTexbox(false, false);
@@ -152,11 +153,6 @@ namespace RestauranteXYZ.Formularios
   
         }
 
-        private void cboTipoEmpleado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnModificar_Click(object sender, EventArgs e)
         {
             HabilitarTexbox(false, false);
@@ -166,6 +162,32 @@ namespace RestauranteXYZ.Formularios
             CargarEmpleados();
             Limpiar();
         }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            HabilitarBotones(true, false, false, false, true);
+            HabilitarTexbox(false, false);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (rdbNombre.Checked == true)
+            {
+                BuscarPorNombre(txtBuscar.Text);
+            }
+            else if (rdbIdEmpleado.Checked == true)
+            {
+                BuscarPorId(int.Parse(txtBuscar.Text));
+            }
+            else
+            {
+                CargarEmpleados();
+            }
+        }
+        #endregion
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -174,7 +196,6 @@ namespace RestauranteXYZ.Formularios
             FilaSeleccionada();
             grpDatos.Enabled = true; //El group box
             
-
             //Seleccionar tab page
             tbcEmpleado.SelectedTab = tbpGestion;
         }
@@ -211,16 +232,6 @@ namespace RestauranteXYZ.Formularios
             cboSexo.Enabled = valor;
             cboTipoEmpleado.Enabled = valor;
         }
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            HabilitarBotones(true, false, false, false, true);
-            HabilitarTexbox(false, false);
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -243,23 +254,22 @@ namespace RestauranteXYZ.Formularios
             CNEmpleado BuscarE = new CNEmpleado();
             CEEmpleado objEmpleado = new CEEmpleado();
             objEmpleado.IdEmpleado = IdEmpleado;
-            dgvEmpleados.DataSource = BuscarE.MostrarPorNombre(objEmpleado).Tables["MostrarId"];
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            if (rdbNombre.Checked == true)
-            {
-                BuscarPorNombre(txtBuscar.Text);
-            }
-            else if (rdbIdEmpleado.Checked == true)
-            {
-               BuscarPorId(int.Parse(txtBuscar.Text));
-            }
+            dgvEmpleados.DataSource = BuscarE.MostrarPorId (objEmpleado).Tables["MostrarId"];
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void cboTipoEmpleado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpDatos_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -412,9 +412,9 @@
             // 
             this.groupBox1.Controls.Add(this.rdbNombre);
             this.groupBox1.Controls.Add(this.rdbIdEmpleado);
-            this.groupBox1.Location = new System.Drawing.Point(184, 12);
+            this.groupBox1.Location = new System.Drawing.Point(217, 17);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(382, 64);
+            this.groupBox1.Size = new System.Drawing.Size(315, 64);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bucar:";
@@ -422,7 +422,7 @@
             // rdbNombre
             // 
             this.rdbNombre.AutoSize = true;
-            this.rdbNombre.Location = new System.Drawing.Point(128, 29);
+            this.rdbNombre.Location = new System.Drawing.Point(180, 29);
             this.rdbNombre.Name = "rdbNombre";
             this.rdbNombre.Size = new System.Drawing.Size(120, 17);
             this.rdbNombre.TabIndex = 1;
