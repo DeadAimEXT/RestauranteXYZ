@@ -98,12 +98,12 @@
             this.chTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.lblVolver = new System.Windows.Forms.Label();
+            this.btnFactura = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblVolver = new System.Windows.Forms.Label();
-            this.btnFactura = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSopaGallina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLomo)).BeginInit();
@@ -896,8 +896,8 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.lblUsuario,
-            this.lblMesa,
-            this.toolStripStatusLabel3});
+            this.toolStripStatusLabel3,
+            this.lblMesa});
             this.statusStrip1.Location = new System.Drawing.Point(0, 793);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(851, 22);
@@ -914,13 +914,14 @@
             // lblUsuario
             // 
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(13, 17);
-            this.lblUsuario.Text = "1";
+            this.lblUsuario.Size = new System.Drawing.Size(47, 17);
+            this.lblUsuario.Text = "Usuario";
             // 
             // lblMesa
             // 
             this.lblMesa.Name = "lblMesa";
-            this.lblMesa.Size = new System.Drawing.Size(0, 17);
+            this.lblMesa.Size = new System.Drawing.Size(34, 17);
+            this.lblMesa.Text = "Mesa";
             // 
             // toolStripStatusLabel3
             // 
@@ -985,6 +986,28 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // lblVolver
+            // 
+            this.lblVolver.AutoSize = true;
+            this.lblVolver.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVolver.Location = new System.Drawing.Point(32, 7);
+            this.lblVolver.Name = "lblVolver";
+            this.lblVolver.Size = new System.Drawing.Size(91, 25);
+            this.lblVolver.TabIndex = 13;
+            this.lblVolver.Text = "<- Volver";
+            this.lblVolver.Click += new System.EventHandler(this.lblVolver_Click);
+            // 
+            // btnFactura
+            // 
+            this.btnFactura.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFactura.Location = new System.Drawing.Point(104, 522);
+            this.btnFactura.Name = "btnFactura";
+            this.btnFactura.Size = new System.Drawing.Size(114, 23);
+            this.btnFactura.TabIndex = 14;
+            this.btnFactura.Text = "Generar Factura";
+            this.btnFactura.UseVisualStyleBackColor = true;
+            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
+            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
@@ -1029,28 +1052,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lblVolver
-            // 
-            this.lblVolver.AutoSize = true;
-            this.lblVolver.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVolver.Location = new System.Drawing.Point(32, 7);
-            this.lblVolver.Name = "lblVolver";
-            this.lblVolver.Size = new System.Drawing.Size(91, 25);
-            this.lblVolver.TabIndex = 13;
-            this.lblVolver.Text = "<- Volver";
-            this.lblVolver.Click += new System.EventHandler(this.lblVolver_Click);
-            // 
-            // btnFactura
-            // 
-            this.btnFactura.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFactura.Location = new System.Drawing.Point(104, 522);
-            this.btnFactura.Name = "btnFactura";
-            this.btnFactura.Size = new System.Drawing.Size(114, 23);
-            this.btnFactura.TabIndex = 14;
-            this.btnFactura.Text = "Generar Factura";
-            this.btnFactura.UseVisualStyleBackColor = true;
-            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
-            // 
             // Orden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1076,6 +1077,7 @@
             this.Name = "Orden";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Orden";
+            this.Load += new System.EventHandler(this.Orden_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSopaGallina)).EndInit();

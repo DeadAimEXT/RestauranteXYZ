@@ -246,5 +246,27 @@ namespace capaDatos
         }
 
         #endregion
+        public int NombreUsuarioEmpleadoId(string userName)
+        {
+            int resultado;
+            SqlCommand cmd = new SqlCommand("Sp_NombreUsuarioEmpleadoId", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@Usuario", SqlDbType.VarChar, 20).Value = userName;
+            try
+            {
+                ConectarBD();
+                resultado = int.Parse(cmd.ExecuteScalar().ToString());
+                return resultado;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Error al recuperar el id del Usuario", ex);
+            }
+            finally
+            {
+                DesconectarBD();
+                cmd.Dispose();
+            }
+        }
     }
 }

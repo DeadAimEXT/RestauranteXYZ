@@ -15,65 +15,78 @@ namespace RestauranteXYZ.Formularios
     public partial class Mesa : Form
     {
         public Orden[] orden = new Orden[] { new Orden(), new Orden(), new Orden(), new Orden(), new Orden(), new Orden(), new Orden(), new Orden(), new Orden() };
-        
+        string userName;
         public Mesa()
         {
             InitializeComponent();
         }
+        public Mesa(string userName)
+        {
+            InitializeComponent();
+            this.userName = userName;
+        }
 
         private void pbMesa1_Click(object sender, EventArgs e)
         {
-            if(!orden[0].IsDisposed)
-            {
-                orden[0].Show();
-            }
-            else
-            {
-                orden[0] = new Orden();
-                orden[0].Show();
-            }
-            
+            mostrarOrden(0);
             
         }
 
         private void pbMesa2_Click(object sender, EventArgs e)
         {
-            orden[1].Show();
+            mostrarOrden(1);
         }
 
         private void pbMesa3_Click(object sender, EventArgs e)
         {
-            orden[2].Show();
+            mostrarOrden(2);
         }
 
         private void pbMesa4_Click(object sender, EventArgs e)
         {
-            orden[3].Show();
+            mostrarOrden(3);
         }
 
         private void pbMesa5_Click(object sender, EventArgs e)
         {
-            orden[4].Show();
+            mostrarOrden(4);
         }
 
         private void pbMesa6_Click(object sender, EventArgs e)
         {
-            orden[5].Show();
+            mostrarOrden(5);
         }
 
         private void pbMesa7_Click(object sender, EventArgs e)
         {
-            orden[6].Show();
+            mostrarOrden(6);
         }
 
         private void pbMesa8_Click(object sender, EventArgs e)
         {
-            orden[7].Show();
+            mostrarOrden(7);
         }
 
         private void pbMesa9_Click(object sender, EventArgs e)
         {
-            orden[8].Show();
+            mostrarOrden(8);
+        }
+
+        private void mostrarOrden(int i)
+        {
+            if (orden[i].IsDisposed)
+            {
+                orden[i] = new Orden();
+                orden[i].idMesa = i + 1;
+                orden[i].userName = this.userName;
+                orden[i].Show();
+            }
+            else
+            {
+                orden[i].idMesa = i + 1;
+                orden[i].userName = this.userName;
+                orden[i].Show();
+            }
         }
     }
 }

@@ -32,7 +32,7 @@ namespace RestauranteXYZ.Formularios
 
         private void pbOrden_Click(object sender, EventArgs e)
         {
-            Mesa mesa = new Mesa();
+            Mesa mesa = new Mesa(userName);
             mesa.Show();
         }
 

@@ -19,9 +19,19 @@ namespace RestauranteXYZ.Formularios
         CheckBox[] chkArray;
         NumericUpDown[] nudArray;
         List<CEDetalleFactura> detallesFactura = new List<CEDetalleFactura>();
-        
-        
-       
+        public string userName;
+        public int idMesa;
+
+
+        public Orden(string userName)//no utilizado
+        {
+            InitializeComponent();
+            chkArray = new CheckBox[] {chkSopaGallina, chkPapas, chkSopaTortilla, chkPollo, chkCarne, chkLomo, chkHamburguesa, chkTocino, chkPupusas, chkGaseosas,
+                                       chkBatido, chkAgua, chkCafe, chkTe, chkBrownie, chkTorta};
+            nudArray = new NumericUpDown[] {nudSopaGallina, nudPapas, nudSopaTortilla, nudPollo, nudCarne, nudLomo, nudHamburguesa, nudTocino, nudPupusas, nudGaseosas,
+                                            nudBatido, nudAgua, nudCafe, nudTe, nudBrownie, nudTorta};
+            this.userName = userName;
+        }
 
         public Orden()
         {
@@ -171,11 +181,14 @@ namespace RestauranteXYZ.Formularios
         private void btnFactura_Click(object sender, EventArgs e)
         {
             int i;
+            
             CNDetalleFactura cnDetFactura = new CNDetalleFactura();
             CNFactura cnFactura = new CNFactura();
             CEFactura factura = new CEFactura();
-            
-            factura.IdEmpleado = int.Parse(lblUsuario.Text); //test
+            CNEmpleado cnEmpleado = new CNEmpleado();
+
+
+            factura.IdEmpleado = cnEmpleado.NombreUsuarioEmpleadoId(lblUsuario.Text); //test
             factura.Fecha = DateTime.Now;
             
             cnFactura.InsertarFactura(factura);
@@ -209,6 +222,12 @@ namespace RestauranteXYZ.Formularios
             detallesFactura.Clear();
             validarNuds();
 
+        }
+
+        private void Orden_Load(object sender, EventArgs e)
+        {
+            lblUsuario.Text = userName;
+            lblMesa.Text = idMesa.ToString();
         }
     }
 }

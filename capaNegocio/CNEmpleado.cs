@@ -59,5 +59,9 @@ namespace capaNegocio
         {
             return objE1.BuscarPorId(objE);
         }
+        public int NombreUsuarioEmpleadoId(string userName)
+        {
+            return objE1.NombreUsuarioEmpleadoId(userName);
+        }
     }
 }
