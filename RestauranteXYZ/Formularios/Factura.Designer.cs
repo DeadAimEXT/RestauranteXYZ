@@ -182,7 +182,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 8;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Text = "Cancelar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -202,6 +202,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(448, 541);
+            this.ControlBox = false;
             this.Controls.Add(this.lblTiempo);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnConfirmar);

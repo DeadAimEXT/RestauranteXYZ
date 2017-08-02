@@ -24,6 +24,10 @@ namespace RestauranteXYZ.Formularios
             CargarComboboxSexo();
             CargarComboboxTipoEmpleado();
             CargarEmpleados();
+            HabilitarBotones(true,false,false,false,true);
+            HabilitarTexbox(false, false);
+            cboSexo.SelectedIndex = -1;
+            cboTipoEmpleado.SelectedIndex = -1;
         }
 
 
