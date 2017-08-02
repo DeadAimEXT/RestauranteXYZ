@@ -229,5 +229,37 @@ namespace RestauranteXYZ.Formularios
             EliminarEmpleado(i);
             CargarEmpleados();
         }
+
+        private void BuscarPorNombre(string Nombre)
+        {
+            CNEmpleado BuscarE = new CNEmpleado();
+            CEEmpleado objEmpleado = new CEEmpleado();
+            objEmpleado.Nombre = Nombre;
+            dgvEmpleados.DataSource = BuscarE.MostrarPorNombre(objEmpleado).Tables["MostrarNombre"];
+        }
+
+        private void BuscarPorId(int IdEmpleado)
+        {
+            CNEmpleado BuscarE = new CNEmpleado();
+            CEEmpleado objEmpleado = new CEEmpleado();
+            objEmpleado.IdEmpleado = IdEmpleado;
+            dgvEmpleados.DataSource = BuscarE.MostrarPorNombre(objEmpleado).Tables["MostrarId"];
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (rdbNombre.Checked == true)
+            {
+                BuscarPorNombre(txtBuscar.Text);
+            }
+            else if (rdbIdEmpleado.Checked == true)
+            {
+               BuscarPorId(int.Parse(txtBuscar.Text));
+            }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+        }
     }
 }
