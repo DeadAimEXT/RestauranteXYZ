@@ -148,5 +148,11 @@ namespace RestauranteXYZ.Formularios
         {
             this.Close();
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            ReporteFactura report = new ReporteFactura();
+            report.Show();
+        }
     }
 }

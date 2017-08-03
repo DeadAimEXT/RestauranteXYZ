@@ -45,7 +45,7 @@
             this.dgvAuditoriaLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAuditoriaLog.Location = new System.Drawing.Point(26, 140);
             this.dgvAuditoriaLog.Name = "dgvAuditoriaLog";
-            this.dgvAuditoriaLog.Size = new System.Drawing.Size(550, 309);
+            this.dgvAuditoriaLog.Size = new System.Drawing.Size(690, 309);
             this.dgvAuditoriaLog.TabIndex = 7;
             // 
             // groupBox1
@@ -53,7 +53,7 @@
             this.groupBox1.Controls.Add(this.rdbEmpleado);
             this.groupBox1.Controls.Add(this.rdbIdUsuario);
             this.groupBox1.Controls.Add(this.rdbIdAuditoria);
-            this.groupBox1.Location = new System.Drawing.Point(113, 23);
+            this.groupBox1.Location = new System.Drawing.Point(184, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(396, 64);
             this.groupBox1.TabIndex = 4;
@@ -95,7 +95,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(382, 101);
+            this.btnBuscar.Location = new System.Drawing.Point(453, 90);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(61, 23);
             this.btnBuscar.TabIndex = 12;
@@ -105,7 +105,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(163, 103);
+            this.txtBuscar.Location = new System.Drawing.Point(234, 92);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(213, 22);
             this.txtBuscar.TabIndex = 11;
@@ -115,7 +115,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(600, 475);
+            this.ClientSize = new System.Drawing.Size(728, 475);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgvAuditoriaLog);

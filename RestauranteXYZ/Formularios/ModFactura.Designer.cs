@@ -39,6 +39,7 @@
             this.txtBuscar = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblSalir = new System.Windows.Forms.Label();
+            this.btnReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -170,6 +171,16 @@
             this.lblSalir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSalir.Click += new System.EventHandler(this.lblSalir_Click);
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Location = new System.Drawing.Point(871, 244);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(75, 23);
+            this.btnReporte.TabIndex = 7;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // ModFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,6 +188,7 @@
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(990, 320);
             this.ControlBox = false;
+            this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.lblSalir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBuscar);
@@ -206,5 +218,6 @@
         private System.Windows.Forms.MaskedTextBox txtBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSalir;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

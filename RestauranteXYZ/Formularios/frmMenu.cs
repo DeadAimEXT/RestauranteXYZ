@@ -26,7 +26,7 @@ namespace RestauranteXYZ.Formularios
 
         private void pbEmpleado_Click(object sender, EventArgs e)
         {
-            Empleado empleado = new Empleado();
+            Empleado empleado = new Empleado(userName);
             empleado.Show();
         }
 
