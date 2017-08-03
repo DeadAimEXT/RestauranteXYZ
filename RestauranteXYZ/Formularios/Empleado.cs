@@ -144,6 +144,7 @@ namespace RestauranteXYZ.Formularios
         #region TodosLosBotones
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            Validar();
             HabilitarTexbox(false, false);
             HabilitarBotones(true, false, false, false, true);
      
@@ -159,7 +160,7 @@ namespace RestauranteXYZ.Formularios
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Validar();
+            
             HabilitarTexbox(false, false);
             HabilitarBotones(true, false, false, false, true);
       
