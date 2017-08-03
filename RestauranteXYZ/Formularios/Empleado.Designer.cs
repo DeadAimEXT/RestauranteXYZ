@@ -450,6 +450,7 @@
             this.ClientSize = new System.Drawing.Size(753, 462);
             this.Controls.Add(this.tbcEmpleado);
             this.Name = "Empleado";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empleado";
             this.Load += new System.EventHandler(this.Empleado_Load);

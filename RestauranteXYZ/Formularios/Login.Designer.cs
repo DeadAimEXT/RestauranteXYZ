@@ -41,16 +41,18 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(104, 76);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogin.Location = new System.Drawing.Point(108, 87);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Ok";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtUser
             // 
+            this.txtUser.BackColor = System.Drawing.Color.White;
             this.txtUser.Location = new System.Drawing.Point(83, 19);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(100, 22);
@@ -58,6 +60,7 @@
             // 
             // txtContrasena
             // 
+            this.txtContrasena.BackColor = System.Drawing.Color.White;
             this.txtContrasena.Location = new System.Drawing.Point(83, 45);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(100, 22);
@@ -91,30 +94,35 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(15, 76);
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSalir.Location = new System.Drawing.Point(27, 87);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::RestauranteXYZ.Properties.Resources.mesa;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(204, 19);
+            this.pictureBox1.Image = global::RestauranteXYZ.Properties.Resources.bar;
+            this.pictureBox1.Location = new System.Drawing.Point(200, 19);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 84);
+            this.pictureBox1.Size = new System.Drawing.Size(105, 91);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 126);
+            this.BackColor = System.Drawing.Color.Linen;
+            this.ClientSize = new System.Drawing.Size(317, 120);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSalir);
@@ -125,8 +133,10 @@
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.btnLogin);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Login";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
