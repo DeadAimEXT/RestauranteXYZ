@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSet1 = new RestauranteXYZ.Formularios.DataSet1();
             this.V_FacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSet1 = new RestauranteXYZ.Formularios.DataSet1();
             this.V_FacturaTableAdapter = new RestauranteXYZ.Formularios.DataSet1TableAdapters.V_FacturaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.V_FacturaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -50,15 +50,15 @@
             this.reportViewer1.Size = new System.Drawing.Size(519, 494);
             this.reportViewer1.TabIndex = 0;
             // 
-            // DataSet1
-            // 
-            this.DataSet1.DataSetName = "DataSet1";
-            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // V_FacturaBindingSource
             // 
             this.V_FacturaBindingSource.DataMember = "V_Factura";
             this.V_FacturaBindingSource.DataSource = this.DataSet1;
+            // 
+            // DataSet1
+            // 
+            this.DataSet1.DataSetName = "DataSet1";
+            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // V_FacturaTableAdapter
             // 
@@ -73,8 +73,8 @@
             this.Name = "ReporteFactura";
             this.Text = "ReporteFactura";
             this.Load += new System.EventHandler(this.ReporteFactura_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.V_FacturaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

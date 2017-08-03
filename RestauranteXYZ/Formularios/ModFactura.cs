@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 using capaDatos;
 
@@ -15,15 +14,15 @@ namespace RestauranteXYZ.Formularios
 {
     public partial class ModFactura : Form
     {
-        
-        
+
+
         DataSet ds = new DataSet();
         SqlDataAdapter da;
-        
+
         public ModFactura()
         {
             InitializeComponent();
-            
+
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -33,7 +32,7 @@ namespace RestauranteXYZ.Formularios
 
         private void rdbFecha_CheckedChanged(object sender, EventArgs e)
         {
-            if(rdbFecha.Checked)
+            if (rdbFecha.Checked)
             {
                 chkAntes.Enabled = true;
                 chkEn.Enabled = true;
@@ -50,7 +49,7 @@ namespace RestauranteXYZ.Formularios
                 chkDespues.Checked = false;
                 txtBuscar.Mask = "";
             }
-            
+
         }
 
         private void buscar()
@@ -100,9 +99,9 @@ namespace RestauranteXYZ.Formularios
                     da = new SqlDataAdapter("SELECT * From V_Factura Where [Fecha] >= '" + txtBuscar.Text + "'", cnn);
                     da.Fill(ds);
                 }
-                else if(chkAntes.Checked && chkDespues.Checked)
+                else if (chkAntes.Checked && chkDespues.Checked)
                 {
-                    da = new SqlDataAdapter("SELECT * From V_Factura Where [Fecha] > '" + txtBuscar.Text + "' OR [Fecha] <'"+ txtBuscar.Text + "'", cnn);
+                    da = new SqlDataAdapter("SELECT * From V_Factura Where [Fecha] > '" + txtBuscar.Text + "' OR [Fecha] <'" + txtBuscar.Text + "'", cnn);
                     da.Fill(ds);
                 }
 
@@ -149,10 +148,10 @@ namespace RestauranteXYZ.Formularios
             this.Close();
         }
 
-        private void btnReporte_Click(object sender, EventArgs e)
+        private void lblReporte_Click(object sender, EventArgs e)
         {
-            ReporteFactura report = new ReporteFactura();
-            report.Show();
+            ReporteFactura reporte = new ReporteFactura();
+            reporte.Show();
         }
-    }
+    }    
 }
