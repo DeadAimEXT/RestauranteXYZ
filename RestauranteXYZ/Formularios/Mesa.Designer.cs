@@ -162,6 +162,8 @@
             this.Controls.Add(this.pbMesa3);
             this.Controls.Add(this.pbMesa2);
             this.Controls.Add(this.pbMesa1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Mesa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mesa";

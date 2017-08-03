@@ -449,6 +449,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 462);
             this.Controls.Add(this.tbcEmpleado);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Empleado";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
