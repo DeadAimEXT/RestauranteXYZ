@@ -44,7 +44,6 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.lblTiempo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,16 +186,6 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // lblTiempo
-            // 
-            this.lblTiempo.AutoSize = true;
-            this.lblTiempo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiempo.Location = new System.Drawing.Point(203, 35);
-            this.lblTiempo.Name = "lblTiempo";
-            this.lblTiempo.Size = new System.Drawing.Size(44, 13);
-            this.lblTiempo.TabIndex = 9;
-            this.lblTiempo.Text = "Tiempo";
-            // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,7 +193,6 @@
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(448, 541);
             this.ControlBox = false;
-            this.Controls.Add(this.lblTiempo);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label4);
@@ -248,6 +236,5 @@
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Label lblTiempo;
     }
 }

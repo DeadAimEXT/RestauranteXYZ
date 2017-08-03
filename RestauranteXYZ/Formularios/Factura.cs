@@ -34,7 +34,6 @@ namespace RestauranteXYZ.Formularios
         {
             int suma = 0;
             lblFecha.Text = fact.Fecha.ToShortDateString();
-            lblTiempo.Text = fact.Fecha.ToShortDateString();
             txtIdFactura.Text = fact.IdFactura.ToString();
             txtEmpleado.Text = cnEmpleado.UsuarioNombreEmpleado(fact.IdEmpleado);
             dgvDetalles.DataSource = cnFactura.MostrarDFacturaId(fact).Tables["Detalles"];
