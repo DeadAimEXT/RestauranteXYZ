@@ -288,7 +288,7 @@ namespace RestauranteXYZ.Formularios
         }
         private void auditar(int idMesa)
         {
-            audit.InsertarAuditLog("El usuario atendio la mesa " + idMesa, cnEmpleado.NombreUsuarioEmpleadoId(userName), DateTime.Now);
+            audit.InsertarAuditLog("El usuario atendio la mesa " + idMesa, cnEmpleado.IdUsuarioXIdEmpleado(cnEmpleado.NombreUsuarioEmpleadoId(userName)), DateTime.Now);
         }
 
         private void Mesa_Activated(object sender, EventArgs e)
