@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pbOrden = new System.Windows.Forms.PictureBox();
             this.pbEmpleado = new System.Windows.Forms.PictureBox();
@@ -172,7 +173,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe Script", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(254, 555);
+            this.label5.Location = new System.Drawing.Point(254, 514);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 23);
             this.label5.TabIndex = 6;
@@ -183,7 +184,7 @@
             // 
             this.pbReportes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbReportes.Image = global::RestauranteXYZ.Properties.Resources.cookbook;
-            this.pbReportes.Location = new System.Drawing.Point(186, 581);
+            this.pbReportes.Location = new System.Drawing.Point(186, 540);
             this.pbReportes.Name = "pbReportes";
             this.pbReportes.Size = new System.Drawing.Size(226, 214);
             this.pbReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,10 +197,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(593, 822);
+            this.ClientSize = new System.Drawing.Size(593, 741);
             this.Controls.Add(this.pbReportes);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMenu";

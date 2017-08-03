@@ -30,7 +30,6 @@
         {
             this.dgvAuditoriaLog = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdbEmpleado = new System.Windows.Forms.RadioButton();
             this.rdbIdUsuario = new System.Windows.Forms.RadioButton();
             this.rdbIdAuditoria = new System.Windows.Forms.RadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -50,31 +49,19 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rdbEmpleado);
             this.groupBox1.Controls.Add(this.rdbIdUsuario);
             this.groupBox1.Controls.Add(this.rdbIdAuditoria);
-            this.groupBox1.Location = new System.Drawing.Point(184, 12);
+            this.groupBox1.Location = new System.Drawing.Point(234, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(396, 64);
+            this.groupBox1.Size = new System.Drawing.Size(280, 64);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bucar:";
             // 
-            // rdbEmpleado
-            // 
-            this.rdbEmpleado.AutoSize = true;
-            this.rdbEmpleado.Location = new System.Drawing.Point(269, 29);
-            this.rdbEmpleado.Name = "rdbEmpleado";
-            this.rdbEmpleado.Size = new System.Drawing.Size(120, 17);
-            this.rdbEmpleado.TabIndex = 1;
-            this.rdbEmpleado.TabStop = true;
-            this.rdbEmpleado.Text = "Nombre Empleado";
-            this.rdbEmpleado.UseVisualStyleBackColor = true;
-            // 
             // rdbIdUsuario
             // 
             this.rdbIdUsuario.AutoSize = true;
-            this.rdbIdUsuario.Location = new System.Drawing.Point(160, 29);
+            this.rdbIdUsuario.Location = new System.Drawing.Point(182, 29);
             this.rdbIdUsuario.Name = "rdbIdUsuario";
             this.rdbIdUsuario.Size = new System.Drawing.Size(75, 17);
             this.rdbIdUsuario.TabIndex = 1;
@@ -134,7 +121,6 @@
         #endregion
         private System.Windows.Forms.DataGridView dgvAuditoriaLog;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rdbEmpleado;
         private System.Windows.Forms.RadioButton rdbIdUsuario;
         private System.Windows.Forms.RadioButton rdbIdAuditoria;
         private System.Windows.Forms.Button btnBuscar;

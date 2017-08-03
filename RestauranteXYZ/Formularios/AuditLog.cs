@@ -55,7 +55,6 @@ namespace RestauranteXYZ.Formularios
             {
                 BuscarPorIdUsuario(Convert.ToInt32(txtBuscar.Text));
             }
-
         }
     }
 }

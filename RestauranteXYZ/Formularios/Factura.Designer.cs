@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.txtRtn = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -220,6 +221,7 @@
             this.Controls.Add(this.txtEmpleado);
             this.Controls.Add(this.txtNombreCliente);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Factura";
             this.Text = "Factura";
             this.Load += new System.EventHandler(this.Factura_Load);

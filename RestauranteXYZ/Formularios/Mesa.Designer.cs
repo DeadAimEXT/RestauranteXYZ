@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mesa));
             this.pbMesa1 = new System.Windows.Forms.PictureBox();
             this.pbMesa2 = new System.Windows.Forms.PictureBox();
             this.pbMesa3 = new System.Windows.Forms.PictureBox();
@@ -162,6 +163,7 @@
             this.Controls.Add(this.pbMesa3);
             this.Controls.Add(this.pbMesa2);
             this.Controls.Add(this.pbMesa1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Mesa";

@@ -228,10 +228,7 @@ namespace RestauranteXYZ.Formularios
             HabilitarTexbox(false, false);
             HabilitarBotones(true, false, false, false, true);
             InsertarEmpleado();
-            
-
-      
-     
+            CargarEmpleados();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
