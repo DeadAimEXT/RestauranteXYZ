@@ -42,7 +42,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnLogin.Location = new System.Drawing.Point(108, 87);
+            this.btnLogin.Location = new System.Drawing.Point(108, 73);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 0;
@@ -87,7 +87,8 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(231, 81);
+            this.lblError.ForeColor = System.Drawing.Color.Sienna;
+            this.lblError.Location = new System.Drawing.Point(30, 99);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 13);
             this.lblError.TabIndex = 3;
@@ -95,7 +96,7 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnSalir.Location = new System.Drawing.Point(27, 87);
+            this.btnSalir.Location = new System.Drawing.Point(27, 73);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;

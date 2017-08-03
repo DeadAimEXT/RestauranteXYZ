@@ -26,6 +26,7 @@ namespace RestauranteXYZ.Formularios
             {
                 Conexion con = new Conexion();
                 SqlConnection cnn = con.cnn;
+                
                 SqlDataAdapter sql = new SqlDataAdapter("Select Count(*) From Usuario where Usuario = '" + txtUser.Text + "' and Contrasena = '" + txtContrasena.Text + "'", cnn);
 
                 DataTable ver = new DataTable();
@@ -46,7 +47,8 @@ namespace RestauranteXYZ.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                
+                lblError.Text = "Datos Erroneos";
             }
         }
 
