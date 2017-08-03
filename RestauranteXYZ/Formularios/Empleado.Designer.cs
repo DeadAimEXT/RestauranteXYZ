@@ -55,23 +55,23 @@
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbpBuscar = new System.Windows.Forms.TabPage();
-            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
-            this.cmsEmpleado = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdbNombre = new System.Windows.Forms.RadioButton();
             this.rdbIdEmpleado = new System.Windows.Forms.RadioButton();
+            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
+            this.cmsEmpleado = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.epMensaje = new System.Windows.Forms.ErrorProvider(this.components);
             this.tbcEmpleado.SuspendLayout();
             this.tbpGestion.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.grpDatos.SuspendLayout();
             this.tbpBuscar.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.cmsEmpleado.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epMensaje)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,7 +120,7 @@
             this.btnModificar.Location = new System.Drawing.Point(324, 21);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(86, 27);
-            this.btnModificar.TabIndex = 28;
+            this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -131,7 +131,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(466, 21);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(86, 27);
-            this.btnCancelar.TabIndex = 27;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -142,7 +142,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(198, 21);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(86, 27);
-            this.btnGuardar.TabIndex = 26;
+            this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -153,7 +153,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(66, 21);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(86, 27);
-            this.btnNuevo.TabIndex = 25;
+            this.btnNuevo.TabIndex = 1;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -164,7 +164,7 @@
             this.btnSalir.Location = new System.Drawing.Point(597, 21);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(86, 27);
-            this.btnSalir.TabIndex = 24;
+            this.btnSalir.TabIndex = 0;
             this.btnSalir.Text = "Salir ";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -193,7 +193,7 @@
             this.grpDatos.Location = new System.Drawing.Point(11, 16);
             this.grpDatos.Name = "grpDatos";
             this.grpDatos.Size = new System.Drawing.Size(736, 339);
-            this.grpDatos.TabIndex = 2;
+            this.grpDatos.TabIndex = 0;
             this.grpDatos.TabStop = false;
             this.grpDatos.Text = "Datos del Empleado:";
             this.grpDatos.Enter += new System.EventHandler(this.grpDatos_Enter);
@@ -215,7 +215,7 @@
             this.cboTipoEmpleado.Location = new System.Drawing.Point(491, 60);
             this.cboTipoEmpleado.Name = "cboTipoEmpleado";
             this.cboTipoEmpleado.Size = new System.Drawing.Size(165, 21);
-            this.cboTipoEmpleado.TabIndex = 14;
+            this.cboTipoEmpleado.TabIndex = 5;
             this.cboTipoEmpleado.SelectedIndexChanged += new System.EventHandler(this.cboTipoEmpleado_SelectedIndexChanged);
             // 
             // label8
@@ -235,7 +235,8 @@
             this.cboSexo.Location = new System.Drawing.Point(491, 97);
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(127, 21);
-            this.cboSexo.TabIndex = 12;
+            this.cboSexo.TabIndex = 6;
+            this.cboSexo.SelectedIndexChanged += new System.EventHandler(this.cboSexo_SelectedIndexChanged);
             // 
             // txtDireccion
             // 
@@ -243,7 +244,8 @@
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(545, 85);
-            this.txtDireccion.TabIndex = 11;
+            this.txtDireccion.TabIndex = 4;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // label7
             // 
@@ -261,7 +263,8 @@
             this.txtCorreo.Location = new System.Drawing.Point(123, 154);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(217, 22);
-            this.txtCorreo.TabIndex = 9;
+            this.txtCorreo.TabIndex = 2;
+            this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged);
             // 
             // label6
             // 
@@ -279,7 +282,8 @@
             this.txtTelefono.Location = new System.Drawing.Point(124, 190);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(217, 22);
-            this.txtTelefono.TabIndex = 7;
+            this.txtTelefono.TabIndex = 3;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // label5
             // 
@@ -297,14 +301,16 @@
             this.txtApellidos.Location = new System.Drawing.Point(123, 119);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(217, 22);
-            this.txtApellidos.TabIndex = 5;
+            this.txtApellidos.TabIndex = 1;
+            this.txtApellidos.TextChanged += new System.EventHandler(this.txtApellidos_TextChanged);
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(123, 82);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(218, 22);
-            this.txtNombre.TabIndex = 4;
+            this.txtNombre.TabIndex = 0;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label4
             // 
@@ -330,10 +336,11 @@
             // 
             // txtIdEmpleado
             // 
+            this.txtIdEmpleado.Enabled = false;
             this.txtIdEmpleado.Location = new System.Drawing.Point(123, 45);
             this.txtIdEmpleado.Name = "txtIdEmpleado";
             this.txtIdEmpleado.Size = new System.Drawing.Size(109, 22);
-            this.txtIdEmpleado.TabIndex = 1;
+            this.txtIdEmpleado.TabIndex = 4;
             // 
             // label2
             // 
@@ -348,24 +355,66 @@
             // 
             // tbpBuscar
             // 
-            this.tbpBuscar.Controls.Add(this.dgvEmpleados);
+            this.tbpBuscar.BackColor = System.Drawing.Color.Linen;
             this.tbpBuscar.Controls.Add(this.txtBuscar);
             this.tbpBuscar.Controls.Add(this.groupBox1);
+            this.tbpBuscar.Controls.Add(this.dgvEmpleados);
             this.tbpBuscar.Location = new System.Drawing.Point(4, 22);
             this.tbpBuscar.Name = "tbpBuscar";
             this.tbpBuscar.Padding = new System.Windows.Forms.Padding(3);
             this.tbpBuscar.Size = new System.Drawing.Size(753, 439);
             this.tbpBuscar.TabIndex = 1;
             this.tbpBuscar.Text = "Buscar Empleado";
-            this.tbpBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(249, 86);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(260, 22);
+            this.txtBuscar.TabIndex = 17;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged_1);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdbNombre);
+            this.groupBox1.Controls.Add(this.rdbIdEmpleado);
+            this.groupBox1.Location = new System.Drawing.Point(208, 14);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(336, 51);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Bucar:";
+            // 
+            // rdbNombre
+            // 
+            this.rdbNombre.AutoSize = true;
+            this.rdbNombre.Location = new System.Drawing.Point(198, 22);
+            this.rdbNombre.Name = "rdbNombre";
+            this.rdbNombre.Size = new System.Drawing.Size(120, 17);
+            this.rdbNombre.TabIndex = 1;
+            this.rdbNombre.TabStop = true;
+            this.rdbNombre.Text = "Nombre Empleado";
+            this.rdbNombre.UseVisualStyleBackColor = true;
+            // 
+            // rdbIdEmpleado
+            // 
+            this.rdbIdEmpleado.AutoSize = true;
+            this.rdbIdEmpleado.Location = new System.Drawing.Point(20, 22);
+            this.rdbIdEmpleado.Name = "rdbIdEmpleado";
+            this.rdbIdEmpleado.Size = new System.Drawing.Size(86, 17);
+            this.rdbIdEmpleado.TabIndex = 0;
+            this.rdbIdEmpleado.TabStop = true;
+            this.rdbIdEmpleado.Text = "IdEmpleado";
+            this.rdbIdEmpleado.UseVisualStyleBackColor = true;
             // 
             // dgvEmpleados
             // 
+            this.dgvEmpleados.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpleados.ContextMenuStrip = this.cmsEmpleado;
-            this.dgvEmpleados.Location = new System.Drawing.Point(19, 133);
+            this.dgvEmpleados.Location = new System.Drawing.Point(12, 129);
             this.dgvEmpleados.Name = "dgvEmpleados";
-            this.dgvEmpleados.Size = new System.Drawing.Size(714, 277);
+            this.dgvEmpleados.Size = new System.Drawing.Size(720, 299);
             this.dgvEmpleados.TabIndex = 9;
             // 
             // cmsEmpleado
@@ -390,47 +439,6 @@
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(227, 87);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(280, 22);
-            this.txtBuscar.TabIndex = 7;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rdbNombre);
-            this.groupBox1.Controls.Add(this.rdbIdEmpleado);
-            this.groupBox1.Location = new System.Drawing.Point(217, 17);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(315, 64);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Bucar:";
-            // 
-            // rdbNombre
-            // 
-            this.rdbNombre.AutoSize = true;
-            this.rdbNombre.Location = new System.Drawing.Point(180, 29);
-            this.rdbNombre.Name = "rdbNombre";
-            this.rdbNombre.Size = new System.Drawing.Size(120, 17);
-            this.rdbNombre.TabIndex = 1;
-            this.rdbNombre.TabStop = true;
-            this.rdbNombre.Text = "Nombre Empleado";
-            this.rdbNombre.UseVisualStyleBackColor = true;
-            // 
-            // rdbIdEmpleado
-            // 
-            this.rdbIdEmpleado.AutoSize = true;
-            this.rdbIdEmpleado.Location = new System.Drawing.Point(20, 29);
-            this.rdbIdEmpleado.Name = "rdbIdEmpleado";
-            this.rdbIdEmpleado.Size = new System.Drawing.Size(86, 17);
-            this.rdbIdEmpleado.TabIndex = 0;
-            this.rdbIdEmpleado.TabStop = true;
-            this.rdbIdEmpleado.Text = "IdEmpleado";
-            this.rdbIdEmpleado.UseVisualStyleBackColor = true;
-            // 
             // epMensaje
             // 
             this.epMensaje.ContainerControl = this;
@@ -452,10 +460,10 @@
             this.grpDatos.PerformLayout();
             this.tbpBuscar.ResumeLayout(false);
             this.tbpBuscar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
-            this.cmsEmpleado.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
+            this.cmsEmpleado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.epMensaje)).EndInit();
             this.ResumeLayout(false);
 
@@ -483,11 +491,7 @@
         private System.Windows.Forms.TextBox txtIdEmpleado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tbpBuscar;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rdbNombre;
-        private System.Windows.Forms.RadioButton rdbIdEmpleado;
         private System.Windows.Forms.DataGridView dgvEmpleados;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
@@ -498,5 +502,9 @@
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.ErrorProvider epMensaje;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rdbNombre;
+        private System.Windows.Forms.RadioButton rdbIdEmpleado;
     }
 }

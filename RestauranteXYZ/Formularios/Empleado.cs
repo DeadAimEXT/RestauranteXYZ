@@ -144,11 +144,83 @@ namespace RestauranteXYZ.Formularios
         #region TodosLosBotones
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Validar();
+            #region Validaciones
+
+            if (txtNombre.Text == "")
+            {
+                epMensaje.SetError(txtNombre, "Debe ingresar Nombres del empleado");
+                txtNombre.Focus();
+                return;
+            }
+            else
+            {
+                epMensaje.SetError(txtNombre, "");
+            }
+
+            if (txtApellidos.Text == "")
+            {
+
+                epMensaje.SetError(txtApellidos, "Debe ingresar Apellidos del empleado");
+                txtApellidos.Focus();
+                return;
+            }
+            else
+            {
+                epMensaje.SetError(txtApellidos, "");
+            }
+
+            if (txtTelefono.Text == "")
+            {
+                epMensaje.SetError(txtTelefono, "Debe ingresar el numero de telefono del empleado");
+                txtTelefono.Focus();
+                return;
+            }
+            else
+            {
+                epMensaje.SetError(txtTelefono, "");
+            }
+
+            if (txtDireccion.Text == "")
+            {
+
+                epMensaje.SetError(txtDireccion, "Debe ingresar la direccion del empleado");
+                txtDireccion.Focus();
+                return;
+            }
+            else
+            {
+                epMensaje.SetError(txtDireccion, "");
+            }
+
+            if (cboTipoEmpleado.Text == "")
+            {
+                epMensaje.SetError(cboTipoEmpleado, "Seleccione el tipo de empleado");
+                cboTipoEmpleado.Focus();
+                return;
+            }
+            else
+            {
+                epMensaje.SetError(cboTipoEmpleado, "");
+            }
+
+            if (cboSexo.Text == "")
+            {
+                epMensaje.SetError(cboSexo, "Seleccione el sexo");
+                cboSexo.Focus();
+                return;
+            }
+            else
+            {
+                epMensaje.SetError(cboTipoEmpleado, "");
+            }
+
+
+            #endregion
             HabilitarTexbox(false, false);
             HabilitarBotones(true, false, false, false, true);
-     
             InsertarEmpleado();
+      
+     
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -160,7 +232,78 @@ namespace RestauranteXYZ.Formularios
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            
+            #region Validaciones
+
+            if (txtNombre.Text == "")
+            {
+                epMensaje.SetError(txtNombre, "Debe ingresar Nombres del empleado");
+                txtNombre.Focus();
+                return;
+            }
+            else
+            {
+                epMensaje.SetError(txtNombre, "");
+            }
+
+            if (txtApellidos.Text == "")
+            {
+
+                epMensaje.SetError(txtApellidos, "Debe ingresar Apellidos del empleado");
+                txtApellidos.Focus();
+                return;
+            }
+            else
+            {
+                epMensaje.SetError(txtApellidos, "");
+            }
+
+            if (txtTelefono.Text == "")
+            {
+                epMensaje.SetError(txtTelefono, "Debe ingresar el numero de telefono del empleado");
+                txtTelefono.Focus();
+                return;
+            }
+            else
+            {
+                epMensaje.SetError(txtTelefono, "");
+            }
+
+            if (txtDireccion.Text == "")
+            {
+
+                epMensaje.SetError(txtDireccion, "Debe ingresar la direccion del empleado");
+                txtDireccion.Focus();
+                return;
+            }
+            else
+            {
+                epMensaje.SetError(txtDireccion, "");
+            }
+
+            if (cboTipoEmpleado.Text == "")
+            {
+                epMensaje.SetError(cboTipoEmpleado, "Seleccione el tipo de empleado");
+                cboTipoEmpleado.Focus();
+                return;
+            }
+            else
+            {
+                epMensaje.SetError(cboTipoEmpleado, "");
+            }
+
+            if (cboSexo.Text == "")
+            {
+                epMensaje.SetError(cboSexo, "Seleccione el sexo");
+                cboSexo.Focus();
+                return;
+            }
+            else
+            {
+                epMensaje.SetError(cboTipoEmpleado, "");
+            }
+
+
+            #endregion
             HabilitarTexbox(false, false);
             HabilitarBotones(true, false, false, false, true);
       
@@ -172,6 +315,8 @@ namespace RestauranteXYZ.Formularios
         {
             HabilitarBotones(true, false, false, false, true);
             HabilitarTexbox(false, false);
+            Limpiar();
+            epMensaje.Dispose();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -246,30 +391,7 @@ namespace RestauranteXYZ.Formularios
             CNEmpleado BuscarE = new CNEmpleado();
             CEEmpleado objEmpleado = new CEEmpleado();
             objEmpleado.IdEmpleado = IdEmpleado;
-            dgvEmpleados.DataSource = BuscarE.MostrarPorId (objEmpleado).Tables["MostrarId"];
-        }
-
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            if (rdbNombre.Checked == true)
-            {
-                BuscarPorNombre(txtBuscar.Text);
-            }
-            else if (rdbIdEmpleado.Checked == true)
-            {
-                BuscarPorId(int.Parse(txtBuscar.Text));
-            }
-
-            if (txtBuscar.Text == "")
-            {
-                CargarEmpleados();
-            }
-
-        }
-
-        private void cboTipoEmpleado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            dgvEmpleados.DataSource = BuscarE.MostrarPorId(objEmpleado).Tables["MostrarId"];
         }
 
         private void grpDatos_Enter(object sender, EventArgs e)
@@ -277,78 +399,57 @@ namespace RestauranteXYZ.Formularios
 
         }
 
-        #region Validaciones
-        private void Validar()
+        private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            if(txtNombre.Text=="")
-            {
+            epMensaje.Dispose();
+        }
 
-                epMensaje.SetError(txtNombre, "Debe ingresar Nombres del empleado");
-                txtNombre.Focus();
-                return;
-            }
-            else
-            {
-                epMensaje.SetError(txtNombre, "");
-            }
-            if (txtApellidos.Text == "")
-            {
+        private void txtApellidos_TextChanged(object sender, EventArgs e)
+        {
+            epMensaje.Dispose();
+        }
 
-                epMensaje.SetError(txtApellidos, "Debe ingresar Apellidos del empleado");
-                txtApellidos.Focus();
-                return;
-            }
-            else
-            {
-                epMensaje.SetError(txtApellidos, "");
-            }
+        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        {
+            epMensaje.Dispose();
+        }
 
-            if (txtTelefono.Text == "")
-            {
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            epMensaje.Dispose();
+        }
 
-                epMensaje.SetError(txtTelefono, "Debe ingresar el numero de telefono del empleado");
-                txtTelefono.Focus();
-                return;
-            }
-            else
-            {
-                epMensaje.SetError(txtTelefono, "");
-            }
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            epMensaje.Dispose();
+        }
 
-            if (txtDireccion.Text == "")
-            {
+        private void cboTipoEmpleado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            epMensaje.Dispose();
+        }
 
-                epMensaje.SetError(txtDireccion, "Debe ingresar la direccion del empleado");
-                txtDireccion.Focus();
-                return;
-            }
-            else
+        private void cboSexo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            epMensaje.Dispose();
+        }
+
+        private void txtBuscar_TextChanged_1(object sender, EventArgs e)
+        {
+            if (rdbNombre.Checked == true)
             {
-                epMensaje.SetError(txtDireccion, "");
+                BuscarPorNombre(txtBuscar.Text);
             }
 
-            if (cboTipoEmpleado.Text == "")
+            if (rdbIdEmpleado.Checked == true)
             {
-                epMensaje.SetError(cboTipoEmpleado, "Seleccione el tipo de empleado");
-                cboTipoEmpleado.Focus();
-                return;
-            }
-            else
-            {
-                epMensaje.SetError(cboTipoEmpleado, "");
+                BuscarPorId(Convert.ToInt32(txtBuscar.Text));
             }
 
-            if (cboSexo.Text == "")
+            if (txtBuscar.Text == "")
             {
-                epMensaje.SetError(cboSexo, "Seleccione el sexo");
-                cboSexo.Focus();
-                return;
-            }
-            else
-            {
-                epMensaje.SetError(cboTipoEmpleado, "");
+                CargarEmpleados();
             }
         }
-        #endregion
     }
 }
