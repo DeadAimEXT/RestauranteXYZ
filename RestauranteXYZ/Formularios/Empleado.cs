@@ -80,7 +80,7 @@ namespace RestauranteXYZ.Formularios
             {
                 MessageBox.Show(null, "Registro almacenado satisfactoriamente", "Restaurante XYZ",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                audit.InsertarAuditLog("Se agrego un empleado nuevo", cnEmpleado.NombreUsuarioEmpleadoId(userName), DateTime.Now);
+                audit.InsertarAuditLog("Se agrego un empleado nuevo", cnEmpleado.IdUsuarioXIdEmpleado(cnEmpleado.NombreUsuarioEmpleadoId(userName)), DateTime.Now);
             }
             else
             {
@@ -106,7 +106,7 @@ namespace RestauranteXYZ.Formularios
             {
                 MessageBox.Show(null, "Registro modificado satisfactoriamente.", "Restaurante XYZ",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                audit.InsertarAuditLog("Se modifico empleado con Id = " + txtIdEmpleado.Text, cnEmpleado.NombreUsuarioEmpleadoId(userName), DateTime.Now);
+                audit.InsertarAuditLog("Se modifico empleado con Id = " + txtIdEmpleado.Text, cnEmpleado.IdUsuarioXIdEmpleado(cnEmpleado.NombreUsuarioEmpleadoId(userName)), DateTime.Now);
             }
             else
             {
@@ -126,7 +126,7 @@ namespace RestauranteXYZ.Formularios
             {
                 MessageBox.Show(null, "Registr eliminado satisfactoriamente.", "Restaurante XYZ",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                audit.InsertarAuditLog("Se elimino el empleado con Id = "+ txtIdEmpleado.Text, cnEmpleado.NombreUsuarioEmpleadoId(userName), DateTime.Now);
+                audit.InsertarAuditLog("Se elimino el empleado con Id = "+ txtIdEmpleado.Text, cnEmpleado.IdUsuarioXIdEmpleado(cnEmpleado.NombreUsuarioEmpleadoId(userName)), DateTime.Now);
             }
             else
             {
