@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using capaEntidades;
 using capaNegocio;
 
+
+
 namespace RestauranteXYZ.Formularios
 {
     public partial class Mesa : Form
@@ -38,131 +40,229 @@ namespace RestauranteXYZ.Formularios
 
         private void pbMesa1_Click(object sender, EventArgs e)
         {
-
-            listMesas[0].Estado = cnMesa.EstadoMesa(listMesas[0]);
-            if(listMesas[0].Estado == 0)
+            MouseEventArgs me = (MouseEventArgs)e;
+            if(me.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                pbMesa1.Image = Properties.Resources.MesaActiva1;
-                cnMesa.ActualizarEstadoMesa(listMesas[0], 1);
+                cnMesa.ActualizarEstadoMesa(listMesas[0], 0);
+                listMesas[0].Estado = cnMesa.EstadoMesa(listMesas[0]);
+                pbMesa1.Image = Properties.Resources.MesaInactiva1;
             }
             else
             {
-                mostrarOrden(0);
+                listMesas[0].Estado = cnMesa.EstadoMesa(listMesas[0]);
+                if (listMesas[0].Estado == 0)
+                {
+                    pbMesa1.Image = Properties.Resources.MesaActiva1;
+                    cnMesa.ActualizarEstadoMesa(listMesas[0], 1);
+                }
+                else
+                {
+                    mostrarOrden(0);
+                }
             }
+            
             
             
         }
 
         private void pbMesa2_Click(object sender, EventArgs e)
         {
-            listMesas[1].Estado = cnMesa.EstadoMesa(listMesas[1]);
-            if (listMesas[1].Estado == 0)
+            MouseEventArgs me = (MouseEventArgs)e;
+            if (me.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                pbMesa2.Image = Properties.Resources.MesaActiva2;
-                cnMesa.ActualizarEstadoMesa(listMesas[1], 1);
+                cnMesa.ActualizarEstadoMesa(listMesas[1], 0);
+                listMesas[1].Estado = cnMesa.EstadoMesa(listMesas[1]);
+                pbMesa2.Image = Properties.Resources.MesaInactiva2;
             }
             else
             {
-                mostrarOrden(1);
+                listMesas[1].Estado = cnMesa.EstadoMesa(listMesas[1]);
+                if (listMesas[1].Estado == 0)
+                {
+                    pbMesa2.Image = Properties.Resources.MesaActiva2;
+                    cnMesa.ActualizarEstadoMesa(listMesas[1], 1);
+                }
+                else
+                {
+                    mostrarOrden(1);
+                }
             }
+            
         }
 
         private void pbMesa3_Click(object sender, EventArgs e)
         {
-            listMesas[2].Estado = cnMesa.EstadoMesa(listMesas[2]);
-            if (listMesas[2].Estado == 0)
+            MouseEventArgs me = (MouseEventArgs)e;
+            if (me.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                pbMesa3.Image = Properties.Resources.MesaActiva3;
-                cnMesa.ActualizarEstadoMesa(listMesas[2], 1);
+                cnMesa.ActualizarEstadoMesa(listMesas[2], 0);
+                listMesas[2].Estado = cnMesa.EstadoMesa(listMesas[2]);
+                pbMesa3.Image = Properties.Resources.MesaInactiva3;
             }
             else
             {
-                mostrarOrden(2);
+                listMesas[2].Estado = cnMesa.EstadoMesa(listMesas[2]);
+                if (listMesas[2].Estado == 0)
+                {
+                    pbMesa3.Image = Properties.Resources.MesaActiva3;
+                    cnMesa.ActualizarEstadoMesa(listMesas[2], 1);
+                }
+                else
+                {
+                    mostrarOrden(2);
+                }
             }
+            
         }
 
         private void pbMesa4_Click(object sender, EventArgs e)
         {
-            listMesas[3].Estado = cnMesa.EstadoMesa(listMesas[3]);
-            if (listMesas[3].Estado == 0)
+            MouseEventArgs me = (MouseEventArgs)e;
+            if (me.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                pbMesa4.Image = Properties.Resources.MesaActiva4;
-                cnMesa.ActualizarEstadoMesa(listMesas[3], 1);
+                cnMesa.ActualizarEstadoMesa(listMesas[3], 0);
+                listMesas[3].Estado = cnMesa.EstadoMesa(listMesas[3]);
+                pbMesa4.Image = Properties.Resources.MesaInactiva4;
             }
             else
             {
-                mostrarOrden(3);
-            };
+                listMesas[3].Estado = cnMesa.EstadoMesa(listMesas[3]);
+                if (listMesas[3].Estado == 0)
+                {
+                    pbMesa4.Image = Properties.Resources.MesaActiva4;
+                    cnMesa.ActualizarEstadoMesa(listMesas[3], 1);
+                }
+                else
+                {
+                    mostrarOrden(3);
+                };
+            }
+            
         }
 
         private void pbMesa5_Click(object sender, EventArgs e)
         {
-            listMesas[4].Estado = cnMesa.EstadoMesa(listMesas[4]);
-            if (listMesas[4].Estado == 0)
+            MouseEventArgs me = (MouseEventArgs)e;
+            if (me.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                pbMesa5.Image = Properties.Resources.ButacaActivaIzq1;
-                cnMesa.ActualizarEstadoMesa(listMesas[4], 1);
+                cnMesa.ActualizarEstadoMesa(listMesas[4], 0);
+                listMesas[4].Estado = cnMesa.EstadoMesa(listMesas[4]);
+                pbMesa5.Image = Properties.Resources.ButacaInactivaIzq1;
             }
             else
             {
-                mostrarOrden(4);
+                listMesas[4].Estado = cnMesa.EstadoMesa(listMesas[4]);
+                if (listMesas[4].Estado == 0)
+                {
+                    pbMesa5.Image = Properties.Resources.ButacaActivaIzq1;
+                    cnMesa.ActualizarEstadoMesa(listMesas[4], 1);
+                }
+                else
+                {
+                    mostrarOrden(4);
+                }
             }
+            
         }
 
         private void pbMesa6_Click(object sender, EventArgs e)
         {
-            listMesas[5].Estado = cnMesa.EstadoMesa(listMesas[5]);
-            if (listMesas[5].Estado == 0)
+            MouseEventArgs me = (MouseEventArgs)e;
+            if (me.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                pbMesa6.Image = Properties.Resources.ButacaActivaIzq2;
-                cnMesa.ActualizarEstadoMesa(listMesas[5], 1);
+                cnMesa.ActualizarEstadoMesa(listMesas[5], 0);
+                listMesas[5].Estado = cnMesa.EstadoMesa(listMesas[5]);
+                pbMesa6.Image = Properties.Resources.ButacaInactivaIzq2;
             }
             else
             {
-                mostrarOrden(5);
+                listMesas[5].Estado = cnMesa.EstadoMesa(listMesas[5]);
+                if (listMesas[5].Estado == 0)
+                {
+                    pbMesa6.Image = Properties.Resources.ButacaActivaIzq2;
+                    cnMesa.ActualizarEstadoMesa(listMesas[5], 1);
+                }
+                else
+                {
+                    mostrarOrden(5);
+                }
             }
+            
         }
 
         private void pbMesa7_Click(object sender, EventArgs e)
         {
-            listMesas[6].Estado = cnMesa.EstadoMesa(listMesas[6]);
-            if (listMesas[6].Estado == 0)
+            MouseEventArgs me = (MouseEventArgs)e;
+            if (me.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                pbMesa7.Image = Properties.Resources.ButacaActivaIzq3;
-                cnMesa.ActualizarEstadoMesa(listMesas[6], 1);
+                cnMesa.ActualizarEstadoMesa(listMesas[6], 0);
+                listMesas[6].Estado = cnMesa.EstadoMesa(listMesas[6]);
+                pbMesa7.Image = Properties.Resources.ButacaInactivaIzq3;
             }
             else
             {
-                mostrarOrden(6);
+                listMesas[6].Estado = cnMesa.EstadoMesa(listMesas[6]);
+                if (listMesas[6].Estado == 0)
+                {
+                    pbMesa7.Image = Properties.Resources.ButacaActivaIzq3;
+                    cnMesa.ActualizarEstadoMesa(listMesas[6], 1);
+                }
+                else
+                {
+                    mostrarOrden(6);
+                }
             }
+            
         }
 
         private void pbMesa8_Click(object sender, EventArgs e)
         {
-            listMesas[7].Estado = cnMesa.EstadoMesa(listMesas[7]);
-            if (listMesas[7].Estado == 0)
+            MouseEventArgs me = (MouseEventArgs)e;
+            if (me.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                pbMesa8.Image = Properties.Resources.ButacaActivaDer1;
-                cnMesa.ActualizarEstadoMesa(listMesas[7], 1);
+                cnMesa.ActualizarEstadoMesa(listMesas[7], 0);
+                listMesas[7].Estado = cnMesa.EstadoMesa(listMesas[7]);
+                pbMesa8.Image = Properties.Resources.ButacaInactivaDer1;
             }
             else
             {
-                mostrarOrden(7);
+                listMesas[7].Estado = cnMesa.EstadoMesa(listMesas[7]);
+                if (listMesas[7].Estado == 0)
+                {
+                    pbMesa8.Image = Properties.Resources.ButacaActivaDer1;
+                    cnMesa.ActualizarEstadoMesa(listMesas[7], 1);
+                }
+                else
+                {
+                    mostrarOrden(7);
+                }
             }
+            
         }
 
         private void pbMesa9_Click(object sender, EventArgs e)
         {
-            listMesas[8].Estado = cnMesa.EstadoMesa(listMesas[8]);
-            if (listMesas[8].Estado == 0)
+            MouseEventArgs me = (MouseEventArgs)e;
+            if (me.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                pbMesa9.Image = Properties.Resources.ButacaActivaDer2;
-                cnMesa.ActualizarEstadoMesa(listMesas[8], 1);
+                cnMesa.ActualizarEstadoMesa(listMesas[8], 0);
+                listMesas[8].Estado = cnMesa.EstadoMesa(listMesas[8]);
+                pbMesa9.Image = Properties.Resources.ButacaInactivaDer2;
             }
             else
             {
-                mostrarOrden(8);
+                listMesas[8].Estado = cnMesa.EstadoMesa(listMesas[8]);
+                if (listMesas[8].Estado == 0)
+                {
+                    pbMesa9.Image = Properties.Resources.ButacaActivaDer2;
+                    cnMesa.ActualizarEstadoMesa(listMesas[8], 1);
+                }
+                else
+                {
+                    mostrarOrden(8);
+                }
             }
+            
         }
 
         private void mostrarOrden(int i)
