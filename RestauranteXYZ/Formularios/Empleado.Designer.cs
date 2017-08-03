@@ -55,7 +55,6 @@
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbpBuscar = new System.Windows.Forms.TabPage();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.cmsEmpleado = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +63,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdbNombre = new System.Windows.Forms.RadioButton();
             this.rdbIdEmpleado = new System.Windows.Forms.RadioButton();
-            this.ePMensaje = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epMensaje = new System.Windows.Forms.ErrorProvider(this.components);
             this.tbcEmpleado.SuspendLayout();
             this.tbpGestion.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -73,7 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.cmsEmpleado.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ePMensaje)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epMensaje)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcEmpleado
@@ -349,7 +348,6 @@
             // 
             // tbpBuscar
             // 
-            this.tbpBuscar.Controls.Add(this.btnBuscar);
             this.tbpBuscar.Controls.Add(this.dgvEmpleados);
             this.tbpBuscar.Controls.Add(this.txtBuscar);
             this.tbpBuscar.Controls.Add(this.groupBox1);
@@ -360,16 +358,6 @@
             this.tbpBuscar.TabIndex = 1;
             this.tbpBuscar.Text = "Buscar Empleado";
             this.tbpBuscar.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(455, 87);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(61, 23);
-            this.btnBuscar.TabIndex = 10;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dgvEmpleados
             // 
@@ -404,9 +392,9 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(236, 89);
+            this.txtBuscar.Location = new System.Drawing.Point(227, 87);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(213, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(280, 22);
             this.txtBuscar.TabIndex = 7;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -443,9 +431,9 @@
             this.rdbIdEmpleado.Text = "IdEmpleado";
             this.rdbIdEmpleado.UseVisualStyleBackColor = true;
             // 
-            // ePMensaje
+            // epMensaje
             // 
-            this.ePMensaje.ContainerControl = this;
+            this.epMensaje.ContainerControl = this;
             // 
             // Empleado
             // 
@@ -468,7 +456,7 @@
             this.cmsEmpleado.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ePMensaje)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epMensaje)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,7 +486,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rdbNombre;
         private System.Windows.Forms.RadioButton rdbIdEmpleado;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -510,6 +497,6 @@
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.ErrorProvider ePMensaje;
+        private System.Windows.Forms.ErrorProvider epMensaje;
     }
 }

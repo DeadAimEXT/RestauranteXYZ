@@ -178,21 +178,7 @@ namespace RestauranteXYZ.Formularios
         {
             this.Close();
         }
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            if (rdbNombre.Checked == true)
-            {
-                BuscarPorNombre(txtBuscar.Text);
-            }
-            else if (rdbIdEmpleado.Checked == true)
-            {
-                BuscarPorId(int.Parse(txtBuscar.Text));
-            }
-            else
-            {
-                CargarEmpleados();
-            }
-        }
+
         #endregion
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -265,6 +251,19 @@ namespace RestauranteXYZ.Formularios
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
+            if (rdbNombre.Checked == true)
+            {
+                BuscarPorNombre(txtBuscar.Text);
+            }
+            else if (rdbIdEmpleado.Checked == true)
+            {
+                BuscarPorId(int.Parse(txtBuscar.Text));
+            }
+
+            if (txtBuscar.Text == "")
+            {
+                CargarEmpleados();
+            }
 
         }
 
@@ -278,80 +277,78 @@ namespace RestauranteXYZ.Formularios
 
         }
 
+        #region Validaciones
         private void Validar()
         {
             if(txtNombre.Text=="")
             {
 
-                ePMensaje.SetError(txtNombre, "Debe ingresar Nombres del empleado");
+                epMensaje.SetError(txtNombre, "Debe ingresar Nombres del empleado");
                 txtNombre.Focus();
                 return;
             }
             else
             {
-                ePMensaje.SetError(txtNombre, "");
+                epMensaje.SetError(txtNombre, "");
             }
             if (txtApellidos.Text == "")
             {
 
-                ePMensaje.SetError(txtApellidos, "Debe ingresar Apellidos del empleado");
+                epMensaje.SetError(txtApellidos, "Debe ingresar Apellidos del empleado");
                 txtApellidos.Focus();
                 return;
             }
             else
             {
-                ePMensaje.SetError(txtApellidos, "");
+                epMensaje.SetError(txtApellidos, "");
             }
 
             if (txtTelefono.Text == "")
             {
 
-                ePMensaje.SetError(txtTelefono, "Debe ingresar el numero de telefono del empleado");
+                epMensaje.SetError(txtTelefono, "Debe ingresar el numero de telefono del empleado");
                 txtTelefono.Focus();
                 return;
             }
             else
             {
-                ePMensaje.SetError(txtTelefono, "");
+                epMensaje.SetError(txtTelefono, "");
             }
 
             if (txtDireccion.Text == "")
             {
 
-                ePMensaje.SetError(txtDireccion, "Debe ingresar la direccion del empleado");
+                epMensaje.SetError(txtDireccion, "Debe ingresar la direccion del empleado");
                 txtDireccion.Focus();
                 return;
             }
             else
             {
-                ePMensaje.SetError(txtDireccion, "");
+                epMensaje.SetError(txtDireccion, "");
             }
 
             if (cboTipoEmpleado.Text == "")
             {
-
-                ePMensaje.SetError(cboTipoEmpleado, "Debe seleccionar el tipo  de empleado");
+                epMensaje.SetError(cboTipoEmpleado, "Seleccione el tipo de empleado");
                 cboTipoEmpleado.Focus();
                 return;
             }
             else
             {
-                ePMensaje.SetError(cboTipoEmpleado, "");
+                epMensaje.SetError(cboTipoEmpleado, "");
             }
 
             if (cboSexo.Text == "")
             {
-
-                ePMensaje.SetError(cboSexo, "Debe seleccionar el sexo del empleado");
+                epMensaje.SetError(cboSexo, "Seleccione el sexo");
                 cboSexo.Focus();
                 return;
             }
             else
             {
-                ePMensaje.SetError(cboSexo, "");
+                epMensaje.SetError(cboTipoEmpleado, "");
             }
-
-
         }
+        #endregion
     }
 }
