@@ -148,10 +148,6 @@ namespace RestauranteXYZ.Formularios
             this.Close();
         }
 
-        private void lblReporte_Click(object sender, EventArgs e)
-        {
-            ReporteFactura reporte = new ReporteFactura();
-            reporte.Show();
-        }
+        
     }    
 }

@@ -121,6 +121,24 @@
     <Compile Include="Formularios\Orden.Designer.cs">
       <DependentUpon>Orden.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ReporteEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReporteEmpleado.Designer.cs">
+      <DependentUpon>ReporteEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReporteProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReporteProducto.Designer.cs">
+      <DependentUpon>ReporteProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\ReporteFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,11 +172,21 @@
     <EmbeddedResource Include="Formularios\Orden.resx">
       <DependentUpon>Orden.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReporteEmpleado.rdlc" />
+    <EmbeddedResource Include="Formularios\ReporteEmpleado.resx">
+      <DependentUpon>ReporteEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ReporteFactura.rdlc" />
+    <EmbeddedResource Include="Formularios\ReporteProducto.resx">
+      <DependentUpon>ReporteProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReporteProductos.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ReporteFactura.resx">
       <DependentUpon>ReporteFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\ReporteProductos.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

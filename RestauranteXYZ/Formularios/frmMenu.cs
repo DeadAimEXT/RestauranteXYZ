@@ -87,5 +87,11 @@ namespace RestauranteXYZ.Formularios
         {
             pbFactura.BorderStyle = BorderStyle.None;
         }
+
+        private void pbReportes_Click(object sender, EventArgs e)
+        {
+            Reportes reporte = new Reportes();
+            reporte.Show();
+        }
     }
 }

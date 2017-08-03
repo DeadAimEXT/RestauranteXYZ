@@ -152,7 +152,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Fecha</Value>
+                            <Value>Mesero</Value>
                             <Style>
                               <FontSize>11pt</FontSize>
                               <FontWeight>Bold</FontWeight>
@@ -189,27 +189,27 @@
               </TablixMembers>
             </TablixMember>
             <TablixMember>
-              <Group Name="Fecha">
+              <Group Name="Mesero">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!Fecha.Value</GroupExpression>
+                  <GroupExpression>=Fields!Mesero.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!Fecha.Value</Value>
+                  <Value>=Fields!Mesero.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
                 <Size>1in</Size>
                 <CellContents>
-                  <Textbox Name="Fecha">
+                  <Textbox Name="Mesero">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>=Fields!Fecha.Value</Value>
+                            <Value>=Fields!Mesero.Value</Value>
                             <Style>
                               <FontWeight>Normal</FontWeight>
                               <Color>#333333</Color>
@@ -219,7 +219,7 @@
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Fecha</rd:DefaultName>
+                    <rd:DefaultName>Mesero</rd:DefaultName>
                     <Style>
                       <Border>
                         <Style>None</Style>
@@ -282,9 +282,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.34375in</Top>
-        <Left>0.10417in</Left>
-        <Height>0.8125in</Height>
+        <Height>0.75in</Height>
         <Width>2in</Width>
         <Style>
           <Border>
@@ -292,41 +290,6 @@
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox8">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Ventas por Fecha</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>MidnightBlue</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>0.10292in</Top>
-        <Left>0.39458in</Left>
-        <Height>0.25in</Height>
-        <Width>1.39583in</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
     </ReportItems>
     <Height>2in</Height>
     <Style />
@@ -346,7 +309,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>53345dcb-4965-4e42-8d56-7b49175ade77</rd:DataSourceID>
+      <rd:DataSourceID>f1d67fd4-7413-474f-8ee6-ae31409e063d</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -400,5 +363,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>3b8dae8c-6898-47fa-a732-532fba60089c</rd:ReportID>
+  <rd:ReportID>afc2e2f2-b612-4dab-bf7f-f89595db47e9</rd:ReportID>
 </Report>

@@ -39,7 +39,6 @@
             this.txtBuscar = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblSalir = new System.Windows.Forms.Label();
-            this.lblReporte = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -171,20 +170,6 @@
             this.lblSalir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSalir.Click += new System.EventHandler(this.lblSalir_Click);
             // 
-            // lblReporte
-            // 
-            this.lblReporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblReporte.AutoSize = true;
-            this.lblReporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblReporte.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReporte.Location = new System.Drawing.Point(867, 230);
-            this.lblReporte.Name = "lblReporte";
-            this.lblReporte.Size = new System.Drawing.Size(109, 35);
-            this.lblReporte.TabIndex = 6;
-            this.lblReporte.Text = " Reporte ";
-            this.lblReporte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblReporte.Click += new System.EventHandler(this.lblReporte_Click);
-            // 
             // ModFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,7 +177,6 @@
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(990, 320);
             this.ControlBox = false;
-            this.Controls.Add(this.lblReporte);
             this.Controls.Add(this.lblSalir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBuscar);
@@ -222,6 +206,5 @@
         private System.Windows.Forms.MaskedTextBox txtBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSalir;
-        private System.Windows.Forms.Label lblReporte;
     }
 }
