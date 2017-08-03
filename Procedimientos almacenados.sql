@@ -574,3 +574,24 @@ AS
 			Where u.IdUsuario = a.IdUsuario
 	End
 Go
+
+
+ALTER Procedure [dbo].[Sp_EliminarEmpleado]
+    @IdEmpleado int
+As
+Begin
+    Set nocount off
+	Exec Sp_EliminarUsuarioXEmpleado @IdEmpleado
+    Delete 
+    From Empleado
+    Where IdEmpleado = @IdEmpleado
+End
+
+Create PROCEDURE Sp_EliminarUsuarioXEmpleado
+	@IdEmpleado int 
+as
+Begin
+	Delete 
+	from Usuario
+	Where IdEmpleado = @IdEmpleado
+End

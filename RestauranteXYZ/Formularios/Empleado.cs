@@ -447,17 +447,19 @@ namespace RestauranteXYZ.Formularios
 
         private void txtBuscar_TextChanged_1(object sender, EventArgs e)
         {
-            if (rdbNombre.Checked == true)
+            if (txtBuscar.Text != "")
             {
-                BuscarPorNombre(txtBuscar.Text);
-            }
+                if (rdbIdEmpleado.Checked == true)
+                {
+                    BuscarPorId(Convert.ToInt32(txtBuscar.Text));
+                }
 
-            if (rdbIdEmpleado.Checked == true)
-            {
-                BuscarPorId(Convert.ToInt32(txtBuscar.Text));
+                if (rdbNombre.Checked == true)
+                {
+                    BuscarPorNombre(txtBuscar.Text);
+                }
             }
-
-            if (txtBuscar.Text == "")
+            else
             {
                 CargarEmpleados();
             }
