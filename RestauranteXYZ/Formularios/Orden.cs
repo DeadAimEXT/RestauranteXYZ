@@ -197,6 +197,11 @@ namespace RestauranteXYZ.Formularios
         {
             
             agregarDgv();
+            for (int i = 0; i < 16; i++)
+            {
+                chkArray[i].Checked = false;
+                nudArray[i].Value = 1;
+            }
         }
 
         private void btnFactura_Click(object sender, EventArgs e)
