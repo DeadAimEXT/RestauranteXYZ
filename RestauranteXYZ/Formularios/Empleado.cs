@@ -16,6 +16,7 @@ namespace RestauranteXYZ.Formularios
     public partial class Empleado : Form
     {
         public string userName;
+        int i;
         CNAuditoriaLog audit = new CNAuditoriaLog();
         CNEmpleado cnEmpleado = new CNEmpleado();
         public Empleado(string userName)
@@ -449,12 +450,12 @@ namespace RestauranteXYZ.Formularios
         {
             if (txtBuscar.Text != "")
             {
-                if (rdbIdEmpleado.Checked == true)
+                if (rdbIdEmpleado.Checked == true && Int32.TryParse(txtBuscar.Text, out i))
                 {
                     BuscarPorId(Convert.ToInt32(txtBuscar.Text));
                 }
 
-                if (rdbNombre.Checked == true)
+                if (rdbNombre.Checked == true && (Int32.TryParse(txtBuscar.Text, out i) == false))
                 {
                     BuscarPorNombre(txtBuscar.Text);
                 }
