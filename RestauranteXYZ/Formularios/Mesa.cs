@@ -19,6 +19,7 @@ namespace RestauranteXYZ.Formularios
         public CNEmpleado cnEmpleado = new CNEmpleado();
         public Orden[] orden = new Orden[] { new Orden(), new Orden(), new Orden(), new Orden(), new Orden(), new Orden(), new Orden(), new Orden(), new Orden() };
         public List<CEMesa> listMesas = new List<CEMesa>();
+        public CNAuditoriaLog audit = new CNAuditoriaLog();
         
         string userName;
         public Mesa()
@@ -173,6 +174,7 @@ namespace RestauranteXYZ.Formularios
                 orden[i].idMesa = i + 1;
                 orden[i].userName = this.userName;
                 orden[i].Show();
+                auditar(i + 1);
 
             }
             else
@@ -181,6 +183,7 @@ namespace RestauranteXYZ.Formularios
                 orden[i].idMesa = i + 1;
                 orden[i].userName = this.userName;
                 orden[i].Show();
+                auditar(i + 1);
             }
         }
 
@@ -282,6 +285,10 @@ namespace RestauranteXYZ.Formularios
                 mesa.Estado = cnMesa.EstadoMesa(mesa);
                 listMesas.Add(mesa);
             }
+        }
+        private void auditar(int idMesa)
+        {
+            audit.InsertarAuditLog("El usuario atendio la mesa " + idMesa, cnEmpleado.NombreUsuarioEmpleadoId(userName), DateTime.Now);
         }
 
         private void Mesa_Activated(object sender, EventArgs e)

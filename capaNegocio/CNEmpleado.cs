@@ -63,5 +63,9 @@ namespace capaNegocio
         {
             return objE1.NombreUsuarioEmpleadoId(userName);
         }
+        public int IdUsuarioXIdEmpleado(int IdEmpleado)
+        {
+            return objE1.IdUsuarioXIdEmpleado(IdEmpleado);
+        }
     }
 }

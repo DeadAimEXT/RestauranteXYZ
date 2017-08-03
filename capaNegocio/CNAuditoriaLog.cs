@@ -27,5 +27,9 @@ namespace capaNegocio
         {
             return objAL1.BuscarAuditLogIdUsuario(objA);
         }
+        public int InsertarAuditLog(string Descripcion, int idEmpleado, DateTime fecha)
+        {
+            return objAL1.InsertarAuditLog(Descripcion, idEmpleado, fecha);
+        }
     }
 }

@@ -15,6 +15,7 @@ namespace RestauranteXYZ.Formularios
     
     public partial class Factura : Form
     {
+        CNAuditoriaLog audit = new CNAuditoriaLog();
         CNEmpleado cnEmpleado = new CNEmpleado();
         CNFactura cnFactura = new CNFactura();
         CEFactura fact = new CEFactura();
@@ -55,6 +56,7 @@ namespace RestauranteXYZ.Formularios
             fact.NombreCliente = txtNombreCliente.Text;
             fact.RTN = txtRtn.Text;
             cnFactura.ActualizarFactura(fact);
+            audit.InsertarAuditLog("Se genero factura con Id = " + fact.IdFactura, cnEmpleado.IdUsuarioXIdEmpleado(fact.IdEmpleado), DateTime.Now);
             this.DialogResult = DialogResult.OK;
         }
     }

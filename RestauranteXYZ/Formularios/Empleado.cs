@@ -12,10 +12,15 @@ using capaNegocio;
 
 namespace RestauranteXYZ.Formularios
 {
+    
     public partial class Empleado : Form
     {
-        public Empleado()
+        public string userName;
+        CNAuditoriaLog audit = new CNAuditoriaLog();
+        CNEmpleado cnEmpleado = new CNEmpleado();
+        public Empleado(string userName)
         {
+            this.userName = userName;
             InitializeComponent();
         }
 
@@ -74,6 +79,7 @@ namespace RestauranteXYZ.Formularios
             {
                 MessageBox.Show(null, "Registro almacenado satisfactoriamente", "Restaurante XYZ",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                audit.InsertarAuditLog("Se agrego un empleado nuevo", cnEmpleado.NombreUsuarioEmpleadoId(userName), DateTime.Now);
             }
             else
             {
@@ -99,11 +105,12 @@ namespace RestauranteXYZ.Formularios
             {
                 MessageBox.Show(null, "Registro modificado satisfactoriamente.", "Restaurante XYZ",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                audit.InsertarAuditLog("Se modifico empleado con Id = " + txtIdEmpleado.Text, cnEmpleado.NombreUsuarioEmpleadoId(userName), DateTime.Now);
             }
             else
             {
                 MessageBox.Show(null, "Error al modificar el registro.", "Restaurante XYZ",
-             MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -118,6 +125,7 @@ namespace RestauranteXYZ.Formularios
             {
                 MessageBox.Show(null, "Registr eliminado satisfactoriamente.", "Restaurante XYZ",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                audit.InsertarAuditLog("Se elimino el empleado con Id = "+ txtIdEmpleado.Text, cnEmpleado.NombreUsuarioEmpleadoId(userName), DateTime.Now);
             }
             else
             {
@@ -219,6 +227,8 @@ namespace RestauranteXYZ.Formularios
             HabilitarTexbox(false, false);
             HabilitarBotones(true, false, false, false, true);
             InsertarEmpleado();
+            
+
       
      
         }
@@ -308,6 +318,7 @@ namespace RestauranteXYZ.Formularios
             HabilitarBotones(true, false, false, false, true);
       
             ModificarEmpleado();
+            
             CargarEmpleados();
             Limpiar();
         }

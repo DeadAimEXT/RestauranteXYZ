@@ -93,5 +93,31 @@ namespace capaDatos
                 ds.Dispose();
             }
         }
+
+        public int InsertarAuditLog(string Descripcion, int idUsuario, DateTime fecha)
+        {
+            int resultado;
+            SqlCommand cmd = new SqlCommand("Sp_InsertarAuditLog", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@Descripcion", SqlDbType.NVarChar, 300).Value = Descripcion;
+            cmd.Parameters.AddWithValue("@IdUsuario", SqlDbType.Int).Value = idUsuario;
+            cmd.Parameters.AddWithValue("@Fecha", SqlDbType.DateTime).Value = fecha;
+            
+            try
+            {
+                ConectarBD();
+                resultado = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al ingresar al auditlog", ex);
+            }
+            finally
+            {
+                DesconectarBD();
+                cmd.Dispose();
+            }
+            return resultado;
+        }
     }
 }

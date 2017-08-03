@@ -267,6 +267,31 @@ namespace capaDatos
                 DesconectarBD();
                 cmd.Dispose();
             }
+
         }
+        public int IdUsuarioXIdEmpleado(int IdEmpleado)
+        {
+            int resultado;
+            SqlCommand cmd = new SqlCommand("Sp_IdUsuarioXIdEmpleado", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@IdEmpleado", SqlDbType.Int).Value = IdEmpleado;
+            try
+            {
+                ConectarBD();
+                resultado = int.Parse(cmd.ExecuteScalar().ToString());
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al recuperar el id del Usuario", ex);
+            }
+            finally
+            {
+                DesconectarBD();
+                cmd.Dispose();
+            }
+
+        }
+
     }
 }
