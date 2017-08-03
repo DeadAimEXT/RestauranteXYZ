@@ -45,7 +45,7 @@
             this.btnLogin.Location = new System.Drawing.Point(108, 73);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Ok";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -56,15 +56,16 @@
             this.txtUser.Location = new System.Drawing.Point(83, 19);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(100, 22);
-            this.txtUser.TabIndex = 1;
+            this.txtUser.TabIndex = 0;
             // 
             // txtContrasena
             // 
             this.txtContrasena.BackColor = System.Drawing.Color.White;
             this.txtContrasena.Location = new System.Drawing.Point(83, 45);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(100, 22);
-            this.txtContrasena.TabIndex = 2;
+            this.txtContrasena.TabIndex = 1;
             // 
             // label1
             // 
@@ -99,7 +100,7 @@
             this.btnSalir.Location = new System.Drawing.Point(27, 73);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 4;
+            this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
