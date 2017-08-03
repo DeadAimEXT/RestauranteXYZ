@@ -64,6 +64,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdbNombre = new System.Windows.Forms.RadioButton();
             this.rdbIdEmpleado = new System.Windows.Forms.RadioButton();
+            this.ePMensaje = new System.Windows.Forms.ErrorProvider(this.components);
             this.tbcEmpleado.SuspendLayout();
             this.tbpGestion.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -72,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.cmsEmpleado.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ePMensaje)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcEmpleado
@@ -441,6 +443,10 @@
             this.rdbIdEmpleado.Text = "IdEmpleado";
             this.rdbIdEmpleado.UseVisualStyleBackColor = true;
             // 
+            // ePMensaje
+            // 
+            this.ePMensaje.ContainerControl = this;
+            // 
             // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,6 +468,7 @@
             this.cmsEmpleado.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ePMensaje)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -503,5 +510,6 @@
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.ErrorProvider ePMensaje;
     }
 }

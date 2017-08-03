@@ -159,6 +159,7 @@ namespace RestauranteXYZ.Formularios
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            Validar();
             HabilitarTexbox(false, false);
             HabilitarBotones(true, false, false, false, true);
       
@@ -273,6 +274,82 @@ namespace RestauranteXYZ.Formularios
 
         private void grpDatos_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void Validar()
+        {
+            if(txtNombre.Text=="")
+            {
+
+                ePMensaje.SetError(txtNombre, "Debe ingresar Nombres del empleado");
+                txtNombre.Focus();
+                return;
+            }
+            else
+            {
+                ePMensaje.SetError(txtNombre, "");
+            }
+            if (txtApellidos.Text == "")
+            {
+
+                ePMensaje.SetError(txtApellidos, "Debe ingresar Apellidos del empleado");
+                txtApellidos.Focus();
+                return;
+            }
+            else
+            {
+                ePMensaje.SetError(txtApellidos, "");
+            }
+
+            if (txtTelefono.Text == "")
+            {
+
+                ePMensaje.SetError(txtTelefono, "Debe ingresar el numero de telefono del empleado");
+                txtTelefono.Focus();
+                return;
+            }
+            else
+            {
+                ePMensaje.SetError(txtTelefono, "");
+            }
+
+            if (txtDireccion.Text == "")
+            {
+
+                ePMensaje.SetError(txtDireccion, "Debe ingresar la direccion del empleado");
+                txtDireccion.Focus();
+                return;
+            }
+            else
+            {
+                ePMensaje.SetError(txtDireccion, "");
+            }
+
+            if (cboTipoEmpleado.Text == "")
+            {
+
+                ePMensaje.SetError(cboTipoEmpleado, "Debe seleccionar el tipo  de empleado");
+                cboTipoEmpleado.Focus();
+                return;
+            }
+            else
+            {
+                ePMensaje.SetError(cboTipoEmpleado, "");
+            }
+
+            if (cboSexo.Text == "")
+            {
+
+                ePMensaje.SetError(cboSexo, "Debe seleccionar el sexo del empleado");
+                cboSexo.Focus();
+                return;
+            }
+            else
+            {
+                ePMensaje.SetError(cboSexo, "");
+            }
+
 
         }
     }
