@@ -21,6 +21,7 @@ namespace RestauranteXYZ.Formularios
         List<CEDetalleFactura> detallesFactura = new List<CEDetalleFactura>();
         public string userName;
         public int idMesa;
+        public CEMesa mesa;
 
 
         public Orden(string userName)//no utilizado
@@ -150,6 +151,8 @@ namespace RestauranteXYZ.Formularios
                 if (chkArray[i].Checked)
                     
                 {
+                    int sent = 0, pos = 0;
+                    btnFactura.Enabled = true;
                     CEDetalleFactura det = new CEDetalleFactura();
                     CEProducto prod = new CEProducto();
                     CNProducto get = new CNProducto();
@@ -168,13 +171,31 @@ namespace RestauranteXYZ.Formularios
                     row.Cells[2].Value = prod.Precio;
                     row.Cells[3].Value = prod.Precio * nudArray[i].Value;
                     dgvDetalleFactura.Rows.Add(row);
-                    detallesFactura.Add(det);
+                    for(int j = 0; j < detallesFactura.Count; j++)
+                    {
+                        if(detallesFactura[j].IdProducto == det.IdProducto)
+                        {
+                            sent = 1;
+                            pos = j;
+                        }
+                        
+                    }
+                    if(sent == 1)
+                    {
+                        detallesFactura[pos].Cantidad += det.Cantidad;
+                    }
+                    else
+                    {
+                        detallesFactura.Add(det);
+                    }
+                    
                 }
             }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            
             agregarDgv();
         }
 
@@ -186,9 +207,10 @@ namespace RestauranteXYZ.Formularios
             CNFactura cnFactura = new CNFactura();
             CEFactura factura = new CEFactura();
             CNEmpleado cnEmpleado = new CNEmpleado();
+            
 
 
-            factura.IdEmpleado = cnEmpleado.NombreUsuarioEmpleadoId(lblUsuario.Text); //test
+            factura.IdEmpleado = cnEmpleado.NombreUsuarioEmpleadoId(lblUsuario.Text); 
             factura.Fecha = DateTime.Now;
             
             cnFactura.InsertarFactura(factura);
@@ -199,6 +221,8 @@ namespace RestauranteXYZ.Formularios
                 det.IdFactura = i;
                 cnDetFactura.InsertarDFactura(det);
             }
+            CNMesa cnMesa = new CNMesa();
+            cnMesa.ActualizarEstadoMesa(mesa, 0);
             Factura frmFactura = new Factura(factura);
 
             if (frmFactura.ShowDialog() == DialogResult.OK)
@@ -219,6 +243,7 @@ namespace RestauranteXYZ.Formularios
                 nudArray[i].Value = 1;
                 dgvDetalleFactura.Rows.Clear();
             }
+            btnFactura.Enabled = false;
             detallesFactura.Clear();
             validarNuds();
 

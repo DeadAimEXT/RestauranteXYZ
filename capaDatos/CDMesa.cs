@@ -113,14 +113,17 @@ namespace capaDatos
         public int EstadoMesa(CEMesa objM)
         {
             int resultado;
+            string test;
             SqlCommand cmd = new SqlCommand("Sp_EstadoMesa", cnn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@IdMesa", SqlDbType.Int).Value = objM.IdMesa;
+            cmd.Parameters.AddWithValue("@IdMesa", SqlDbType.Bit).Value = objM.IdMesa;
             
             try
             {
                 ConectarBD();
-                resultado = int.Parse(cmd.ExecuteScalar().ToString());
+                test = cmd.ExecuteScalar().ToString();
+                resultado = (test == "True") ? 1 : 0;
+                
             }
             catch (Exception ex)
             {
@@ -132,6 +135,31 @@ namespace capaDatos
                 cmd.Dispose();
             }
             return resultado;
+        }
+        public DataSet MostrarMesaId(CEMesa objM)
+        {
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataSet ds = new DataSet();
+            SqlCommand cmd = new SqlCommand("Sp_MostrarMesaId", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@IdMesa", SqlDbType.Int).Value = objM.IdMesa;
+            try
+            {
+                da.SelectCommand = cmd;
+                ConectarBD();
+                da.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("No se pudo mostrar los datos de la base de datos", ex);
+            }
+            finally
+            {
+                   
+                DesconectarBD();
+                ds.Dispose();
+            }
         }
 
 

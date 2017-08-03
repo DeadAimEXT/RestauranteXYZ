@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using capaDatos;
 using capaEntidades;
+using System.Data;
 
 namespace capaNegocio
 {
@@ -19,6 +20,10 @@ namespace capaNegocio
         public int EstadoMesa(CEMesa objM)
         {
             return mesa.EstadoMesa(objM);
+        }
+        public DataSet MostrarMesaId(CEMesa objM)
+        {
+            return mesa.MostrarMesaId(objM);
         }
     }
 }

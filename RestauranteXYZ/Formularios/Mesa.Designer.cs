@@ -165,6 +165,8 @@
             this.Name = "Mesa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mesa";
+            this.Activated += new System.EventHandler(this.Mesa_Activated);
+            this.Load += new System.EventHandler(this.Mesa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbMesa1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMesa2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMesa3)).EndInit();

@@ -89,8 +89,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblMesa = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblMesa = new System.Windows.Forms.ToolStripStatusLabel();
             this.dgvDetalleFactura = new System.Windows.Forms.DataGridView();
             this.chProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -917,18 +917,18 @@
             this.lblUsuario.Size = new System.Drawing.Size(47, 17);
             this.lblUsuario.Text = "Usuario";
             // 
-            // lblMesa
-            // 
-            this.lblMesa.Name = "lblMesa";
-            this.lblMesa.Size = new System.Drawing.Size(34, 17);
-            this.lblMesa.Text = "Mesa";
-            // 
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(37, 17);
             this.toolStripStatusLabel3.Text = "Mesa:";
+            // 
+            // lblMesa
+            // 
+            this.lblMesa.Name = "lblMesa";
+            this.lblMesa.Size = new System.Drawing.Size(34, 17);
+            this.lblMesa.Text = "Mesa";
             // 
             // dgvDetalleFactura
             // 
@@ -939,9 +939,9 @@
             this.chCantidad,
             this.chPrecio,
             this.chTotal});
-            this.dgvDetalleFactura.Location = new System.Drawing.Point(11, 551);
+            this.dgvDetalleFactura.Location = new System.Drawing.Point(12, 554);
             this.dgvDetalleFactura.Name = "dgvDetalleFactura";
-            this.dgvDetalleFactura.Size = new System.Drawing.Size(837, 239);
+            this.dgvDetalleFactura.Size = new System.Drawing.Size(827, 221);
             this.dgvDetalleFactura.TabIndex = 11;
             // 
             // chProducto
@@ -980,7 +980,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(11, 522);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(112, 23);
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -999,10 +999,11 @@
             // 
             // btnFactura
             // 
+            this.btnFactura.Enabled = false;
             this.btnFactura.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFactura.Location = new System.Drawing.Point(104, 522);
+            this.btnFactura.Location = new System.Drawing.Point(131, 522);
             this.btnFactura.Name = "btnFactura";
-            this.btnFactura.Size = new System.Drawing.Size(114, 23);
+            this.btnFactura.Size = new System.Drawing.Size(112, 23);
             this.btnFactura.TabIndex = 14;
             this.btnFactura.Text = "Generar Factura";
             this.btnFactura.UseVisualStyleBackColor = true;
