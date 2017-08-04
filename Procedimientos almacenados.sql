@@ -7,7 +7,7 @@ use RestauranteXYZ
 ------------------------------------------------------------------------------------------------------
 
 --Procedimiento almacenado para insertar
-Create Procedure Sp_InsertarEmpleado
+alter Procedure Sp_InsertarEmpleado
 	@Nombre nvarchar(20),
 	@Apellido nvarchar(20),
 	@Telefono varchar(9),
@@ -52,7 +52,7 @@ Select * from Empleado
 Exec Sp_ModificarEmpleado 1, 'Samuel', 'Aguilar', '2780-0000', 'kike.as58@gmail.com', 'B° La esperanza', 1, 1
 
 --Procedimiento almacenado para eliminar Empleado.
-Create Procedure Sp_EliminarEmpleado
+alter Procedure Sp_EliminarEmpleado
 	@IdEmpleado int
 As
 Begin
@@ -530,11 +530,11 @@ From Factura f inner join DetalleFactura d on f.IdFactura = d.IdFactura
 ------------------------------Procedimientos Almacenados para Auditoria--------------------------------
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
-Create Procedure Sp_MostrarAuditoriaLog
+Alter Procedure Sp_MostrarAuditoriaLog
 As
 	Begin
 		Set nocount on
-		Select a.IdAuditLog, u.Usuario, e.Nombre + ' ' + e.Apellido 'Nombre Empleado', a.Descripcion
+		Select a.IdAuditLog, u.Usuario, e.Nombre + ' ' + e.Apellido 'Nombre Empleado', a.Descripcion, a.Fecha
 		From AuditLog a inner join Usuario u
 			on a.IdUsuario = u.IdUsuario
 			inner join Empleado e
@@ -546,12 +546,12 @@ exec Sp_MostrarAuditoriaLog
 
 
 
-Create Procedure Sp_MostrarAuditoriaLogId
+Alter Procedure Sp_MostrarAuditoriaLogId
 	@IdAuditLog int
 AS
 	BEGIN
 		Set nocount on
-			Select a.IdAuditLog, u.Usuario, e.Nombre + ' ' + e.Apellido 'Nombre Empleado', a.Descripcion
+			Select a.IdAuditLog, u.Usuario, e.Nombre + ' ' + e.Apellido 'Nombre Empleado', a.Descripcion, a.Fecha
 			From AuditLog a inner join Usuario u
 				on a.IdUsuario = u.IdUsuario
 				inner join Empleado e
@@ -561,12 +561,12 @@ AS
 Go
 
 
-Create Procedure Sp_MostrarAuditoriaLogIdUsuario
+Alter Procedure Sp_MostrarAuditoriaLogIdUsuario
 	@IdUsuario int
 AS
 	BEGIN
 		Set nocount on
-			Select a.IdAuditLog, u.Usuario, e.Nombre + ' ' + e.Apellido 'Nombre Empleado', a.Descripcion
+			Select a.IdAuditLog, u.Usuario, e.Nombre + ' ' + e.Apellido 'Nombre Empleado', a.Descripcion, a.Fecha
 			From AuditLog a inner join Usuario u
 				on a.IdUsuario = u.IdUsuario
 				inner join Empleado e
@@ -574,6 +574,28 @@ AS
 			Where u.IdUsuario = a.IdUsuario
 	End
 Go
+
+Alter Procedure Sp_MostrarAuditoriaLogIdEmpleado
+	@IdEmpleado int
+AS
+	BEGIN
+		Set nocount on
+			Select a.IdAuditLog, u.Usuario, e.Nombre + ' ' + e.Apellido 'Nombre Empleado', a.Descripcion, a.Fecha
+			From AuditLog a inner join Usuario u
+				on a.IdUsuario = u.IdUsuario
+				inner join Empleado e
+				on u.IdEmpleado = e.IdEmpleado
+			Where e.IdEmpleado = (select *
+									from Empleado 
+									where )
+	End
+Go
+
+select *
+from Empleado
+
+select *
+from Usuario
 
 
 ALTER Procedure [dbo].[Sp_EliminarEmpleado]

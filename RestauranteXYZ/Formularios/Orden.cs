@@ -251,7 +251,6 @@ namespace RestauranteXYZ.Formularios
             btnFactura.Enabled = false;
             detallesFactura.Clear();
             validarNuds();
-
         }
 
         private void Orden_Load(object sender, EventArgs e)

@@ -49,7 +49,7 @@ namespace capaDatos
                 ConectarBD();
                 da = new SqlDataAdapter("Sp_MostrarAuditoriaLogId", cnn);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.Add("@IdAuditLog", SqlDbType.Int).Value = objA;
+                da.SelectCommand.Parameters.Add("@IdAuditLog", SqlDbType.Int).Value = objA.IdAuditoriaLog;
                 da.Fill(ds, "MostrarPorIdAuditLog");
                 return ds;
 
@@ -77,7 +77,7 @@ namespace capaDatos
                 ConectarBD();
                 da = new SqlDataAdapter("Sp_MostrarAuditoriaLogIdUsuario", cnn);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.Add("@IdUsuario", SqlDbType.Int).Value = objA;
+                da.SelectCommand.Parameters.Add("@IdUsuario", SqlDbType.Int).Value = objA.IdUsuario;
                 da.Fill(ds, "MostrarPorIdUsuario");
                 return ds;
 

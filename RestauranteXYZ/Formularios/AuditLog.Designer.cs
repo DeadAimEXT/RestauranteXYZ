@@ -44,7 +44,7 @@
             this.dgvAuditoriaLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAuditoriaLog.Location = new System.Drawing.Point(26, 140);
             this.dgvAuditoriaLog.Name = "dgvAuditoriaLog";
-            this.dgvAuditoriaLog.Size = new System.Drawing.Size(690, 309);
+            this.dgvAuditoriaLog.Size = new System.Drawing.Size(690, 390);
             this.dgvAuditoriaLog.TabIndex = 7;
             // 
             // groupBox1
@@ -102,13 +102,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(728, 475);
+            this.ClientSize = new System.Drawing.Size(743, 555);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgvAuditoriaLog);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AuditLog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.AuditLog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuditoriaLog)).EndInit();
             this.groupBox1.ResumeLayout(false);

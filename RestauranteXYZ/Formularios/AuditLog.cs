@@ -22,6 +22,7 @@ namespace RestauranteXYZ.Formularios
         private void AuditLog_Load(object sender, EventArgs e)
         {
             CargarDgvAuditoriaLog();
+            dgvAuditoriaLog.Columns[3].Width = 230;
         }
         private void CargarDgvAuditoriaLog()
         {
@@ -55,6 +56,7 @@ namespace RestauranteXYZ.Formularios
             {
                 BuscarPorIdUsuario(Convert.ToInt32(txtBuscar.Text));
             }
+            
         }
     }
 }
